@@ -1,0 +1,18 @@
+<div id="uespDestiny2TooltipRoot">
+	<div id="uespD2TooltipTitleRoot" class="uespD2TooltipTitleRoot {titleClass}">
+		<div id="uespD2TooltipImage">{image}</div>
+		<div id="uespD2TooltipTitle">{title}</div>
+		<div id="uespD2TooltipSubTitle">{subtitle}</div>
+	</div>
+	<div id="uespD2TooltipBody">
+		<div id="uespD2TooltipStats">
+			{stats}
+		</div>
+		<hr class="uespD2HorizRule" />
+		<div id="uespD2TooltipPerks">
+			{perks}
+		</div>
+		<div id="uespD2TooltipFooter">
+		</div>
+	</div>
+</div>

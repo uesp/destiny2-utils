@@ -1,0 +1,16 @@
+<div id="uespDestiny2TooltipRoot">
+	<div id="uespD2TooltipTitleRoot" class="uespD2TooltipTitleRoot">
+		<div id="uespD2TooltipTitle">Error: Unknown {type} Found!</div>
+		<div id="uespD2TooltipSubTitle">#{id}</div>
+	</div>
+	<div id="uespD2TooltipBody">
+		<div id="uespD2TooltipRequires"></div>
+		<div id="uespD2TooltipMainStat"></div>
+		<div id="uespD2TooltipStats">
+		</div>
+		<div id="uespD2TooltipPerks">
+		</div>
+		<div id="uespD2TooltipFooter">
+		</div>
+	</div>
+</div>

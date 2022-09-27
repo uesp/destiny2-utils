@@ -1,0 +1,155 @@
+#uespDestiny2Tooltip {
+	position: absolute;
+	z-index: 100;
+	width: 400px;
+}
+
+#uespDestiny2TooltipRoot {
+	width: 400px;
+	font-family: "roboto condensed", Helvetica, Arial, sans-serif;
+	line-height: 1.1;
+	color: white;
+}
+
+#uespD2TooltipImage {
+	float: right;
+	width: 64px;
+	height: 64px;
+}
+
+#uespD2TooltipImage img {
+	width: 64px;
+	height: 64px;
+	position: relative;
+	top: -5px;
+	right: -5px;
+}
+
+#uespD2TooltipBody {
+	text-align: left;
+	background-color: #2b2e28;
+	color: white;
+	font-size: 12px;
+	min-height: 100px;
+	padding: 5px;
+	color: white;
+}
+
+#uespD2TooltipTitleRoot {
+	padding: 5px;
+	height: 54px;
+}
+
+.uespD2TooltipTitleRoot {
+	background-color: #999;	
+}
+
+#uespD2TooltipTitle {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#uespD2TooltipSubTitle {
+	font-size: 16px;
+	font-weight: normal;
+	padding-top: 5px;
+}
+
+#uespD2TooltipRequires {
+	
+}
+
+#uespD2TooltipMainStat {
+	
+}
+
+#uespD2TooltipStats {
+	
+}
+
+#uespD2TooltipPerks {
+	
+}
+
+#uespD2TooltipFooter {
+	
+}
+
+.uespDestiny2Toolip {
+	display: inline-block;
+}
+
+.uespD2ItemTypeCommon {
+	background-color: #c3bcb4;
+	color: #333;
+}
+
+.uespD2ItemTypeUncommon {
+	background-color: #366f42;
+	color: #fff;
+}
+
+.uespD2ItemTypeRare {
+	background-color: #5076a3;
+	color: #fff;
+}
+
+.uespD2ItemTypeLegendary {
+	background-color: #522f65;
+	color: #fff;
+}
+
+.uespD2ItemTypeExotic {
+	background-color: #ceaf33;
+	color: #fff;
+}
+
+.uespD2StatRow {
+	width: 100%;
+	padding: 2px;
+}
+
+.uespD2StatName {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	margin-right: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.uespD2StatValueRoot {
+	display: inline-block;
+	border: 2px solid #eee;
+	height: 10px;
+}
+
+.uespD2StatValue {
+	display: inline-block;
+	background-color: #eee;
+	height: 100%;
+}
+
+.uespD2StatValueText {
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.uespD2HorizRule {
+	border: 1px inset #999;
+}
+
+.uespD2SocketRow {
+	width: 100%;
+}
+
+.uespD2SocketName {
+	font-weight: bold;
+}
+
+.uespD2SocketDesc {
+	font-size: 11px;
+	margin-bottom: 5px;
+	margin-left: 25px;
+	color: #ddd;
+}

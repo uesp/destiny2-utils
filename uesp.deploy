@@ -1,0 +1,11 @@
+#
+
+name = destiny2.utils
+staged = true
+
+ignore = .hg*
+ignore = .git*
+ignore = *.deploy
+ignore = *.log
+
+dest = content3.uesp.net:/home/destiny2/www/
