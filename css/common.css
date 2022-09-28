@@ -1,0 +1,40 @@
+body {
+	background-color: #222;
+	color: #ddd;
+	font-family: roboto condensed,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+#uespD2SearchResultsTable {
+	border-spacing: 0;
+}
+
+#uespD2SearchResultsTable tr {
+	margin: 5px;
+}
+
+#uespD2SearchResultsTable tr:hover {
+	background-color: #333;
+}
+
+a {
+	color: #99f;
+	text-decoration: none;
+}
+
+a:visit {
+	color: #f99;
+	text-decoration: none;
+}
+
+.uespD2SearchImage {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: 3px;
+}
+
+.uespD2SearchDescription {
+	font-size: 12px;
+	display: inline;
+}

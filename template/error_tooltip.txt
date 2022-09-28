@@ -1,14 +1,13 @@
 <div id="uespDestiny2TooltipRoot">
-	<div id="uespD2TooltipTitleRoot" class="uespD2TooltipTitleRoot">
-		<div id="uespD2TooltipTitle">Error: Unknown {type} Found!</div>
+	<div id="uespD2TooltipTitleRoot" class="uespD2TooltipTitleRoot uespD2ItemTypeError">
+		<div id="uespD2TooltipTitle"> Unknown {type}</div>
 		<div id="uespD2TooltipSubTitle">#{id}</div>
 	</div>
 	<div id="uespD2TooltipBody">
-		<div id="uespD2TooltipRequires"></div>
-		<div id="uespD2TooltipMainStat"></div>
+		Could not find any data for the specified {lowertype}!
 		<div id="uespD2TooltipStats">
 		</div>
-		<div id="uespD2TooltipPerks">
+		<div id="uespD2TooltipSockets">
 		</div>
 		<div id="uespD2TooltipFooter">
 		</div>

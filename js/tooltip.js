@@ -129,11 +129,10 @@ window.AdjustUespDestiny2TooltipPosition = function(tooltip, parent)
 		left = left - viewportTooltip.left + 10;
 		tooltip.offset({ top: top, left: left });
 	}
-
 }
 
 
-window.HideUespDenstiny2Tooltip = function()
+window.HideUespDestiny2Tooltip = function()
 {
 	UespD2Tooltip_Visible = false;
 	
@@ -143,7 +142,7 @@ window.HideUespDenstiny2Tooltip = function()
 }
 
 
-window.OnUespDenstiny2TooltipEnter = function()
+window.OnUespDestiny2TooltipEnter = function()
 {
 	var $this = $(this);
 	UespD2Tooltip_LastElement = $this;
@@ -152,13 +151,25 @@ window.OnUespDenstiny2TooltipEnter = function()
 }
 
 
-window.OnUespDenstiny2TooltipLeave = function()
+window.OnUespDestiny2TooltipLeave = function()
 {
 	UespD2Tooltip_LastElement = null;
-	HideUespDenstiny2Tooltip();
+	HideUespDestiny2Tooltip();
+}
+
+
+window.UpdateUespDestinyLinks = function()
+{
+	$('.uespDestiny2Toolip').each(function() {
+		var $this = $(this);
+		var itemid = $this.attr("itemid");
+		
+		if (itemid) $this.attr("href", "https://light.gg/db/items/" + parseInt(itemid) + "/");
+	});
 }
 
 
 $( document ).ready(function() {
-	$('.uespDestiny2Toolip').hover(OnUespDenstiny2TooltipEnter, OnUespDenstiny2TooltipLeave);
+	$('.uespDestiny2Toolip').hover(OnUespDestiny2TooltipEnter, OnUespDestiny2TooltipLeave);
+	UpdateUespDestinyLinks();
 });

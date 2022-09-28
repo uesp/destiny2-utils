@@ -192,6 +192,10 @@ class CUespDestiny2DbUpdater
 				$createQuery = str_replace(');', " , \nPRIMARY KEY idx_key(`key`(100))\n);", $createQuery);
 			}
 			
+				// Add our own name index
+			//$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nINDEX idx_name(`name`(64))\n);", $createQuery);
+			$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nFULLTEXT(`name`)\n);", $createQuery);
+			
 			//print("$createQuery");
 			
 			$mysqlCreate = $this->db->query($createQuery);
@@ -203,13 +207,20 @@ class CUespDestiny2DbUpdater
 				continue;
 			}
 			
-			
 			$selectQuery = $sqliteDb->query("SELECT * FROM $table;");
 			
 			while ($row = $selectQuery->fetchArray(SQLITE3_ASSOC)) 
 			{
 				$values = [];
 				$cols = [];
+				
+				$json = $row['json'];
+				$name = "";
+				$nameMatch = preg_match('/"name":"([^"]*)"/', $json, $matches);
+				if ($nameMatch) $name = $matches[1];
+				
+				$cols[] = 'name';
+				$values[] = "'" . $this->db->real_escape_string($name) . "'";
 				
 				foreach ($row as $col => $value)
 				{

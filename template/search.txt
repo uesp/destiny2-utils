@@ -1,24 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>UESP: Destiny 2 Tooltip Test</title>
+		<title>UESP: Destiny 2 Search</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="//destiny2.uesp.net/css/common.css" />
 		<link rel="stylesheet" href="//destiny2.uesp.net/css/tooltip.css" />
 		<script type="text/javascript" src="//esolog-static.uesp.net/resources/jquery-1.10.2.js"></script>
 		<script src='//esolog-static.uesp.net/resources/jquery.ui.touch-punch.min.js?version=28Mar2017'></script>
+		<script src='//destiny2.uesp.net/js/search.js'></script>
 		<script src='//destiny2.uesp.net/js/tooltip.js'></script>
 	</head>
 <body>
 
-<h2>UESP: Destiny 2 Tooltip Test</h2>
+<h2>UESP: Destiny 2 Search</h2>
+This currently only searches item data.
+<p>
+<form>
+<input type="text" value="{searchText}" name="search">
+<input type="submit" value="Search...">
+</form>
 
-
-<ul>
-	<li>Error: <div class="uespDestiny2Toolip">Nothing</div>
-	<li>Item: <div class="uespDestiny2Toolip" itemid="2816212794">Bad Juju</div>
-	<li>Item Link: <a class="uespDestiny2Toolip" itemid="2816212794">Bad Juju</a>
-</ul>
-
+<br/>
+{searchResults}
 
 </body>
 </html>

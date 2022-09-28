@@ -9,8 +9,8 @@
 			{stats}
 		</div>
 		<hr class="uespD2HorizRule" />
-		<div id="uespD2TooltipPerks">
-			{perks}
+		<div id="uespD2TooltipSockets">
+			{sockets}
 		</div>
 		<div id="uespD2TooltipFooter">
 		</div>

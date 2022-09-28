@@ -10,6 +10,21 @@ class CUespDestiny2Tooltips
 	const ITEM_TEMPLATE = "./template/item_tooltip.txt";
 	const BASE_IMAGE_URL = 'https://www.bungie.net';
 	
+	const IGNORE_STAT_NAMES = [
+			"Inventory Size" => true,
+	];
+	
+	const VALUE_DISPLAY_STATS = [
+			"Rounds Per Minute" => true,
+			"Magazine" => true,
+	];
+	
+	const IGNORE_SOCKET_NAMES = [
+			'Default Ornament' => true,
+			'Tracker Disabled' => true,
+			'Empty Catalyst Socket' => true,
+	];
+	
 	protected $db = null;
 	
 	protected $inputParams = [];
@@ -72,12 +87,12 @@ class CUespDestiny2Tooltips
 	protected function GetJsonData($json, $key1, $key2 = null, $default = null)
 	{
 		$value = $json[$key1];
-		if ($value == null) return $default !== null ? $default : "Unknown $key1";
+		if ($value === null) return $default !== null ? $default : "Unknown $key1";
 		
 		if ($key2)
 		{
 			$value = $value[$key2];
-			if ($value == null) return $default !== null ? $default : "Unknown $key2";
+			if ($value === null) return $default !== null ? $default : "Unknown $key2";
 		}
 		
 		return $value;
@@ -129,6 +144,32 @@ class CUespDestiny2Tooltips
 	}
 	
 	
+	protected function SetSocketTypes(&$itemData)
+	{
+		if ($this->GetJsonData($itemData, "sockets", "socketEntries") == null) return false;
+		$sockets = &$itemData['sockets']['socketEntries'];
+		
+		$socketCategories = $this->GetJsonData($itemData, "sockets", "socketCategories");
+		
+		foreach ($socketCategories as $category => $socketCategory)
+		{
+			$socketIndexes = $socketCategory['socketIndexes'];
+			if ($socketIndexes == null) continue;
+			
+			foreach($socketIndexes as $index)
+			{
+				if ($sockets[$index] != null)
+				{
+					$sockets[$index]['socketCategory'] = $category;
+					$sockets[$index]['socketCategoryName'] = $socketCategory['name'];
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+	
 	protected function LoadItem($itemId)
 	{
 		$itemId = intval($itemId);
@@ -142,6 +183,9 @@ class CUespDestiny2Tooltips
 		
 		$this->LoadRelatedData($itemData, "stats", "stats", "statHash", "Stat");
 		$this->LoadRelatedData($itemData, "sockets", "socketEntries", "singleInitialItemHash", "InventoryItem");
+		$this->LoadRelatedData($itemData, "sockets", "socketCategories", "socketCategoryHash", "SocketCategory");
+		
+		$this->SetSocketTypes($itemData);
 		
 		return $itemData;
 	}
@@ -154,7 +198,9 @@ class CUespDestiny2Tooltips
 		$min = intval($statData['minimum']);
 		$max = intval($statData['displayMaximum']);
 		
-		if ($value <= 0) return "";
+		if (!$this->ShouldDisplayStat($statData)) return "";
+		
+		if ($this->IsValueDisplayStat($statData)) return "";
 		
 		$origValue = $value;
 		$value = $value * 2;
@@ -172,15 +218,85 @@ class CUespDestiny2Tooltips
 	}
 	
 	
+	protected function MakeStatValueHtml($statData)
+	{
+		$name = $this->EscapeHtml($statData['name']);
+		$value = intval($statData['value']);
+		$min = intval($statData['minimum']);
+		$max = intval($statData['displayMaximum']);
+		
+		if (!$this->ShouldDisplayStat($statData)) return "";
+		if (!$this->IsValueDisplayStat($statData)) return "";
+		
+		$origValue = $value;
+		$value = $value * 2;
+		$max = $max * 2;
+		if ($max > 200) $max = 200;
+		if ($value > $max) $value = $max;
+		
+		$output = "<div class=\"uespD2StatRow\">";
+		$output .= "<div class=\"uespD2StatName\">$name</div>";
+		$output .= "<div class=\"uespD2StatValueText\">$origValue</div>";
+		
+		$output .= "</div>\n";
+		return $output;
+	}
+	
+	
+	protected function IsValueDisplayStat($statData)
+	{
+		$name = $statData['name'];
+		
+		if (self::VALUE_DISPLAY_STATS[$name]) return true;
+		
+		return false;
+	}
+	
+	
+	protected function ShouldDisplayStat($statData)
+	{
+		$name = $statData['name'];
+		$value = intval($statData['value']);
+		
+		if ($value <= 0) return false;
+		if ($name == null || $name == "") return false;
+		if (self::IGNORE_STAT_NAMES[$name]) return false;
+		
+		return true;
+	}
+	
+	
+	protected function ShouldDisplaySocket($socketData)
+	{
+		if ($socketData['defaultVisible'] == false) return false;
+		
+		$name = $socketData['name'];
+		
+		if ($name == null || $name == "") return false;
+		if (self::IGNORE_SOCKET_NAMES[$name]) return false;
+		
+		return true;
+	}
+	
+	
 	protected function MakeSocketHtml($socketData)
 	{
+		$socketCategory = $socketData['socketCategoryName'];
+		//$name = $this->EscapeHtml($socketData['name'] . " ($socketCategory)");
 		$name = $this->EscapeHtml($socketData['name']);
 		$desc = $this->EscapeHtml($socketData['description']);
+		$icon = $socketData['icon'];
 		
-		if ($socketData['defaultVisible'] == false) return "";
-		if ($name == "") return "";
+		if (!$this->ShouldDisplaySocket($socketData)) return "";
 		
 		$output = "<div class=\"uespD2SocketRow\">";
+		
+		if ($icon) 
+		{
+			$iconUrl = self::BASE_IMAGE_URL . $icon;
+			$output .= "<div class=\"uespD2SocketIcon\"><img src=\"$iconUrl\"></div>";
+		}
+		
 		$output .= "<div class=\"uespD2SocketName\">$name</div>";
 		$output .= "<div class=\"uespD2SocketDesc\">$desc</div>";
 		$output .= "</div>\n";
@@ -195,7 +311,7 @@ class CUespDestiny2Tooltips
 		
 		$name = $this->GetJsonData($itemData, 'displayProperties', 'name'); 
 		$icon = $this->GetJsonData($itemData, 'displayProperties', 'icon', '');
-		$iconWatermark = $this->GetJsonData($itemData, 'iconWatermark');
+		$iconWatermark = $this->GetJsonData($itemData, 'iconWatermark', null, '');
 		$itemType = $this->GetJsonData($itemData, 'itemTypeDisplayName');
 		$tierType = $this->GetJsonData($itemData, 'inventory', 'tierType');
 		$tierTypeName = $this->GetJsonData($itemData, 'inventory', 'tierTypeName');
@@ -207,14 +323,22 @@ class CUespDestiny2Tooltips
 		{
 			$imageUrl = self::BASE_IMAGE_URL . $icon; 
 			$imageHtml = "<img src=\"$imageUrl\">";
+			
+			if ($iconWatermark != "") 
+			{
+				$waterImageUrl = self::BASE_IMAGE_URL . $iconWatermark;
+				$imageHtml .= "<img src=\"$waterImageUrl\">";
+			}
 		}
 		
 		$stats = $this->GetJsonData($itemData, 'stats', 'stats', []);
 		$statsHtml = "";
+		$statValuesHtml = "";
 		
 		foreach ($stats as $statId => $stat)
 		{
 			$statsHtml .= $this->MakeStatHtml($stat);
+			$statValuesHtml .= $this->MakeStatValueHtml($stat);
 		}
 		
 		$sockets = $this->GetJsonData($itemData, 'sockets', 'socketEntries', []);
@@ -230,8 +354,8 @@ class CUespDestiny2Tooltips
 				'{title}' => $this->EscapeHtml($name),
 				'{subtitle}' => $this->EscapeHtml($itemType),
 				'{image}' => $imageHtml,
-				'{stats}' => $statsHtml,
-				'{perks}' => $socketsHtml,
+				'{stats}' => $statsHtml . $statValuesHtml,
+				'{sockets}' => $socketsHtml,
 		);
 		
 		$template = file_get_contents(self::ITEM_TEMPLATE);
@@ -243,10 +367,11 @@ class CUespDestiny2Tooltips
 	}
 	
 	
-	protected function ShowErrorTooltip($type = "None", $id = "0")
+	protected function ShowErrorTooltip($type = "Type", $id = "?")
 	{
 		$replacePairs = array(
 				'{type}' => $this->EscapeHtml($type),
+				'{lowertype}' => $this->EscapeHtml(strtolower($type)),
 				'{id}' => $this->EscapeHtml($id),
 		);
 		
