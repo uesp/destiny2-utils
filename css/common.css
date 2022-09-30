@@ -17,6 +17,15 @@ body {
 	background-color: #333;
 }
 
+#uespD2SearchResultsTable tr td:nth-child(3),
+#uespD2SearchResultsTable tr td:nth-child(4),
+#uespD2SearchResultsTable tr td:nth-child(5),
+#uespD2SearchResultsTable tr td:nth-child(6) {
+	text-align: center;
+	font-size: 12px;
+	padding: 3px;
+}
+
 a {
 	color: #99f;
 	text-decoration: none;
@@ -35,6 +44,14 @@ a:visit {
 }
 
 .uespD2SearchDescription {
-	font-size: 12px;
-	display: inline;
+	font-size: 11px;
+	/* display: inline; */
+}
+
+a.uespDestiny2Toolip {
+	font-weight: bold;
+}
+
+#uespD2SearchResultsTable tr td:nth-child(3) {
+	text-align: center;
 }

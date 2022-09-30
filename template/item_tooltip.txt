@@ -8,7 +8,6 @@
 		<div id="uespD2TooltipStats">
 			{stats}
 		</div>
-		<hr class="uespD2HorizRule" />
 		<div id="uespD2TooltipSockets">
 			{sockets}
 		</div>

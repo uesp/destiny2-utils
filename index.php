@@ -12,6 +12,10 @@ class CUespDestiny2Search
 	protected $inputParams = [];
 	protected $searchText = "";
 	protected $searchResults = [];
+	protected $classData = [];
+	protected $equipSlotData = [];
+	
+	protected $onlyShowEquippable = false;	// This hides skills and other things
 	
 	
 	public function __construct()
@@ -51,6 +55,33 @@ class CUespDestiny2Search
 		header("Pragma: no-cache");
 		header("Access-Control-Allow-Origin: *");
 		header("content-type: text/html");
+	}
+	
+	
+	protected function LoadData($table, $indexField = null)
+	{
+		$table = $this->MakeAlphaNum($table);
+		$query = "SELECT * FROM `$table`";
+		$result = $this->db->query($query);
+		if ($result === false) return [];
+		
+		$data = [];
+		
+		while ($row = $result->fetch_assoc())
+		{
+			$id = intval($row['id']);
+			
+			if ($indexField != null)
+			{
+				$json = json_decode($row['json'], true);
+				$id1 = $this->GetJsonData($json, $indexField, null, false);
+				if ($id1 !== false) $id = $id1;
+			}
+			
+			$data[$id] = $row;
+		}
+		
+		return $data;
 	}
 	
 	
@@ -102,10 +133,10 @@ class CUespDestiny2Search
 		{
 			$id = intval($result['id']);
 			$name = $this->EscapeHtml($result['name']);
-			$itemData = json_decode($result['json'], true);
+			$itemData = $result['data'];
 			
 			$desc = $this->EscapeHtml($this->GetJsonData($itemData, 'displayProperties', 'description', ''));
-			if ($desc) $desc = " -- " . $desc;
+			//if ($desc) $desc = " -- " . $desc;
 			
 			$icon = $this->EscapeAttr($this->GetJsonData($itemData, 'displayProperties', 'icon', ''));
 			$waterIcon = $this->EscapeAttr($this->GetJsonData($itemData, 'iconWatermark', null, ''));
@@ -119,15 +150,24 @@ class CUespDestiny2Search
 			$tierTypeName = $this->GetJsonData($itemData, 'inventory', 'tierTypeName', '');
 			$textClass = 'uespD2ItemTypeText' .$this->MakeAlphaNum($tierTypeName);
 			
-			$classType = $this->EscapeAttr($this->GetJsonData($itemData, 'classType', null, ''));
+			$classType = intval($this->GetJsonData($itemData, 'classType', null, ''));
+			$classTypeName = "";
+			if ($this->classData[$classType]) $classTypeName = $this->classData[$classType]['name'];
+			if ($classTypeName == null) $classTypeName = "";
+			
+			$equipSlotTypeHash = intval($this->GetJsonData($itemData, 'equippingBlock', 'equipmentSlotTypeHash', 0));
+			$equipSlotType = "";
+			if ($this->equipSlotData[$equipSlotTypeHash]) $equipSlotType = $this->equipSlotData[$equipSlotTypeHash]['name'];
+			if ($equipSlotType == null) $equipSlotType = "";
+			
 			$itemType = $this->EscapeAttr($this->GetJsonData($itemData, 'itemTypeDisplayName'));
 			
 			$output .= "<tr>";
 			$output .= "<td><a href=\"https://light.gg/db/items/$id/\" itemid=\"$id\" class=\"uespDestiny2Toolip $textClass\">$imageHtml</a></td>";
 			$output .= "<td><a href=\"https://light.gg/db/items/$id/\" itemid=\"$id\" class=\"uespDestiny2Toolip $textClass\">$name</a><div class=\"uespD2SearchDescription\">$desc</div></td>";
-			$output .= "<td></td>";
+			$output .= "<td>$classTypeName</td>";
 			$output .= "<td>$tierTypeName</td>";
-			$output .= "<td></td>";
+			$output .= "<td>$equipSlotType</td>";
 			$output .= "<td>$itemType</td>";
 			$output .= "</tr>\n";
 		}
@@ -155,6 +195,9 @@ class CUespDestiny2Search
 	
 	protected function DoSearch()
 	{
+		$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
+		$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
+		
 		$safeName = preg_replace('/[*+\-@<>()"~]/', '', $this->searchText);
 		$safeName = $this->db->real_escape_string($safeName);
 		$query = "SELECT * FROM DestinyInventoryItemDefinition WHERE MATCH(name) AGAINST('$safeName*' IN BOOLEAN MODE) ORDER BY name;";
@@ -167,6 +210,13 @@ class CUespDestiny2Search
 		
 		while ($row = $result->fetch_assoc())
 		{
+			$row['data'] = json_decode($row['json'], true);
+			
+			if ($this->onlyShowEquippable)
+			{
+				if (!$this->GetJsonData($row['data'], 'equippable', null, false)) continue;
+			}
+			
 			$this->searchResults[] = $row;
 		}
 		

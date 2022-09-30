@@ -1,4 +1,8 @@
 <?php
+/*
+ * TODO
+ * 		- Tier Names: Exotic, Legendary, Rare, Common, Basic
+ */
 
 
 require_once("/home/uesp/secrets/destiny2.secrets");
@@ -20,15 +24,23 @@ class CUespDestiny2Tooltips
 	];
 	
 	const IGNORE_SOCKET_NAMES = [
+			'Default Effect' => true,
 			'Default Ornament' => true,
+			'Default Shader' => true,
 			'Tracker Disabled' => true,
+			'Empty Aspect Socket' => true,
 			'Empty Catalyst Socket' => true,
+			'Empty Fragment Socket' => true,
+			'Empty Mod Socket' => true,
 	];
 	
 	protected $db = null;
 	
 	protected $inputParams = [];
 	protected $itemId = 0;
+	
+	protected $classData = [];
+	protected $equipSlotData = [];
 	
 	
 	public function __construct()
@@ -96,6 +108,33 @@ class CUespDestiny2Tooltips
 		}
 		
 		return $value;
+	}
+	
+	
+	protected function LoadData($table, $indexField = null)
+	{
+		$table = $this->MakeAlphaNum($table);
+		$query = "SELECT * FROM `$table`";
+		$result = $this->db->query($query);
+		if ($result === false) return [];
+		
+		$data = [];
+		
+		while ($row = $result->fetch_assoc())
+		{
+			$id = intval($row['id']);
+			
+			if ($indexField != null)
+			{
+				$json = json_decode($row['json'], true);
+				$id1 = $this->GetJsonData($json, $indexField, null, false);
+				if ($id1 !== false) $id = $id1;
+			}
+			
+			$data[$id] = $row;
+		}
+		
+		return $data;
 	}
 	
 	
@@ -260,6 +299,9 @@ class CUespDestiny2Tooltips
 		
 		if ($value <= 0) return false;
 		if ($name == null || $name == "") return false;
+		
+		if (preg_match('/Deprecated/i', $name)) return false;
+		
 		if (self::IGNORE_STAT_NAMES[$name]) return false;
 		
 		return true;
@@ -271,8 +313,13 @@ class CUespDestiny2Tooltips
 		if ($socketData['defaultVisible'] == false) return false;
 		
 		$name = $socketData['name'];
+		$desc = $socketData['description'];
 		
 		if ($name == null || $name == "") return false;
+		
+		if (preg_match('/deprecated/i', $name)) return false;
+		if ($desc && preg_match('/deprecated/i', $desc)) return false;
+		
 		if (self::IGNORE_SOCKET_NAMES[$name]) return false;
 		
 		return true;
@@ -291,7 +338,7 @@ class CUespDestiny2Tooltips
 		
 		$output = "<div class=\"uespD2SocketRow\">";
 		
-		if ($icon) 
+		if ($icon)
 		{
 			$iconUrl = self::BASE_IMAGE_URL . $icon;
 			$output .= "<div class=\"uespD2SocketIcon\"><img src=\"$iconUrl\"></div>";
@@ -306,16 +353,30 @@ class CUespDestiny2Tooltips
 	
 	protected function ShowItemTooltip()
 	{
+		$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
+		$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
+		
 		$itemData = $this->LoadItem($this->itemId);
 		if ($itemData === false) return $this->ShowErrorTooltip("Item", $this->itemId);
 		
 		$name = $this->GetJsonData($itemData, 'displayProperties', 'name'); 
+		$desc = $this->GetJsonData($itemData, 'displayProperties', 'description');
 		$icon = $this->GetJsonData($itemData, 'displayProperties', 'icon', '');
 		$iconWatermark = $this->GetJsonData($itemData, 'iconWatermark', null, '');
 		$itemType = $this->GetJsonData($itemData, 'itemTypeDisplayName');
 		$tierType = $this->GetJsonData($itemData, 'inventory', 'tierType');
 		$tierTypeName = $this->GetJsonData($itemData, 'inventory', 'tierTypeName');
 		$flavorText = $this->GetJsonData($itemData, 'flavorText');
+		
+		$classType = intval($this->GetJsonData($itemData, 'classType', null, ''));
+		$classTypeName = "";
+		if ($this->classData[$classType]) $classTypeName = $this->classData[$classType]['name'];
+		if ($classTypeName == null) $classTypeName = "";
+		
+		$equipSlotTypeHash = intval($this->GetJsonData($itemData, 'equippingBlock', 'equipmentSlotTypeHash', 0));
+		$equipSlotType = "";
+		if ($this->equipSlotData[$equipSlotTypeHash]) $equipSlotType = $this->equipSlotData[$equipSlotTypeHash]['name'];
+		if ($equipSlotType == null) $equipSlotType = "";
 		
 		$imageHtml = "";
 		
@@ -349,10 +410,24 @@ class CUespDestiny2Tooltips
 			$socketsHtml .= $this->MakeSocketHtml($socket);
 		}
 		
+		if ($statsHtml == "" && $statValuesHtml == "")
+		{
+			$statsHtml = "<div class=\"uespD2TooltipStatsDesc\">" . $this->EscapeHtml($desc) . "</div>";
+		}
+		
+		if (($statsHtml != "" || $statValuesHtml != "") && $socketsHtml != "") 
+		{
+			$statValuesHtml .= '<hr class="uespD2HorizRule" />';
+		}
+		
+		$itemSubtitle = $itemType;
+		if ($classTypeName) $itemSubtitle = $classTypeName . " " . $itemSubtitle;
+		if ($tierTypeName) $itemSubtitle = $tierTypeName . " " . $itemSubtitle;
+		
 		$replacePairs = array(
 				'{titleClass}' => 'uespD2ItemType' . $this->MakeAlphaNum($tierTypeName),
 				'{title}' => $this->EscapeHtml($name),
-				'{subtitle}' => $this->EscapeHtml($itemType),
+				'{subtitle}' => $this->EscapeHtml($itemSubtitle),
 				'{image}' => $imageHtml,
 				'{stats}' => $statsHtml . $statValuesHtml,
 				'{sockets}' => $socketsHtml,
