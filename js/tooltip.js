@@ -13,7 +13,7 @@ window.CreateUespDestiny2Tooltip = function()
 }
 
 
-window.ShowUespDestiny2Tooltip = function (parent, itemId)
+window.ShowUespDestiny2Tooltip = function (parent, itemId, itemIcon, collectibleId)
 {
 	UespD2Tooltip_LastElement = parent;
 	
@@ -22,19 +22,29 @@ window.ShowUespDestiny2Tooltip = function (parent, itemId)
 	var cacheId = "";
 	
 	if (itemId) { linkSrc += "&item=" + itemId; dataOk = true; }
+	if (collectibleId) { linkSrc += "&collectible=" + collectibleId; dataOk = true; }
+	if (itemIcon) { linkSrc += "&icon=" + itemIcon; dataOk = true; }
 	
 	//if (!dataOk) return false;
 	
 	if (UespD2TooltipElement == null) CreateUespDestiny2Tooltip();
 	
-	var position = $(parent).offset();
-	var width = $(parent).width();
+	var position = jQuery(parent).offset();
+	var width = jQuery(parent).width();
 	UespD2TooltipElement.css({ top: position.top-50, left: position.left + width });
 	UespD2Tooltip_Visible = true;
 	
-	if (itemId) 
+	if (itemId)
 	{
 		cacheId = itemId.toString();
+	}
+	else if (collectibleId)
+	{
+		cacheId = collectibleId.toString();
+	}
+	else if (itemIcon)
+	{
+		cacheId = itemIcon.toString();
 	}
 	
 	UespD2Tooltip_CacheId = cacheId;
@@ -147,7 +157,7 @@ window.OnUespDestiny2TooltipEnter = function()
 	var $this = $(this);
 	UespD2Tooltip_LastElement = $this;
 	
-	ShowUespDestiny2Tooltip(UespD2Tooltip_LastElement, $this.attr('itemid'));
+	ShowUespDestiny2Tooltip(UespD2Tooltip_LastElement, $this.attr('itemid'), $this.attr('itemicon'), $this.attr('collectibleid'));
 }
 
 

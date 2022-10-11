@@ -195,6 +195,7 @@ class CUespDestiny2DbUpdater
 				// Add our own name index
 			//$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nINDEX idx_name(`name`(64))\n);", $createQuery);
 			$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nFULLTEXT(`name`)\n);", $createQuery);
+			$createQuery = str_replace(');', " , icon TINYTEXT NOT NULL, \nINDEX idx_icon(icon(64))\n);", $createQuery);
 			
 			//print("$createQuery");
 			
@@ -215,12 +216,20 @@ class CUespDestiny2DbUpdater
 				$cols = [];
 				
 				$json = $row['json'];
+				
 				$name = "";
 				$nameMatch = preg_match('/"name":"([^"]*)"/', $json, $matches);
 				if ($nameMatch) $name = $matches[1];
 				
+				$icon = "";
+				$iconMatch = preg_match('/"icon":"([^"]*)"/', $json, $matches);
+				if ($iconMatch) $icon = str_replace('/common/destiny2_content/icons/', '', $matches[1]);
+				
 				$cols[] = 'name';
 				$values[] = "'" . $this->db->real_escape_string($name) . "'";
+				
+				$cols[] = 'icon';
+				$values[] = "'" . $this->db->real_escape_string($icon) . "'";
 				
 				foreach ($row as $col => $value)
 				{

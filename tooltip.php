@@ -31,6 +31,10 @@ class CUespDestiny2Tooltips
 			'Empty Aspect Socket' => true,
 			'Empty Catalyst Socket' => true,
 			'Empty Fragment Socket' => true,
+			'Empty Tubes Socket' => true,
+			'Empty Magazines Socket' => true,
+			'Empty Traits Socket' => true,
+			'Empty Memento Socket' => true,
 			'Empty Mod Socket' => true,
 	];
 	
@@ -38,6 +42,8 @@ class CUespDestiny2Tooltips
 	
 	protected $inputParams = [];
 	protected $itemId = 0;
+	protected $itemIcon = "";
+	protected $collectibleId = 0;
 	
 	protected $classData = [];
 	protected $equipSlotData = [];
@@ -67,6 +73,8 @@ class CUespDestiny2Tooltips
 		$this->inputParams = $_REQUEST;
 		
 		if (array_key_exists('item', $this->inputParams)) $this->itemId = intval($this->inputParams['item']);
+		if (array_key_exists('collectible', $this->inputParams)) $this->collectibleId = intval($this->inputParams['collectible']);
+		if (array_key_exists('icon', $this->inputParams)) $this->itemIcon = $this->inputParams['icon'];
 	}
 	
 	
@@ -159,8 +167,15 @@ class CUespDestiny2Tooltips
 		$records1 = &$itemData[$key1];
 		if ($records1 == null) return false;
 		
-		$records2 = &$records1[$key2];
-		if ($records2 == null) return false;
+		if ($key2 != null)
+		{
+			$records2 = &$records1[$key2];
+			if ($records2 == null) return false;
+		}
+		else
+		{
+			$records2 = &$records1;
+		}
 		
 		foreach ($records2 as $id => &$record)
 		{
@@ -223,6 +238,77 @@ class CUespDestiny2Tooltips
 		$this->LoadRelatedData($itemData, "stats", "stats", "statHash", "Stat");
 		$this->LoadRelatedData($itemData, "sockets", "socketEntries", "singleInitialItemHash", "InventoryItem");
 		$this->LoadRelatedData($itemData, "sockets", "socketCategories", "socketCategoryHash", "SocketCategory");
+		$this->LoadRelatedData($itemData, "perks", null, "perkHash", "SandboxPerk");
+		
+		$this->SetSocketTypes($itemData);
+		
+		return $itemData;
+	}
+	
+	
+	protected function LoadCollectible($collectibleId)
+	{
+		$collectibleId = intval($collectibleId);
+		
+		$result = $this->db->query("SELECT * FROM DestinyCollectibleDefinition WHERE id='$collectibleId';");
+		if ($result === false) return false;
+		if ($result->num_rows <= 0) return false;
+		
+		$json = $result->fetch_assoc()['json'];
+		$collectibleData = json_decode($json, true);
+		
+		$itemId = $collectibleData['itemHash'];
+		if ($itemId == null) return false;
+		
+		$this->itemId = intval($itemId);
+		
+		$itemData = $this->LoadItem($itemId);
+		if ($itemData === false) return false;
+		
+		$itemData['displayProperties']['origIcon'] = $itemData['displayProperties']['icon'];
+		$itemData['displayProperties']['icon'] = $collectibleData['displayProperties']['icon'];
+		
+		return $itemData;
+	}
+	
+	
+	protected function LoadItemIcon($itemIcon)
+	{
+		$safeIcon = $this->db->real_escape_string($itemIcon);
+		
+		$result = $this->db->query("SELECT * FROM DestinyInventoryItemDefinition WHERE icon='$safeIcon';");
+		if ($result === false) return false;
+		
+		if ($result->num_rows <= 0)
+		{
+			$result = $this->db->query("SELECT * FROM DestinyCollectibleDefinition WHERE icon='$safeIcon';");
+			if ($result === false) return false;
+			if ($result->num_rows <= 0) return false;
+			
+			$json = $result->fetch_assoc()['json'];
+			$collectibleData = json_decode($json, true);
+			
+			$itemId = $collectibleData['itemHash'];
+			if ($itemId == null) return false;
+			
+			$this->itemId = intval($itemId);
+			
+			$itemData = $this->LoadItem($itemId);
+			if ($itemData === false) return false;
+			
+			$itemData['displayProperties']['origIcon'] = $itemData['displayProperties']['icon'];
+			$itemData['displayProperties']['icon'] = $collectibleData['displayProperties']['icon'];
+			
+			return $itemData;
+		}
+		
+		$json = $result->fetch_assoc()['json'];
+		$itemData = json_decode($json, true);
+		
+		$this->LoadRelatedData($itemData, "stats", "stats", "statHash", "Stat");
+		$this->LoadRelatedData($itemData, "sockets", "socketEntries", "singleInitialItemHash", "InventoryItem");
+		$this->LoadRelatedData($itemData, "sockets", "socketCategories", "socketCategoryHash", "SocketCategory");
+		$this->LoadRelatedData($itemData, "perks", null, "perkHash", "SandboxPerk");
 		
 		$this->SetSocketTypes($itemData);
 		
@@ -308,6 +394,21 @@ class CUespDestiny2Tooltips
 	}
 	
 	
+	protected function ShouldDisplayPerk($perkData)
+	{
+		$name = $perkData['name'];
+		$desc = $perkData['description'];
+		
+		if ($name == null || $name == "") return false;
+		if ($desc == null || $desc == "") return false;
+		
+		if (preg_match('/deprecated/i', $name)) return false;
+		if ($desc && preg_match('/deprecated/i', $desc)) return false;
+		
+		return true;
+	}
+	
+	
 	protected function ShouldDisplaySocket($socketData)
 	{
 		if ($socketData['defaultVisible'] == false) return false;
@@ -323,6 +424,29 @@ class CUespDestiny2Tooltips
 		if (self::IGNORE_SOCKET_NAMES[$name]) return false;
 		
 		return true;
+	}
+	
+	
+	protected function MakePerkHtml($perkData)
+	{
+		$name = $this->EscapeHtml($perkData['name']);
+		$desc = $this->EscapeHtml($perkData['description']);
+		$icon = $perkData['icon'];
+		
+		if (!$this->ShouldDisplayPerk($perkData)) return "";
+		
+		$output = "<div class=\"uespD2SocketRow\">";
+		
+		if ($icon)
+		{
+			$iconUrl = self::BASE_IMAGE_URL . $icon;
+			$output .= "<div class=\"uespD2SocketIcon\"><img src=\"$iconUrl\"></div>";
+		}
+		
+		$output .= "<div class=\"uespD2SocketName\">$name</div>";
+		$output .= "<div class=\"uespD2SocketDesc\">$desc</div>";
+		$output .= "</div>\n";
+		return $output;
 	}
 	
 	
@@ -351,13 +475,16 @@ class CUespDestiny2Tooltips
 	}
 	
 	
-	protected function ShowItemTooltip()
+	protected function ShowItemTooltip($itemData = null)
 	{
-		$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
-		$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
-		
-		$itemData = $this->LoadItem($this->itemId);
-		if ($itemData === false) return $this->ShowErrorTooltip("Item", $this->itemId);
+		if ($itemData == null)
+		{
+			$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
+			$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
+			
+			$itemData = $this->LoadItem($this->itemId);
+			if ($itemData === false) return $this->ShowErrorTooltip("Item", $this->itemId);
+		}
 		
 		$name = $this->GetJsonData($itemData, 'displayProperties', 'name'); 
 		$desc = $this->GetJsonData($itemData, 'displayProperties', 'description');
@@ -365,7 +492,7 @@ class CUespDestiny2Tooltips
 		$iconWatermark = $this->GetJsonData($itemData, 'iconWatermark', null, '');
 		$itemType = $this->GetJsonData($itemData, 'itemTypeDisplayName');
 		$tierType = $this->GetJsonData($itemData, 'inventory', 'tierType');
-		$tierTypeName = $this->GetJsonData($itemData, 'inventory', 'tierTypeName');
+		$tierTypeName = $this->GetJsonData($itemData, 'inventory', 'tierTypeName', '');
 		$flavorText = $this->GetJsonData($itemData, 'flavorText');
 		
 		$classType = intval($this->GetJsonData($itemData, 'classType', null, ''));
@@ -410,7 +537,14 @@ class CUespDestiny2Tooltips
 			$socketsHtml .= $this->MakeSocketHtml($socket);
 		}
 		
-		if ($statsHtml == "" && $statValuesHtml == "")
+		$perks = $this->GetJsonData($itemData, 'perks', null, []);
+		
+		foreach ($perks as $perk)
+		{
+			$socketsHtml .= $this->MakePerkHtml($perk);
+		}
+		
+		if ($statsHtml == "" && $statValuesHtml == "" && $desc != "")
 		{
 			$statsHtml = "<div class=\"uespD2TooltipStatsDesc\">" . $this->EscapeHtml($desc) . "</div>";
 		}
@@ -442,6 +576,30 @@ class CUespDestiny2Tooltips
 	}
 	
 	
+	protected function ShowCollectibleTooltip()
+	{
+		$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
+		$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
+		
+		$itemData = $this->LoadCollectible($this->collectibleId);
+		if ($itemData === false) return $this->ShowErrorTooltip("Collectible", $this->collectibleId);
+		
+		return $this->ShowItemTooltip($itemData);
+	}
+	
+	
+	protected function ShowItemIconTooltip()
+	{
+		$this->classData = $this->LoadData('DestinyClassDefinition', 'classType');
+		$this->equipSlotData = $this->LoadData('DestinyEquipmentSlotDefinition');
+		
+		$itemData = $this->LoadItemIcon($this->itemIcon);
+		if ($itemData === false) return $this->ShowErrorTooltip("Item", $this->itemId);
+		
+		return $this->ShowItemTooltip($itemData);
+	}
+	
+	
 	protected function ShowErrorTooltip($type = "Type", $id = "?")
 	{
 		$replacePairs = array(
@@ -466,6 +624,14 @@ class CUespDestiny2Tooltips
 		if ($this->itemId > 0)
 		{
 			return $this->ShowItemTooltip();
+		}
+		else if ($this->collectibleId > 0)
+		{
+			return $this->ShowCollectibleTooltip();
+		}
+		else if ($this->itemIcon != "")
+		{
+			return $this->ShowItemIconTooltip();
 		}
 		else
 		{
