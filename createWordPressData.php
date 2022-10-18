@@ -484,6 +484,27 @@ class CUespDestiny2CreateWPData
 		$energyWeapons = $this->FilterRecords("InventoryItem", "equipSlotName", "Energy Weapons");
 		$powerWeapons = $this->FilterRecords("InventoryItem", "equipSlotName", "Power Weapons");
 		
+		$exoticArmor = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Leg Armor");
+		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Chest Armor");
+		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Helmet");
+		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Gauntlets");
+		
+		$commonArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Charged with Light Mod");
+		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Vault of Glass Armor Mod");
+		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common General Armor Mod");
+		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Armor Mod");
+		
+		$legArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Leg Armor Mod") + $commonArmorMods;
+		$legArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Leg Armor Mod");
+		$armArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Arms Armor Mod") + $commonArmorMods;
+		$armArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Arms Armor Mod");
+		$chestArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Chest Armor Mod") + $commonArmorMods;
+		$chestArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Chest Armor Mod");
+		$headArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Helmet Armor Mod") + $commonArmorMods;
+		$headArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Helmet Armor Mod");
+		$classArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Class Item Armor Mod");
+		$classArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Class Item Mod");
+		
 		print("//-----------------------------------------------------------------------------\n\n");
 		
 		$this->DumpData($superAbilities, "superAbilities", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon']);
@@ -498,6 +519,14 @@ class CUespDestiny2CreateWPData
 		$this->DumpData($kineticWeapons, "kineticWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
 		$this->DumpData($energyWeapons, "energyWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
 		$this->DumpData($powerWeapons, "powerWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		
+		$this->DumpData($exoticArmor, "exoticArmor", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		
+		$this->DumpData($legArmorMods, "LegArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($armArmorMods, "ArmArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($chestArmorMods, "ChestArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($headArmorMods, "HeadArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($classArmorMods, "ClassArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
 		
 		return true;
 	}

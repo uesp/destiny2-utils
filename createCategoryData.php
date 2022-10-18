@@ -28,6 +28,7 @@ class CUespDestiny2CreateCategoryData
 	protected $classData = [];
 	protected $equipSlotData = [];
 	protected $itemCategories = [];
+	protected $tierCategories = [];
 	
 	
 	public function __construct()
@@ -121,6 +122,23 @@ class CUespDestiny2CreateCategoryData
 	}
 	
 	
+	protected function CreateTierCategories()
+	{
+		$this->tierCategories = [];
+		
+		foreach ($this->itemData as &$item)
+		{
+			$itemData = &$item['data'];
+			
+			$tierType = $this->GetJsonData($itemData, 'itemTypeAndTierDisplayName', null, '');
+			
+			$this->tierCategories[$tierType][] = $itemData;
+		}
+		
+		ksort($this->tierCategories);
+	}
+	
+	
 	protected function CreateCategories()
 	{
 		$this->itemCategories = [];
@@ -149,6 +167,18 @@ class CUespDestiny2CreateCategoryData
 			if ($itemTypeName == "") $itemTypeName = "$itemType:$itemTypeSubtype";
 			
 			$this->itemCategories[$itemTypeName][$classTypeName][$equipSlotType][] = $itemData;
+		}
+	}
+	
+	
+	protected function PrintTierCategoryTree()
+	{
+		print("Showing Tier Categories:\n");
+		
+		foreach ($this->tierCategories as $tier => $items)
+		{
+			$count = count($items);
+			print("\t$tier = $count\n");
 		}
 	}
 	
@@ -200,7 +230,9 @@ class CUespDestiny2CreateCategoryData
 		if ($this->itemData === false) die("Error: Failed to load item data!");
 		
 		$this->CreateCategories();
+		$this->CreateTierCategories();
 		$this->PrintCategoryTree();
+		$this->PrintTierCategoryTree();
 		
 		return true;
 	}

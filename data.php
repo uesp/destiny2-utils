@@ -11,6 +11,24 @@
 	//Found 306 InventoryItem records matching equipSlotName is 'Kinetic Weapons' (removed 140 duplicate names)...
 	//Found 426 InventoryItem records matching equipSlotName is 'Energy Weapons' (removed 188 duplicate names)...
 	//Found 179 InventoryItem records matching equipSlotName is 'Power Weapons' (removed 84 duplicate names)...
+	//Found 23 InventoryItem records matching itemTypeAndTierDisplayName is 'Exotic Leg Armor' (removed 14 duplicate names)...
+	//Found 25 InventoryItem records matching itemTypeAndTierDisplayName is 'Exotic Chest Armor' (removed 17 duplicate names)...
+	//Found 27 InventoryItem records matching itemTypeAndTierDisplayName is 'Exotic Helmet' (removed 19 duplicate names)...
+	//Found 36 InventoryItem records matching itemTypeAndTierDisplayName is 'Exotic Gauntlets' (removed 25 duplicate names)...
+	//Found 28 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Charged with Light Mod' (removed 0 duplicate names)...
+	//Found 11 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Vault of Glass Armor Mod' (removed 0 duplicate names)...
+	//Found 15 InventoryItem records matching itemTypeAndTierDisplayName is 'Common General Armor Mod' (removed 0 duplicate names)...
+	//Found 8 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Armor Mod' (removed 11 duplicate names)...
+	//Found 35 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Leg Armor Mod' (removed 1 duplicate names)...
+	//Found 4 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Leg Armor Mod' (removed 0 duplicate names)...
+	//Found 40 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Arms Armor Mod' (removed 1 duplicate names)...
+	//Found 13 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Arms Armor Mod' (removed 0 duplicate names)...
+	//Found 36 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Chest Armor Mod' (removed 0 duplicate names)...
+	//Found 2 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Chest Armor Mod' (removed 0 duplicate names)...
+	//Found 40 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Helmet Armor Mod' (removed 0 duplicate names)...
+	//Found 7 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Helmet Armor Mod' (removed 0 duplicate names)...
+	//Found 14 InventoryItem records matching itemTypeAndTierDisplayName is 'Common Class Item Armor Mod' (removed 0 duplicate names)...
+	//Found 10 InventoryItem records matching itemTypeAndTierDisplayName is 'Legendary Class Item Mod' (removed 0 duplicate names)...
 //-----------------------------------------------------------------------------
 
 const DATA_SUPERABILITIES = array (
@@ -43024,6 +43042,6761 @@ Heavy attacks are stronger with full energy.',
         'icon' => '/common/destiny2_content/icons/b7106e2123d59e57a1547bc006892ebc.png',
         'desc' => 'Hitting three separate targets increases damage for a moderate duration.\\nHitting three separate targets increases damage for a moderate duration.',
       ),
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_EXOTICARMOR = array (
+  2255796155 => 
+  array (
+    'name' => 'Peregrine Greaves',
+    'icon' => '/common/destiny2_content/icons/e190a700d56bedadee4344970e8f2133.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      235075862 => 
+      array (
+        'id' => 235075862,
+        'name' => 'Peregrine Strike',
+        'icon' => '/common/destiny2_content/icons/bd775013989f997f42300026df667077.png',
+        'desc' => 'All shoulder charge abilities (Seismic Strike, Hammer Strike, or Shield Bash) deal bonus damage when activated in the air. Provides a small benefit to the airborne effectiveness stat of all weapons.\\nBonus damage on airborne shoulder charge',
+      ),
+    ),
+  ),
+  2423243921 => 
+  array (
+    'name' => 'Antaeus Wards',
+    'icon' => '/common/destiny2_content/icons/e9f3ca5b7e0853c963102f6d1cb35fb9.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      242794439 => 
+      array (
+        'id' => 242794439,
+        'name' => 'Reflective Vents',
+        'icon' => '/common/destiny2_content/icons/9a68553b389a60865dd984121e25a06a.png',
+        'desc' => 'Improved slide. Sliding after sprinting for a short time reflects incoming projectiles.\\nSliding reflects projectiles.',
+      ),
+    ),
+  ),
+  2808445048 => 
+  array (
+    'name' => 'Geomag Stabilizers',
+    'icon' => '/common/destiny2_content/icons/2a8adaa02a77a82ff8f84d5debdeb529.jpg',
+    'sockets' => 
+    array (
+      1939153390 => 
+      array (
+        'id' => 1939153390,
+        'name' => 'Close Enough',
+        'icon' => '/common/destiny2_content/icons/27e30a85050d67d408e228feebfdee87.png',
+        'desc' => 'Damaging targets with Chaos Reach extends its duration.\\nExtended Chaos Reach.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2954558332 => 
+  array (
+    'name' => 'Lunafaction Boots',
+    'icon' => '/common/destiny2_content/icons/4d1cf89d08b11bd87c8944ecddbbfffe.jpg',
+    'sockets' => 
+    array (
+      3347978672 => 
+      array (
+        'id' => 3347978672,
+        'name' => 'Alchemical Etchings',
+        'icon' => '/common/destiny2_content/icons/a62a58b9fcc42286d16dc2e47ff1310e.png',
+        'desc' => 'Your Rifts gain the additional ability to increase weapon reload speeds. Empowering Rift makes weapons effective over longer ranges.\\nRifts increase weapon reload speed. Empowering Rift increases range.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2954558333 => 
+  array (
+    'name' => 'Transversive Steps',
+    'icon' => '/common/destiny2_content/icons/78874c268891725a68bdcc35432fec9e.jpg',
+    'sockets' => 
+    array (
+      3347978673 => 
+      array (
+        'id' => 3347978673,
+        'name' => 'Strange Protractor',
+        'icon' => '/common/destiny2_content/icons/d2322bbcc6af2f2d9d96bf1c72e9957a.png',
+        'desc' => 'Sprint speed increased. After a short time sprinting, your currently equipped weapon is automatically reloaded.\\nBuffs sprint. Sprinting reloads current weapon.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3045642045 => 
+  array (
+    'name' => 'Boots of the Assembler',
+    'icon' => '/common/destiny2_content/icons/4ec2f5a9ee028c80cb682eff6ca50b5f.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      902934539 => 
+      array (
+        'id' => 902934539,
+        'name' => 'Blessing of Order',
+        'icon' => '/common/destiny2_content/icons/6550bfbd5761c97b7d814bec47b4f760.png',
+        'desc' => 'Standing in a healing rift creates Noble Seekers that seek out allies that are not in a rift and heal them. Standing in an empowering rift creates Noble Seekers that grant both you and your ally a damage bonus. Each time a Noble Seeker finds one of your allies, the duration of your rift is briefly extended while you are standing in it. Provides a moderate benefit to the airborne effectiveness stat of the Hand Cannon Lumina.\\nRifts create beneficial seeker projectiles.',
+      ),
+    ),
+  ),
+  3539357318 => 
+  array (
+    'name' => 'Lion Rampant',
+    'icon' => '/common/destiny2_content/icons/bd9977d2267655736adc7c72a8fb4659.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3241194940 => 
+      array (
+        'id' => 3241194940,
+        'name' => 'Jump Jets',
+        'icon' => '/common/destiny2_content/icons/e6f9a0a69e2a607b94355570bae8ea5f.png',
+        'desc' => 'Provides additional aerial maneuverability and enables accurate hipfire while you\'re in the air during Lift. Provides a large benefit to the airborne effectiveness stat of all weapons while hipfiring.\\nBuffs maneuverability and air hipfire in Lift.',
+      ),
+    ),
+  ),
+  3539357319 => 
+  array (
+    'name' => 'Peacekeepers',
+    'icon' => '/common/destiny2_content/icons/592dc38dd7a785ad28e83236559fc6ea.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3241194941 => 
+      array (
+        'id' => 3241194941,
+        'name' => 'Mecha Holster',
+        'icon' => '/common/destiny2_content/icons/83d30cd7f8966bed099cf582f2a771b6.png',
+        'desc' => 'Reloads stowed Submachine Guns and allows you to ready them instantly. Improves your handling with Submachine Guns and your movement while wielding one. Provides a moderate benefit to the airborne effectiveness stat of Submachine Guns.\\nReloads stowed SMGs and allows instant ready.',
+      ),
+    ),
+  ),
+  3790373072 => 
+  array (
+    'name' => 'Dunemarchers',
+    'icon' => '/common/destiny2_content/icons/a2e2f285d70d2fe23511278c071666f6.jpg',
+    'sockets' => 
+    array (
+      3241194942 => 
+      array (
+        'id' => 3241194942,
+        'name' => 'Linear Actuators',
+        'icon' => '/common/destiny2_content/icons/0d2662acae48f6edc0e0c06ee2bff4e4.png',
+        'desc' => 'Increases sprint speed. Sprinting builds up a static charge. After melee-attacking an enemy, that charge will chain damage to nearby enemies.\\nFaster sprinting and chain melee damage.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  136355432 => 
+  array (
+    'name' => 'Mk. 44 Stand Asides',
+    'icon' => '/common/destiny2_content/icons/869138d14fc6be5650522b1372739172.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      824488952 => 
+      array (
+        'id' => 824488952,
+        'name' => 'Seriously, Watch Out',
+        'icon' => '/common/destiny2_content/icons/39adcc8fa1b974702d8ac3f9e32a7302.png',
+        'desc' => 'Grants an overshield when you\'re sprinting at full health with Seismic Strike, Hammer Strike, or Shield Bash equipped and charged. Hits with these abilities recharge a portion of your melee energy.\\nSafer shoulder charge abilities.',
+      ),
+    ),
+  ),
+  193869520 => 
+  array (
+    'name' => 'St0mp-EE5',
+    'icon' => '/common/destiny2_content/icons/8c7681f1e93ee996a724e55554e079e9.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1694242450 => 
+      array (
+        'id' => 1694242450,
+        'name' => 'Hydraulic Boosters',
+        'icon' => '/common/destiny2_content/icons/7ba8f2d164699bd968347c33badf2d7d.png',
+        'desc' => 'Increases sprint speed and slide distance. Improves High Jump, Strafe Jump, and Triple Jump. The airborne effectiveness stat of all weapons receives a large penalty.\\nBuffs sprint, slide, and jumping.',
+      ),
+    ),
+  ),
+  193869522 => 
+  array (
+    'name' => 'Lucky Pants',
+    'icon' => '/common/destiny2_content/icons/68dc68ed3ce3f9361460b7d4a69bd351.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1694242448 => 
+      array (
+        'id' => 1694242448,
+        'name' => 'Illegally Modded Holster',
+        'icon' => '/common/destiny2_content/icons/e5b157f170060b68fe800209c8151215.png',
+        'desc' => 'When you ready a fully loaded Hand Cannon that deals Kinetic damage or a damage type that matches your subclass energy type, each hit from that Hand Cannon increases the damage of the next shot for a short time against a combatant. Hand Cannons ready faster and are more accurate immediately after swapping to them. Provides a small benefit to the airborne effectiveness stat of Hand Cannons while the buff is active.\\nHand Cannons ready faster and gain increased accuracy and bonus damage.',
+      ),
+      2979161761 => 
+      array (
+        'id' => 2979161761,
+        'name' => 'Hand Cannon Holster',
+        'icon' => '/common/destiny2_content/icons/c4a18ec69b5536bfc0b8c501de34432f.png',
+        'desc' => 'Gradually reloads your stowed Hand Cannons over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+      ),
+    ),
+  ),
+  193869523 => 
+  array (
+    'name' => 'Orpheus Rig',
+    'icon' => '/common/destiny2_content/icons/0d6ae4296f1435209070142cf26dfd37.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1694242449 => 
+      array (
+        'id' => 1694242449,
+        'name' => 'Uncanny Arrows',
+        'icon' => '/common/destiny2_content/icons/b604a36e2b4853cd228971652c5adf60.png',
+        'desc' => 'Provides ability energy for each target tethered by Deadfall anchors. Moebius Quiver has an additional shot.\\nGrants Deadfall and Moebius Quiver energy.',
+      ),
+    ),
+  ),
+  235591051 => 
+  array (
+    'name' => 'Promethium Spur',
+    'icon' => '/common/destiny2_content/icons/770c8a9fa2baedeeb6fae9df00315567.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1095471953 => 
+      array (
+        'id' => 1095471953,
+        'name' => 'Embers of Light',
+        'icon' => '/common/destiny2_content/icons/55b0f28c25ebc80c6fbca0bf54325db6.png',
+        'desc' => 'Defeating combatants or Guardians while Daybreak is active creates a healing and empowering rift at their location. While standing in any rift, [Solar] Solar weapon final blows grant Rift energy. When your Rift energy is full, final blows consume your Rift energy and create a healing and empowering rift at the target\'s location.\\nCreate combination Healing/Empowering Rifts.',
+      ),
+    ),
+  ),
+  511888814 => 
+  array (
+    'name' => 'Secant Filaments',
+    'icon' => '/common/destiny2_content/icons/4ef68743a8e42a4acd6c2851b882f6b2.jpg',
+    'sockets' => 
+    array (
+      4003902350 => 
+      array (
+        'id' => 4003902350,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/7a9c2c9b5e4a94db2aa2f844fd66ac9a.jpg',
+        'desc' => 'Change this armor\'s energy type to Stasis.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1341199512 => 
+      array (
+        'id' => 1341199512,
+        'name' => 'Devouring Rift',
+        'icon' => '/common/destiny2_content/icons/3a6d2127f53b2add11a7f55966477a97.png',
+        'desc' => 'Casting an empowering rift will grant you Devour. Damage dealt by you and your allies from within your empowering rift will disrupt combatants.\\nYour empowering rifts grant you Devour. Damage dealt from within them will disrupt combatants.',
+      ),
+    ),
+  ),
+  574694189 => 
+  array (
+    'name' => 'Fr0st-EE5',
+    'icon' => '/common/destiny2_content/icons/308f4e5bd5b86d095904b878f70d8ee8.jpg',
+    'sockets' => 
+    array (
+      897181301 => 
+      array (
+        'id' => 897181301,
+        'name' => 'Rapid Cooldown',
+        'icon' => '/common/destiny2_content/icons/8ff8479b346e8f6cd93d524268dbbbfc.png',
+        'desc' => 'Increased grenade, melee, and dodge regeneration while sprinting. Dodging increases your sprint speed.\\nSprinting gives energy. Dodging speeds up sprint.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  1001356380 => 
+  array (
+    'name' => 'Star-Eater Scales',
+    'icon' => '/common/destiny2_content/icons/90190addf444371b5817524982b9ee5c.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4048389864 => 
+      array (
+        'id' => 4048389864,
+        'name' => 'Feast of Light',
+        'icon' => '/common/destiny2_content/icons/5922b375e4826163b594a571536e5705.png',
+        'desc' => 'You gain additional Super energy from Orbs of Power you pick up. While your Super energy is full, picking up an Orb of Power overcharges your Super, causing you to gain a burst of healing when cast and a bonus to your Super damage. At maximum overcharge, you also gain an overshield.\\nPick up Orbs of Power to overcharge your Super.',
+      ),
+    ),
+  ),
+  1163283805 => 
+  array (
+    'name' => 'Gemini Jester',
+    'icon' => '/common/destiny2_content/icons/2e17b501b613c225728347e8da10723d.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4024170927 => 
+      array (
+        'id' => 4024170927,
+        'name' => 'Misdirection',
+        'icon' => '/common/destiny2_content/icons/36d1453a6f9deea49d53b1f8cb414794.png',
+        'desc' => 'Dodging disorients nearby enemies and temporarily removes their radar.\\nDodging disorients and removes enemy radars.',
+      ),
+    ),
+  ),
+  1219761634 => 
+  array (
+    'name' => 'The Bombardiers',
+    'icon' => '/common/destiny2_content/icons/cd4edf7ec937a158820acef78f7eda43.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1844314558 => 
+      array (
+        'id' => 1844314558,
+        'name' => 'Parting Gift',
+        'icon' => '/common/destiny2_content/icons/a22492e756f1df51473a01b2615bb180.png',
+        'desc' => 'Dodging leaves behind an explosive that detonates after a short delay, damaging targets around it and creating a secondary effect based on your subclass energy type:
+• [Arc] Blinds targets.
+• [Solar] Scorches targets.
+• [Void] Suppresses targets.
+• [Stasis] Slows targets.\\nDodging leaves behind an explosive that detonates after a short delay, damaging targets around it.',
+      ),
+    ),
+  ),
+  1453120846 => 
+  array (
+    'name' => 'The Path of Burning Steps',
+    'icon' => '/common/destiny2_content/icons/42c3009229b1e7126edf4e6f32ecb218.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2500502982 => 
+      array (
+        'id' => 2500502982,
+        'name' => 'Firewalker',
+        'icon' => '/common/destiny2_content/icons/d9fcc20e6788dedf6b026177dbd89948.png',
+        'desc' => 'Solar final blows periodically grant you an escalating bonus to weapon damage. You are harder to slow or freeze with Stasis, and when you break out, you take no damage from doing so, creating a burst of Solar energy around yourself.\\nSolar final blows improve weapon damage. You are harder to slow or freeze with Stasis.',
+      ),
+    ),
+  ),
+  1537074069 => 
+  array (
+    'name' => 'Phoenix Cradle',
+    'icon' => '/common/destiny2_content/icons/c6cab448d3b64ef356258cf6712d373c.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2951499542 => 
+      array (
+        'id' => 2951499542,
+        'name' => 'Beacons of Empowerment',
+        'icon' => '/common/destiny2_content/icons/f81f7528cf180a817d4d26b589e3767b.png',
+        'desc' => 'Sol Invictus lasts twice as long. Allies who pass through your Sunspot are granted Sol Invictus and Solar restoration.\\nSol Invictus lasts twice as long. Allies who pass through your Sunspot are granted Sol Invictus and Solar restoration.',
+      ),
+    ),
+  ),
+  1624882687 => 
+  array (
+    'name' => 'Rain of Fire',
+    'icon' => '/common/destiny2_content/icons/9d93246478c267ea815158d0cc8a1da4.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4222205045 => 
+      array (
+        'id' => 4222205045,
+        'name' => 'Soaring Fusilier',
+        'icon' => '/common/destiny2_content/icons/ca5298bfa10b4bbcaf0f9bb41c3fbbfc.png',
+        'desc' => 'Air dodge reloads all of your weapons and improves the airborne effectiveness of Fusion Rifles and Linear Fusion Rifles; final blows with these weapons make you radiant. Provides a moderate benefit to the airborne effectiveness stat of Fusion Rifles and Linear Fusion Rifles.\\nAir dodge reloads weapons. Fusion Rifle and Linear Fusion Rifle final blows make you radiant.',
+      ),
+    ),
+  ),
+  1702288800 => 
+  array (
+    'name' => 'Radiant Dance Machines',
+    'icon' => '/common/destiny2_content/icons/85646c1db4b0b485931de01623711970.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      117669763 => 
+      array (
+        'id' => 117669763,
+        'name' => 'The Dance',
+        'icon' => '/common/destiny2_content/icons/38072f9099feef39271f41b1f7bd76a1.png',
+        'desc' => 'Activating your dodge ability while near targets allows you to dodge additional times for a short period.\\nDodge multiple times in rapid succession.',
+      ),
+    ),
+  ),
+  2268523867 => 
+  array (
+    'name' => 'Raiju\'s Harness',
+    'icon' => '/common/destiny2_content/icons/3a1b6b0ed4381607dc6e47d8c51758b3.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4251375227 => 
+      array (
+        'id' => 4251375227,
+        'name' => 'Mobius Conduit',
+        'icon' => '/common/destiny2_content/icons/cb34f66eef00d26173d36377d305c6c0.png',
+        'desc' => '[Super]  : Deactivate Whirlwind Guard early. Whirlwind Guard consumes energy more slowly when not attacking, and guarding does not consume extra Super energy.\\nGuarding doesn\'t consume energy. Early deactivation for Whirlwind Guard.',
+      ),
+    ),
+  ),
+  2321120637 => 
+  array (
+    'name' => 'Cuirass of the Falling Star',
+    'icon' => '/common/destiny2_content/icons/ea1b68b6afd0da11a98d814774cc8900.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4235122381 => 
+      array (
+        'id' => 4235122381,
+        'name' => 'Glorious Charge',
+        'icon' => '/common/destiny2_content/icons/d22aab3566d92ba0207544349d9651c9.png',
+        'desc' => 'Greatly increases your Thundercrash impact damage. Gain an overshield that lasts longer the farther you travel before striking a target.\\nIncreases Thundercrash damage.',
+      ),
+    ),
+  ),
+  2326396534 => 
+  array (
+    'name' => 'Severance Enclosure',
+    'icon' => '/common/destiny2_content/icons/eefd8a59d6e89563de1b79b0f9945944.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3449001998 => 
+      array (
+        'id' => 3449001998,
+        'name' => 'Spheromatik Trigger',
+        'icon' => '/common/destiny2_content/icons/abc2b9292851c793aa784f80786ef05a.png',
+        'desc' => 'Powered melee final blows unleash a damaging explosion. Finishers and final blows against more powerful targets increase the radius and damage of the explosion.\\nPowered melee kills and finishers unleash explosions.',
+      ),
+    ),
+  ),
+  2422973183 => 
+  array (
+    'name' => 'Sanguine Alchemy',
+    'icon' => '/common/destiny2_content/icons/f3207249663fd5f4297656e73f942a42.jpg',
+    'sockets' => 
+    array (
+      1420473289 => 
+      array (
+        'id' => 1420473289,
+        'name' => 'Blood Magic',
+        'icon' => '/common/destiny2_content/icons/6b57202297c7de14292ea82911b74f6b.png',
+        'desc' => 'Weapon kills while standing in any rift pause the rift\'s countdown, extending its duration. Further kills maintain and extend the length of the pause.\\nWeapon kills while in a rift extend the rift\'s duration.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2766109872 => 
+  array (
+    'name' => 'Raiden Flux',
+    'icon' => '/common/destiny2_content/icons/e065a7ce827f8a1c624052595c4e7916.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      593361146 => 
+      array (
+        'id' => 593361146,
+        'name' => 'Synapse Junctions',
+        'icon' => '/common/destiny2_content/icons/ea8a2c6bbaada0ddbf2e7165061a0e79.png',
+        'desc' => 'Quick successive attacks with Arc Staff increase its damage output and duration.\\nChained Arc Staff hits buff damage and duration.',
+      ),
+    ),
+  ),
+  2766109874 => 
+  array (
+    'name' => 'The Dragon\'s Shadow',
+    'icon' => '/common/destiny2_content/icons/5501d47a7916022c737494682c0c73ec.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      593361144 => 
+      array (
+        'id' => 593361144,
+        'name' => 'Wraithmetal Mail',
+        'icon' => '/common/destiny2_content/icons/eacc7db368ca99d8fb1df8f860d11303.png',
+        'desc' => 'Dodging reloads all weapons and increases both movement and weapon handling speeds for a brief time.\\nDodge reloads guns and buffs speed and handling.',
+      ),
+    ),
+  ),
+  2782999716 => 
+  array (
+    'name' => 'Wings of Sacred Dawn',
+    'icon' => '/common/destiny2_content/icons/eb1c6215d4997aaba5c0c10114ff65b6.jpg',
+    'sockets' => 
+    array (
+      926349160 => 
+      array (
+        'id' => 926349160,
+        'name' => 'Tome of Dawn',
+        'icon' => '/common/destiny2_content/icons/0e4012acea067d2725f4d1a8b1568b82.png',
+        'desc' => 'When Dawnblade is equipped, aiming weapons while you\'re midair suspends you there for a short time, improving airborne accuracy, reducing incoming flinch, and granting damage resistance. Weapon hits extend this effect\'s duration. Provides a large benefit to the airborne effectiveness stat of all weapons.\\nDawnblade holds you in midair when you\'re aiming.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2782999717 => 
+  array (
+    'name' => 'Starfire Protocol',
+    'icon' => '/common/destiny2_content/icons/fa2241f0aaad40cb5ecfe5b810eb5f64.jpg',
+    'sockets' => 
+    array (
+      926349161 => 
+      array (
+        'id' => 926349161,
+        'name' => 'Fusion Harness',
+        'icon' => '/common/destiny2_content/icons/89119bb0278ccfefcee91f05e9659d1a.png',
+        'desc' => 'Fusion Grenades have an additional charge and recharge from empowered weapon damage. Fusion Grenade kills grant Rift energy.\\nExtra Fusion Grenade. Grenade kills charge Rift.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2829609851 => 
+  array (
+    'name' => 'Armamentarium',
+    'icon' => '/common/destiny2_content/icons/9482dc5d359231558d9ac7f70e5bbd86.jpg',
+    'sockets' => 
+    array (
+      883550427 => 
+      array (
+        'id' => 883550427,
+        'name' => 'And Another Thing',
+        'icon' => '/common/destiny2_content/icons/2e745e0bcf95e0165fddca4523341509.png',
+        'desc' => 'Gain an additional grenade charge.\\nGain an additional grenade charge.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  3301944824 => 
+  array (
+    'name' => 'Mantle of Battle Harmony',
+    'icon' => '/common/destiny2_content/icons/85bf3170006a8249ca78e5a672880bea.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2618534366 => 
+      array (
+        'id' => 2618534366,
+        'name' => 'Absorption Cells',
+        'icon' => '/common/destiny2_content/icons/06003ba72c3fb888d95049a8a4de5cd3.png',
+        'desc' => 'Takedowns with weapons that have a damage type matching your subclass element grant you Super energy. While your Super energy is full, you instead gain a temporary bonus to weapon damage of the type matching your subclass element.\\nGain Super energy on elemental weapon takedowns.',
+      ),
+    ),
+  ),
+  3392742912 => 
+  array (
+    'name' => 'Ophidia Spathe',
+    'icon' => '/common/destiny2_content/icons/e1be553c40f233880f9ad18b8687c385.jpg',
+    'sockets' => 
+    array (
+      3666112472 => 
+      array (
+        'id' => 3666112472,
+        'name' => 'Scissor Fingers',
+        'icon' => '/common/destiny2_content/icons/342515e3622e93b405b4c3e4d6564aa5.png',
+        'desc' => 'Grants two knives per charge.\\nGrants two knives per charge.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  3488362706 => 
+  array (
+    'name' => 'Chromatic Fire',
+    'icon' => '/common/destiny2_content/icons/aeba89a17da757ee0329979f7a3ec883.jpg',
+    'sockets' => 
+    array (
+      2204713148 => 
+      array (
+        'id' => 2204713148,
+        'name' => 'Crystalline Transistor',
+        'icon' => '/common/destiny2_content/icons/31b54c2b4b2a5c3efc34b307c5f5f138.png',
+        'desc' => 'Crystalline Transistor
+Precision final blows with your Kinetic weapon create an explosion in the element of your subclass.\\nPrecision final blows from non-elemental Kinetic weapons create an explosion in the element of your subclass.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3488362707 => 
+  array (
+    'name' => 'Phoenix Protocol',
+    'icon' => '/common/destiny2_content/icons/10e877d11596456c90452dd47739469a.jpg',
+    'sockets' => 
+    array (
+      2204713149 => 
+      array (
+        'id' => 2204713149,
+        'name' => 'Battle-Hearth',
+        'icon' => '/common/destiny2_content/icons/d999f8294da327d0c88f4e68def8204c.png',
+        'desc' => 'Kills and assists you make while standing in your Well of Radiance return Super energy.\\nGain Super energy for kills and assists inside Well of Radiance.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  4070560770 => 
+  array (
+    'name' => 'Gwisin Vest',
+    'icon' => '/common/destiny2_content/icons/598126991a4bfe56b2901f1e1dca6147.jpg',
+    'sockets' => 
+    array (
+      2192678014 => 
+      array (
+        'id' => 2192678014,
+        'name' => 'Roving Assassin',
+        'icon' => '/common/destiny2_content/icons/edb9b54be96b726c4d351e0d5a4c4ce2.png',
+        'desc' => 'Each Spectral Blades kill you make before going into stealth will restore more of your Super energy.\\nVanish after Spectral Blades kills for more Super energy.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  4070560771 => 
+  array (
+    'name' => 'The Sixth Coyote',
+    'icon' => '/common/destiny2_content/icons/f6a2a1450f6020cd7fb1c368c44593b6.jpg',
+    'sockets' => 
+    array (
+      2192678015 => 
+      array (
+        'id' => 2192678015,
+        'name' => 'Double Dodge',
+        'icon' => '/common/destiny2_content/icons/d5147ece70b72c3c694772fb0540f0ac.png',
+        'desc' => 'Gain a second dodge charge.\\nGain a second dodge charge.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  419976111 => 
+  array (
+    'name' => 'Lucky Raspberry',
+    'icon' => '/common/destiny2_content/icons/710504ae0aedfaa671f29e37dd041a4b.jpg',
+    'sockets' => 
+    array (
+      593361147 => 
+      array (
+        'id' => 593361147,
+        'name' => 'Probability Matrix',
+        'icon' => '/common/destiny2_content/icons/65c8b7a702742e29623820f7590a5731.png',
+        'desc' => 'Increases the chaining capabilities of Arc Bolt Grenade and has a chance to recharge it each time it deals damage. A full chain always recharges.\\nImproves Arc Bolt Grenade chains.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  458095280 => 
+  array (
+    'name' => 'Crest of Alpha Lupi',
+    'icon' => '/common/destiny2_content/icons/5d9110e516e5828d881ffe17e7c1482e.jpg',
+    'sockets' => 
+    array (
+      1667892710 => 
+      array (
+        'id' => 1667892710,
+        'name' => 'Survival Well',
+        'icon' => '/common/destiny2_content/icons/b87fda05aa81b43723cd5d9d789a4ad0.png',
+        'desc' => 'Generates an additional Orb of Power from Supers and a healing pulse when Barricade is activated.\\nMore Orbs from Supers. Casting Barricade heals.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  458095281 => 
+  array (
+    'name' => 'Actium War Rig',
+    'icon' => '/common/destiny2_content/icons/957eae3f0e2e00ee7f8dba4b1f03c1e7.jpg',
+    'sockets' => 
+    array (
+      1667892711 => 
+      array (
+        'id' => 1667892711,
+        'name' => 'Auto-Loading Link',
+        'icon' => '/common/destiny2_content/icons/dbe4d890b763e90e95f208a1cb3612e1.png',
+        'desc' => 'Steadily reloads a portion of your equipped Auto Rifle\'s or Machine Gun\'s magazine from reserves. Provides a moderate benefit to the airborne effectiveness stat of Auto Rifles and Machine Guns.\\nSteadily reloads your equipped Auto Rifle\'s or Machine Gun\'s mag.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  458095282 => 
+  array (
+    'name' => 'Hallowfire Heart',
+    'icon' => '/common/destiny2_content/icons/9f337b76f1abf670fac270b272818c2f.jpg',
+    'sockets' => 
+    array (
+      1667892708 => 
+      array (
+        'id' => 1667892708,
+        'name' => 'Sunfire Furnace',
+        'icon' => '/common/destiny2_content/icons/a6a4d10ad46ed47fec42e47a4900b317.png',
+        'desc' => 'Improves the recharge rate of your Solar abilities. Greatly improves recharge rate while your Super is charged. Provides a small benefit to the airborne effectiveness stat of all weapons.\\nSolar abilities regen faster, even faster if Super is charged.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  461841403 => 
+  array (
+    'name' => 'Gyrfalcon\'s Hauberk',
+    'icon' => '/common/destiny2_content/icons/ba046a2cf74cd8c96090b7a63b5562e6.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3809192347 => 
+      array (
+        'id' => 3809192347,
+        'name' => 'See Me, Feel Me',
+        'icon' => '/common/destiny2_content/icons/890dfceec3f747eecd70be357fff95d6.png',
+        'desc' => 'Your weapons gain a bonus to damage briefly after you emerge from being invisible. When you are invisible and defeat a combatant using a finisher, nearby combatants turn volatile; you and your nearby allies gain a reserve overshield and improved class ability regen. These reserve overshields can be deployed by using a class ability.\\nGain bonus damage after being invisible. Finishers while invisible grant allies a reserve overshield.',
+      ),
+    ),
+  ),
+  1322544481 => 
+  array (
+    'name' => 'Hoarfrost-Z',
+    'icon' => '/common/destiny2_content/icons/f5cba8e2772072b819e6c35a80726ba4.jpg',
+    'sockets' => 
+    array (
+      4003902350 => 
+      array (
+        'id' => 4003902350,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/7a9c2c9b5e4a94db2aa2f844fd66ac9a.jpg',
+        'desc' => 'Change this armor\'s energy type to Stasis.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2471523345 => 
+      array (
+        'id' => 2471523345,
+        'name' => 'Glacial Fortification',
+        'icon' => '/common/destiny2_content/icons/bea3537cf9220c8b575d87f4c7036046.png',
+        'desc' => 'When using the Stasis subclass, your Barricade becomes a wall of Stasis crystals that slows nearby targets when created. Standing behind this barricade will grant you and your allies increased weapon reload speed, stability, and range.\\nReplace Barricade with a wall of Stasis crystals.',
+      ),
+    ),
+  ),
+  1341951177 => 
+  array (
+    'name' => 'Heart of Inmost Light',
+    'icon' => '/common/destiny2_content/icons/ff43a8718ef112640f519346e169d994.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1919923227 => 
+      array (
+        'id' => 1919923227,
+        'name' => 'Overflowing Light',
+        'icon' => '/common/destiny2_content/icons/5ce35ec45dd679ed38a4df4da4d071c1.png',
+        'desc' => 'Using an ability (grenade, melee, or Barricade) empowers the other two abilities. Empowered means abilities have faster regen, melees and grenades do more damage, and Barricades have more hit points.\\nUse one ability to briefly improve your other abilities.',
+      ),
+    ),
+  ),
+  1725917554 => 
+  array (
+    'name' => 'Vesper of Radius',
+    'icon' => '/common/destiny2_content/icons/b22c53b5868c94352f69f7493f7f6f2d.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1142806944 => 
+      array (
+        'id' => 1142806944,
+        'name' => 'Planetary Torrent',
+        'icon' => '/common/destiny2_content/icons/651bbd816727a508645886c68e1c90d9.png',
+        'desc' => 'Rifts release an Arc shockwave when cast. Rift energy recharges faster when you are surrounded by enemies.\\nRifts release an Arc shockwave when cast. Rift energy recharges faster when you are surrounded by enemies.',
+      ),
+    ),
+  ),
+  1935198785 => 
+  array (
+    'name' => 'Omnioculus',
+    'icon' => '/common/destiny2_content/icons/8d8c8f37d34c121441571fda7e8e3b7a.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      553093017 => 
+      array (
+        'id' => 553093017,
+        'name' => 'Beyond The Veil',
+        'icon' => '/common/destiny2_content/icons/23051335e839cf4afe70f5bea7d1db37.png',
+        'desc' => 'You gain a second Smoke Bomb charge and have damage resistance while invisible. When you make an ally invisible, they gain damage resistance while invisible and you gain melee energy.\\nGuardians you make invisible gain damage resistance.',
+      ),
+    ),
+  ),
+  1996008488 => 
+  array (
+    'name' => 'Stormdancer\'s Brace',
+    'icon' => '/common/destiny2_content/icons/6674e0265174407bcda44c20e3d7532a.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1211775759 => 
+      array (
+        'id' => 1211775759,
+        'name' => 'Ascending Amplitude',
+        'icon' => '/common/destiny2_content/icons/dd98fc74127a1541c03aef3845f8dca3.png',
+        'desc' => 'Each target you defeat with Stormtrance increases the damage you deal with it and refunds Super energy when Stormtrance ends.\\nEach target you defeat with Stormtrance increases the damage you deal with it and refunds Super energy when Stormtrance ends.',
+      ),
+    ),
+  ),
+  2177524718 => 
+  array (
+    'name' => 'The Stag',
+    'icon' => '/common/destiny2_content/icons/16634beca2ccdda00a47e8615dbc89f7.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      722862450 => 
+      array (
+        'id' => 722862450,
+        'name' => 'Dearly Departed',
+        'icon' => '/common/destiny2_content/icons/ca9e1f6a848ec62d1d5ef73026dac817.png',
+        'desc' => 'Your Rift provides damage reduction to allied Guardians standing in it. Grants Rift energy when you are critically wounded. On your death, creates a healing rift on your corpse.\\nRift grants damage reduction. Grants Rift energy when critically wounded; creates healing rift on death.',
+      ),
+    ),
+  ),
+  2203146422 => 
+  array (
+    'name' => 'Assassin\'s Cowl',
+    'icon' => '/common/destiny2_content/icons/44a37337c57b27f43c24359cdff7e255.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      236605015 => 
+      array (
+        'id' => 236605015,
+        'name' => 'Vanishing Execution',
+        'icon' => '/common/destiny2_content/icons/81861f9836f7cb424202631b3bdc6086.png',
+        'desc' => 'Powered melee final blows grant invisibility and restore a portion of health and shields. Finishers and final blows against more powerful targets increase the duration of the invisibility and the amount of health and shields restored.\\nPowered melee kills and finishers grant invisibility and healing.',
+      ),
+    ),
+  ),
+  2316914168 => 
+  array (
+    'name' => 'Dawn Chorus',
+    'icon' => '/common/destiny2_content/icons/66289d9dce869bca5aa53beb88edf15c.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2799418574 => 
+      array (
+        'id' => 2799418574,
+        'name' => 'Rites of Ember',
+        'icon' => '/common/destiny2_content/icons/32a08e12f670944a09286a0d61dca976.png',
+        'desc' => 'Your Daybreak projectiles cause targets to scorch on contact. Your scorch effects deal more damage, and you gain a small amount of melee energy each time your scorch effects damage a target.\\nImproves scorch effects and Daybreak projectiles.',
+      ),
+    ),
+  ),
+  2384488862 => 
+  array (
+    'name' => 'Khepri\'s Horn',
+    'icon' => '/common/destiny2_content/icons/835191598407f6a2d3305db51c49e892.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2355041704 => 
+      array (
+        'id' => 2355041704,
+        'name' => 'Solar Rampart',
+        'icon' => '/common/destiny2_content/icons/600b4ccd37d76e406aa9e88ef17b1340.png',
+        'desc' => 'Solar damage kills recharge your Barricade, which unleashes a blast of Solar energy when summoned.\\nSolar kills recharge a Solar blast Barricade.',
+      ),
+    ),
+  ),
+  2428181146 => 
+  array (
+    'name' => 'Verity\'s Brow',
+    'icon' => '/common/destiny2_content/icons/370fcdc370c73eb2d839253f76a1e826.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1971489086 => 
+      array (
+        'id' => 1971489086,
+        'name' => 'The Fourth Magic',
+        'icon' => '/common/destiny2_content/icons/30bdc40be9ed4ea60635adade654c6b1.png',
+        'desc' => 'Weapon final blows with a damage type matching your subclass energy grant Death Throes, which provides a grenade damage bonus and grants you grenade energy. When you have Death Throes and throw a grenade, nearby allies gain greatly increased grenade regeneration for a short time.\\nEnergy weapon kills boost grenade damage.',
+      ),
+    ),
+  ),
+  2523259392 => 
+  array (
+    'name' => 'Eye of Another World',
+    'icon' => '/common/destiny2_content/icons/e8afec0dbe1253087cb19242dd626305.jpg',
+    'sockets' => 
+    array (
+      3927963100 => 
+      array (
+        'id' => 3927963100,
+        'name' => 'Cerebral Uplink',
+        'icon' => '/common/destiny2_content/icons/95b5bee37c0a85676c2f2ff548a9af5b.png',
+        'desc' => 'Highlights priority targets and improves the regeneration speed of your grenade, melee, and Rift abilities. Provides a small benefit to the airborne effectiveness stat of all weapons.\\nMarks priority targets and buffs ability regen.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2523259393 => 
+  array (
+    'name' => 'Nezarec\'s Sin',
+    'icon' => '/common/destiny2_content/icons/67f7bbf158f84c33802b178e463b7037.jpg',
+    'sockets' => 
+    array (
+      3927963101 => 
+      array (
+        'id' => 3927963101,
+        'name' => 'Abyssal Extractors',
+        'icon' => '/common/destiny2_content/icons/07b30a221b8627ca44631f9764d7a9bc.png',
+        'desc' => 'Void-damage kills increase ability energy recharge rate.\\nVoid kills increase ability regen.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2523259394 => 
+  array (
+    'name' => 'Skull of Dire Ahamkara',
+    'icon' => '/common/destiny2_content/icons/58c941539ffb843a5559a83c6f7cb579.jpg',
+    'sockets' => 
+    array (
+      3927963102 => 
+      array (
+        'id' => 3927963102,
+        'name' => 'Actual Grandeur',
+        'icon' => '/common/destiny2_content/icons/90ae76530113775c5eb0681ba61e1363.png',
+        'desc' => 'Provides additional damage resistance during Nova Bomb. Nova Bomb kills grant Super energy.\\nNova Bomb kills grant Super energy.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2523259395 => 
+  array (
+    'name' => 'Crown of Tempests',
+    'icon' => '/common/destiny2_content/icons/afd0a0e6f206d9518e56e7d7a148a50d.jpg',
+    'sockets' => 
+    array (
+      3927963103 => 
+      array (
+        'id' => 3927963103,
+        'name' => 'Conduction Tines',
+        'icon' => '/common/destiny2_content/icons/dc558c71855176b2139a1cb9246b2cfb.png',
+        'desc' => 'Arc ability or Jolt final blows increase the recharge rate of your Arc abilities and extend the duration of Stormtrance.\\nArc ability or Jolt final blows restore Arc abilities.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2578771006 => 
+  array (
+    'name' => 'One-Eyed Mask',
+    'icon' => '/common/destiny2_content/icons/d6e6248b34d1299aee22571db71c7a24.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      699693452 => 
+      array (
+        'id' => 699693452,
+        'name' => 'Vengeance',
+        'icon' => '/common/destiny2_content/icons/015525bda9f4da320c9fad69532080dc.png',
+        'desc' => 'Highlights the target who dares to damage you. Track down and destroy them for an overshield.\\nHighlight and defeat those that harm you for an overshield.',
+      ),
+    ),
+  ),
+  2600992433 => 
+  array (
+    'name' => 'Wormhusk Crown',
+    'icon' => '/common/destiny2_content/icons/95eb480d723f510afd9fd3e2bbb1d92d.jpg',
+    'sockets' => 
+    array (
+      3723531833 => 
+      array (
+        'id' => 3723531833,
+        'name' => 'Burning Souls',
+        'icon' => '/common/destiny2_content/icons/f6dd0dc8be15795e0b0b2e2fcff77601.png',
+        'desc' => 'Dodging gives a small health and shield bump.\\nDodging gives a small health and shield bump.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  2773056939 => 
+  array (
+    'name' => 'Graviton Forfeit',
+    'icon' => '/common/destiny2_content/icons/57f35a636ef455069d04231d4a564013.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2119325971 => 
+      array (
+        'id' => 2119325971,
+        'name' => 'Vanishing Shadow',
+        'icon' => '/common/destiny2_content/icons/8673ca5a543745c743955495f9a43310.png',
+        'desc' => 'Increases the duration of any invisibility effects. While you are invisible, your melee recharges faster, your weapons reload faster, and your Recovery is greatly increased.\\nImproved invisibility.',
+      ),
+    ),
+  ),
+  2808156426 => 
+  array (
+    'name' => 'Eternal Warrior',
+    'icon' => '/common/destiny2_content/icons/a070ad591d0bee08fc4711bd01581486.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      926976844 => 
+      array (
+        'id' => 926976844,
+        'name' => 'Resolute',
+        'icon' => '/common/destiny2_content/icons/c8dff916f4f29fbd04c6c8eb408f1832.png',
+        'desc' => 'Gain an overshield when activating Fists of Havoc.\\nCasting Fists of Havoc grants an overshield.',
+      ),
+    ),
+  ),
+  2822465023 => 
+  array (
+    'name' => 'Felwinter\'s Helm',
+    'icon' => '/common/destiny2_content/icons/d2555fd79b630dfdcba0ae1fac3bda1b.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      622433369 => 
+      array (
+        'id' => 622433369,
+        'name' => 'Warlord\'s End',
+        'icon' => '/common/destiny2_content/icons/d7b7958af2dcea8831066fb73a41dbe2.png',
+        'desc' => 'Powered melee final blows create a burst of energy that weakens nearby targets. Finishers and final blows against more powerful targets increase the radius of the burst and the length of the weakening effect.\\nPowered melee kills create a burst of energy that weakens nearby enemies.',
+      ),
+    ),
+  ),
+  3216110440 => 
+  array (
+    'name' => 'An Insurmountable Skullfort',
+    'icon' => '/common/destiny2_content/icons/c444f5213f554d715b0d7a9de1108e12.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3662465907 => 
+      array (
+        'id' => 3662465907,
+        'name' => 'Transfusion Matrix',
+        'icon' => '/common/destiny2_content/icons/5384eebcb22ae821f3e2fb21cb15785f.png',
+        'desc' => 'Kills with Arc melee abilities trigger health regeneration and restore melee energy.\\nArc melee kills grant health and melee energy.',
+      ),
+    ),
+  ),
+  3316517958 => 
+  array (
+    'name' => 'Loreley Splendor Helm',
+    'icon' => '/common/destiny2_content/icons/84fcf9589ae5320f282abe89bd0c5fff.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1163213078 => 
+      array (
+        'id' => 1163213078,
+        'name' => 'Cauterizing Flame',
+        'icon' => '/common/destiny2_content/icons/747e2e05dcf2922df8ba2cb9963ea62f.png',
+        'desc' => 'When you are critically wounded with full class ability energy or when you cast a Barricade, create a Sunspot at your location that has improved restoration effects.\\nCreate a Sunspot with improved Solar restoration when critically wounded or on Barricade cast.',
+      ),
+    ),
+  ),
+  3883866764 => 
+  array (
+    'name' => 'Mask of the Quiet One',
+    'icon' => '/common/destiny2_content/icons/cd76e4a21cb89cd5b850eba34a8df41c.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3662465906 => 
+      array (
+        'id' => 3662465906,
+        'name' => 'Dreaded Visage',
+        'icon' => '/common/destiny2_content/icons/404bbb3309574bdc55c0f8276d8dd6ab.png',
+        'desc' => 'Grants ability energy when you\'re damaged. When critically wounded, regain maximum health on kills.\\nGain ability energy when you\'re damaged. When critical, heal on kills.',
+      ),
+    ),
+  ),
+  3897389303 => 
+  array (
+    'name' => 'Apotheosis Veil',
+    'icon' => '/common/destiny2_content/icons/6f234606ab2e043388dfaeee946f854b.jpg',
+    'sockets' => 
+    array (
+      4174493725 => 
+      array (
+        'id' => 4174493725,
+        'name' => 'Insatiable',
+        'icon' => '/common/destiny2_content/icons/72dd454b94ad8bce01c17eb55b30ea4f.png',
+        'desc' => 'Immediately regenerate health, melee, grenade, and Rift energy upon activating your Super. Nearby allies recharge class abilities faster.\\nAbility energy on Super cast. Allies get class energy.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3948284065 => 
+  array (
+    'name' => 'Astrocyte Verse',
+    'icon' => '/common/destiny2_content/icons/96fdb1cd590b2212006d128dd0bc32a4.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3295796664 => 
+      array (
+        'id' => 3295796664,
+        'name' => 'Move to Survive',
+        'icon' => '/common/destiny2_content/icons/a028203c53d6004d895a0164d56df27c.png',
+        'desc' => 'Blink further and more frequently. Weapon readies quickly out of Blink and radar remains up. Provides a moderate benefit to the airborne effectiveness stat of all weapons.\\nImproved Blink',
+      ),
+    ),
+  ),
+  3974038291 => 
+  array (
+    'name' => 'Precious Scars',
+    'icon' => '/common/destiny2_content/icons/e69888e5592b50c6e36aa7206236aacb.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2979726427 => 
+      array (
+        'id' => 2979726427,
+        'name' => 'Kintsugi',
+        'icon' => '/common/destiny2_content/icons/dbb49eee5a34f8ba219211984857f8b4.png',
+        'desc' => 'Final blows from weapons with a damage type matching your subclass energy create a burst of healing around you. After reviving or being revived, you gain an aura that provides overshields to you and nearby allies.\\nRevives grant overshields.',
+      ),
+    ),
+  ),
+  106575079 => 
+  array (
+    'name' => 'Helm of Saint-14',
+    'icon' => '/common/destiny2_content/icons/e363d457b179de242b932e097cca6edd.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1331592343 => 
+      array (
+        'id' => 1331592343,
+        'name' => 'Starless Night',
+        'icon' => '/common/destiny2_content/icons/3baaf236fc4e53bf571548edde0eb122.png',
+        'desc' => 'Targets that enter Ward of Dawn are blinded, while allies that pass through gain a Void overshield. Guarding with Sentinel Shield blinds nearby targets.\\nWard of Dawn blinds targets and grants Void overshield. Guarding blinds.',
+      ),
+    ),
+  ),
+  896224899 => 
+  array (
+    'name' => 'Foetracer',
+    'icon' => '/common/destiny2_content/icons/5e995f3d538bbfdc83f887b11a1f747c.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2663272109 => 
+      array (
+        'id' => 2663272109,
+        'name' => 'Relentless Tracker',
+        'icon' => '/common/destiny2_content/icons/7330198ade36c963bcb679217130492a.png',
+        'desc' => 'Visually marks targets. Deals more damage to low-health marked targets. Provides a small benefit to the airborne effectiveness stat of all weapons.\\nMarks targets. Buffs damage to low-health marks.',
+      ),
+    ),
+  ),
+  1321354572 => 
+  array (
+    'name' => 'Knucklehead Radar',
+    'icon' => '/common/destiny2_content/icons/5c085a24228eff7815014f82a6caeadf.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2663272111 => 
+      array (
+        'id' => 2663272111,
+        'name' => 'Upgraded Sensor Pack',
+        'icon' => '/common/destiny2_content/icons/fba5436440789213d827dab15282d075.png',
+        'desc' => 'Provides radar while you\'re aiming. Enhances your radar resolution while crouched.\\nProvides radar while you\'re aiming, enhanced radar while crouching.',
+      ),
+    ),
+  ),
+  1321354573 => 
+  array (
+    'name' => 'Celestial Nighthawk',
+    'icon' => '/common/destiny2_content/icons/fa668959fe0812f22f277ac17d819747.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2663272110 => 
+      array (
+        'id' => 2663272110,
+        'name' => 'Hawkeye Hack',
+        'icon' => '/common/destiny2_content/icons/428a91c1b9d5e1a6136e9d90fe95c937.png',
+        'desc' => 'Modifies Golden Gun to fire a single high-damage shot. Enemies eliminated by the shot explode and grant you Super energy.\\nGolden Gun fires one high-damage shot.',
+      ),
+    ),
+  ),
+  1619425569 => 
+  array (
+    'name' => 'Mask of Bakris',
+    'icon' => '/common/destiny2_content/icons/0040eb348bcfe0d26dea72cd5f7ed667.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      692285813 => 
+      array (
+        'id' => 692285813,
+        'name' => 'Light Shift',
+        'icon' => '/common/destiny2_content/icons/0d9f6ab489214f6e0f5a846bd57ce981.png',
+        'desc' => 'Replaces your Stasis subclass dodge ability with a longer range, faster moving shift that partially cloaks you during use. After shifting, your Arc weapons deal increased damage to combatants for a short time, and you deal increased damage to all slowed or frozen combatants.\\nShift instead of dodge.',
+      ),
+    ),
+  ),
+  1703551922 => 
+  array (
+    'name' => 'Blight Ranger',
+    'icon' => '/common/destiny2_content/icons/2534ec78fafa88984fabb6af9e6d72aa.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3556461530 => 
+      array (
+        'id' => 3556461530,
+        'name' => 'Voltaic Mirror',
+        'icon' => '/common/destiny2_content/icons/65236aff72b2de9cd34c1c02b1428611.png',
+        'desc' => 'Attacks you redirect with your Arc staff deal massively increased damage and generate Orbs of Power for your allies. Guarding with your Whirlwind Guard Super does not consume extra Super energy.\\nAttacks you redirect with your Arc Staff deal massively increased damage.',
+      ),
+    ),
+  ),
+  1849149215 => 
+  array (
+    'name' => 'Fallen Sunstar',
+    'icon' => '/common/destiny2_content/icons/5a8611a927ec24c5323d20293b6a8c26.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1376049785 => 
+      array (
+        'id' => 1376049785,
+        'name' => 'Ionic Conductor',
+        'icon' => '/common/destiny2_content/icons/09c276ee9877f57a62530c056287d717.png',
+        'desc' => 'Ionic traces you create move faster and grant you additional ability energy. Nearby allies also gain ability energy when you collect an ionic trace.\\nImproved ionic traces',
+      ),
+    ),
+  ),
+  2166230715 => 
+  array (
+    'name' => 'Sealed Ahamkara Grasps',
+    'icon' => '/common/destiny2_content/icons/1f1c77866e270996058590849422f1d0.jpg',
+    'sockets' => 
+    array (
+      2805134531 => 
+      array (
+        'id' => 2805134531,
+        'name' => 'Nightmare Fuel',
+        'icon' => '/common/destiny2_content/icons/36ac137a3d8d9dc306291439c6c3bf7f.png',
+        'desc' => 'Dealing melee damage reloads your currently equipped weapon. Provides a large benefit to the airborne effectiveness stat of all weapons for 5 seconds after dealing melee damage.\\nMelee hits reload equipped weapon.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2169905051 => 
+  array (
+    'name' => 'Renewal Grasps',
+    'icon' => '/common/destiny2_content/icons/ad3dd5ac839c584dd0ec5c5ca33c3c54.jpg',
+    'sockets' => 
+    array (
+      4003902350 => 
+      array (
+        'id' => 4003902350,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/7a9c2c9b5e4a94db2aa2f844fd66ac9a.jpg',
+        'desc' => 'Change this armor\'s energy type to Stasis.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1457189155 => 
+      array (
+        'id' => 1457189155,
+        'name' => 'Depths of Duskfield',
+        'icon' => '/common/destiny2_content/icons/b04c7cbe12219c996b18b66aa5e79fc1.png',
+        'desc' => 'Your Duskfield grenades have a much larger effect radius. Allies inside the Duskfield take reduced damage and targets inside the area deal reduced damage.\\nDuskfield grenades have a larger effect and reduce damage for allies inside the field.',
+      ),
+    ),
+  ),
+  2240152949 => 
+  array (
+    'name' => 'Stronghold',
+    'icon' => '/common/destiny2_content/icons/623ebc54e5a3bb481991df4513c543d7.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1731450287 => 
+      array (
+        'id' => 1731450287,
+        'name' => 'Clenched Fist',
+        'icon' => '/common/destiny2_content/icons/c1fd946dca8764e74c3577042d4ab799.png',
+        'desc' => 'Maximizes Guard stats on equipped Swords. Shots blocked immediately after guarding will heal you.\\nBonuses to guarding with Swords.',
+      ),
+    ),
+  ),
+  2389062558 => 
+  array (
+    'name' => 'Contraverse Hold',
+    'icon' => '/common/destiny2_content/icons/6cac8bb83b7e2921687d613d42f9fb47.jpg',
+    'sockets' => 
+    array (
+      8507332 => 
+      array (
+        'id' => 8507332,
+        'name' => 'Chaotic Exchanger',
+        'icon' => '/common/destiny2_content/icons/4827a2c374ce4b8cef4d0dbd76b27a1a.png',
+        'desc' => 'Resist incoming damage while charging your Void grenade. Charged Void grenades return grenade energy on a hit.\\nImproved charging for Void grenades.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  2415768376 => 
+  array (
+    'name' => 'Athrys\'s Embrace',
+    'icon' => '/common/destiny2_content/icons/51dac9557cd6c46c6f427a26f46392e3.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3663096260 => 
+      array (
+        'id' => 3663096260,
+        'name' => 'Skittering Stinger',
+        'icon' => '/common/destiny2_content/icons/a857c3c5ff7d2fce59aad713a155a031.png',
+        'desc' => 'Weighted Knife gains a second bounce. Rapid precision hits with your weapons grant Weighted Knife a significant damage bonus and the ability to stun unshielded combatants for a short time.
+
+Empowered Weighted Knife is strong against [Stagger] Unstoppable Champions.\\nWeighted Knife bounces twice and deals bonus damage.',
+      ),
+    ),
+  ),
+  2563444729 => 
+  array (
+    'name' => 'ACD/0 Feedback Fence',
+    'icon' => '/common/destiny2_content/icons/51fd51c3b825f132198ccbf02b4de7d2.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1155472386 => 
+      array (
+        'id' => 1155472386,
+        'name' => 'Fury Conductors',
+        'icon' => '/common/destiny2_content/icons/cac7d167de19879bbe166e601032cf1f.png',
+        'desc' => 'Melee hits build energy. Being struck by a melee attack reduces incoming damage and unleashes the energy in a devastating explosion.\\nMelee hits store explosive defensive energy.',
+      ),
+    ),
+  ),
+  2757274117 => 
+  array (
+    'name' => 'Khepri\'s Sting',
+    'icon' => '/common/destiny2_content/icons/6c80680f2a60f304fcc871c639974070.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      4102900702 => 
+      array (
+        'id' => 4102900702,
+        'name' => 'Touch of Venom',
+        'icon' => '/common/destiny2_content/icons/b1de40db96249e332b8a6954c9f40164.png',
+        'desc' => 'Punching someone with full melee energy will instantly cast Smoke Bomb. Gain Truesight while in your own Smoke Bomb effect. Your smoke bombs deal increased damage.\\nInstant Smoke Bomb with Truesight and improved damage',
+      ),
+    ),
+  ),
+  2780717641 => 
+  array (
+    'name' => 'Necrotic Grip',
+    'icon' => '/common/destiny2_content/icons/ef055cbc0f4b0992f4a3c2e4c8e179f7.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3824622015 => 
+      array (
+        'id' => 3824622015,
+        'name' => 'Grasp of the Devourer',
+        'icon' => '/common/destiny2_content/icons/6e0cd400bd89182b01a416a611eb21b1.png',
+        'desc' => 'Damaging combatants poisons them, dealing increasing damage over time. Defeating a poisoned combatant spreads the condition.
+
+Provides a moderate benefit to the airborne effectiveness stat of all Weapons of Sorrow.\\nMelees cause damage over time.',
+      ),
+    ),
+  ),
+  2950045886 => 
+  array (
+    'name' => 'Aeon Soul',
+    'icon' => '/common/destiny2_content/icons/1ee10eac192a5c4a7c8dbc6195c10dec.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3268255645 => 
+      array (
+        'id' => 3268255645,
+        'name' => 'Sect of Force',
+        'icon' => '/common/destiny2_content/icons/1afd329603bbc915ce6ec5e2cc1f3c55.jpg',
+        'desc' => 'You specialize in punishing powerful combatants before they can harm your allies.',
+      ),
+    ),
+  ),
+  2970800254 => 
+  array (
+    'name' => 'Claws of Ahamkara',
+    'icon' => '/common/destiny2_content/icons/90f62236b87badbb2f56c104315f63e2.jpg',
+    'sockets' => 
+    array (
+      2637025676 => 
+      array (
+        'id' => 2637025676,
+        'name' => 'The Whispers',
+        'icon' => '/common/destiny2_content/icons/be16b49a52b2f0efe9ae1507c8c7cf49.png',
+        'desc' => 'Gain an additional melee charge.\\nGain an additional melee charge.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3070357340 => 
+  array (
+    'name' => 'Getaway Artist',
+    'icon' => '/common/destiny2_content/icons/673dfa5edf0723adf0275cf30281a123.jpg',
+    'sockets' => 
+    array (
+      2818140350 => 
+      array (
+        'id' => 2818140350,
+        'name' => 'Dynamic Duo',
+        'icon' => '/common/destiny2_content/icons/bd46c762859f87b2c533101d73ffb3ac.png',
+        'desc' => '[Grenade]  : Convert your Arc grenade into a Arc Soul and become amplified. The Arc Soul functions as an autonomous turret.\\nConsuming your Arc grenade grants an Arc Soul and amplifies you.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3259193988 => 
+  array (
+    'name' => 'Osmiomancy Gloves',
+    'icon' => '/common/destiny2_content/icons/17ec444d96f933694c9a016094a858da.jpg',
+    'sockets' => 
+    array (
+      4003902350 => 
+      array (
+        'id' => 4003902350,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/7a9c2c9b5e4a94db2aa2f844fd66ac9a.jpg',
+        'desc' => 'Change this armor\'s energy type to Stasis.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      921817150 => 
+      array (
+        'id' => 921817150,
+        'name' => 'Fervid Coldsnap',
+        'icon' => '/common/destiny2_content/icons/da69cd16d79a697011793c1e92290b5d.png',
+        'desc' => 'Your Coldsnap grenades have an additional charge that recharges quicker on direct impact. The seeker spawned from Coldsnap grenades travels further.\\nYour Coldsnap grenades have an additional charge, recharge faster on impact, and have increased seeker travel distance.',
+      ),
+    ),
+  ),
+  3267996858 => 
+  array (
+    'name' => 'No Backup Plans',
+    'icon' => '/common/destiny2_content/icons/51979dd9ebfc73e66685fa18fb65c5c9.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      569260333 => 
+      array (
+        'id' => 569260333,
+        'name' => 'Force Multiplier',
+        'icon' => '/common/destiny2_content/icons/515e52c2199576f4fabe0f9eaf07df93.png',
+        'desc' => 'When you have full Void melee energy, Shotgun final blows grant a Void overshield and consume your melee energy. Shotgun final blows also give you melee energy. Provides a moderate benefit to the airborne effectiveness stat of Shotguns.\\nShotgun final blows consume melee energy to grant an Overshield.',
+      ),
+    ),
+  ),
+  3295711091 => 
+  array (
+    'name' => 'Liar\'s Handshake',
+    'icon' => '/common/destiny2_content/icons/c0a7faba69ffaf9ecd84183c606a506e.jpg',
+    'sockets' => 
+    array (
+      595829387 => 
+      array (
+        'id' => 595829387,
+        'name' => 'Cross Counter',
+        'icon' => '/common/destiny2_content/icons/0082475c90a676cd0c5e04090484b175.png',
+        'desc' => 'Using your Arc melee ability or being hit by a melee attack will allow you to follow up with an extremely powerful melee counterpunch that will heal you.\\nCross Counter regenerates health and deals extra damage.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  3453042252 => 
+  array (
+    'name' => 'Caliban\'s Hand',
+    'icon' => '/common/destiny2_content/icons/4c1535b83a443f15f2115b5d3ba58c0f.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2179827240 => 
+      array (
+        'id' => 2179827240,
+        'name' => 'Roast \'Em',
+        'icon' => '/common/destiny2_content/icons/747af67b5083261a13c9d611ec0cf6f1.png',
+        'desc' => 'Your Proximity Knife scorches targets it damages with its explosions, or ignites targets on final blow.
+
+After throwing a Proximity Knife, you gain increased melee regeneration until the knife explodes.\\nImproves Proximity Knife effectiveness and regeneration speed.',
+      ),
+    ),
+  ),
+  3627185503 => 
+  array (
+    'name' => 'Ophidian Aspect',
+    'icon' => '/common/destiny2_content/icons/3995951ee0fdf3fb77d757370458e031.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1147638875 => 
+      array (
+        'id' => 1147638875,
+        'name' => 'Cobra Totemic',
+        'icon' => '/common/destiny2_content/icons/c2afac9ab85081b228bc217d3ce743ba.png',
+        'desc' => 'Weapons ready and reload very quickly. Melee range is extended. Provides a small benefit to the airborne effectiveness stat of all weapons.\\nImproved weapon ready speed, reload, and melee range.',
+      ),
+    ),
+  ),
+  3787517196 => 
+  array (
+    'name' => 'Sunbracers',
+    'icon' => '/common/destiny2_content/icons/17c01ac034a7194e2de22d1ac487bb70.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2731901711 => 
+      array (
+        'id' => 2731901711,
+        'name' => 'Helium Spirals',
+        'icon' => '/common/destiny2_content/icons/05989a470940bc0972991069f0d5d866.png',
+        'desc' => 'Increases the duration of Solar Grenades. Solar melee kills grant unlimited Solar Grenade energy for a brief time.\\nSolar grenades burn longer. Melee kills restore them.',
+      ),
+    ),
+  ),
+  3844826440 => 
+  array (
+    'name' => 'Karnstein Armlets',
+    'icon' => '/common/destiny2_content/icons/7a37bd1dc75bd0848d8c7afa25570763.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2731901710 => 
+      array (
+        'id' => 2731901710,
+        'name' => 'Vampire\'s Caress',
+        'icon' => '/common/destiny2_content/icons/cf44821763ca3aeaeb4a6a16153a0ee0.png',
+        'desc' => 'Melee kills instantly restore a large amount of health and continue to restore health afterwards for a short duration.\\nMelee kills restore health for a short duration.',
+      ),
+    ),
+  ),
+  3844826443 => 
+  array (
+    'name' => 'Winter\'s Guile',
+    'icon' => '/common/destiny2_content/icons/4307654e15248d54fcffca2ab2710951.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      2731901709 => 
+      array (
+        'id' => 2731901709,
+        'name' => 'Warlord\'s Sigil',
+        'icon' => '/common/destiny2_content/icons/68a1b3a08cac4d3138c802e0e48d206b.png',
+        'desc' => 'Eliminating enemies with melee attacks increases your melee damage.\\nMelee kills increase melee damage.',
+      ),
+    ),
+  ),
+  3942036043 => 
+  array (
+    'name' => 'Aeon Swift',
+    'icon' => '/common/destiny2_content/icons/2e98cefd54e09b7383c000e2501358e0.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3268255645 => 
+      array (
+        'id' => 3268255645,
+        'name' => 'Sect of Force',
+        'icon' => '/common/destiny2_content/icons/1afd329603bbc915ce6ec5e2cc1f3c55.jpg',
+        'desc' => 'You specialize in punishing powerful combatants before they can harm your allies.',
+      ),
+    ),
+  ),
+  4284305242 => 
+  array (
+    'name' => 'Young Ahamkara\'s Spine',
+    'icon' => '/common/destiny2_content/icons/e7ccbff166a5a543df4f475f69f3ebf8.jpg',
+    'sockets' => 
+    array (
+      481860150 => 
+      array (
+        'id' => 481860150,
+        'name' => 'Wish-Dragon Teeth',
+        'icon' => '/common/destiny2_content/icons/aa800e2ba152d92b6a98e85d69e3a1ee.png',
+        'desc' => 'Increases Tripmine Grenade duration and blast radius. Ability damage grants Tripmine Grenade energy.\\nAbility damage grants enhanced Tripmines.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  4284305243 => 
+  array (
+    'name' => 'Mechaneer\'s Tricksleeves',
+    'icon' => '/common/destiny2_content/icons/a11c0abd3b5a9d9ac128ff37aec61425.jpg',
+    'sockets' => 
+    array (
+      481860151 => 
+      array (
+        'id' => 481860151,
+        'name' => 'Spring-Loaded Mounting',
+        'icon' => '/common/destiny2_content/icons/2453c2749743ca93b901346862dec5ea.png',
+        'desc' => 'Increases Sidearm ready and reload speed. While you\'re critically wounded, swapping to a Sidearm increases its damage. Provides a large benefit to the airborne effectiveness stat of Sidearms.\\nBoosts Sidearms, especially when you\'re wounded.',
+      ),
+      1633794450 => 
+      array (
+        'id' => 1633794450,
+        'name' => 'Mobility Enhancement Mod',
+        'icon' => '/common/destiny2_content/icons/42fcb576b30940185664507b2321ad0e.png',
+        'desc' => 'Increased mobility.',
+      ),
+    ),
+  ),
+  241462141 => 
+  array (
+    'name' => 'Doom Fang Pauldron',
+    'icon' => '/common/destiny2_content/icons/1e6af1d4e6ec8568434b1c8f8604b122.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1155472387 => 
+      array (
+        'id' => 1155472387,
+        'name' => 'Horns of Doom',
+        'icon' => '/common/destiny2_content/icons/eec4e47aa14ea841c57969df7b10850d.png',
+        'desc' => 'Void melee kills give Super energy.
+While Sentinel Shield is active, melee kills recharge Shield Throw, which extends your Super on hits.\\nVoid melee kills give Super energy. Improves Sentinel Shield.',
+      ),
+    ),
+  ),
+  241462142 => 
+  array (
+    'name' => 'Synthoceps',
+    'icon' => '/common/destiny2_content/icons/21d1f1aaf807996e1cfff5fc283fb59e.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1155472384 => 
+      array (
+        'id' => 1155472384,
+        'name' => 'Biotic Enhancements',
+        'icon' => '/common/destiny2_content/icons/081a4e6b7f5f8b1ed2ac84e1231e638d.png',
+        'desc' => 'Increased melee lunge range. Improved melee and Super damage when you\'re surrounded.\\nBuffs melee range. Being surrounded buffs damage.',
+      ),
+    ),
+  ),
+  300502917 => 
+  array (
+    'name' => 'Nothing Manacles',
+    'icon' => '/common/destiny2_content/icons/d51dbf7f5849cdb7d36ee0e4615c73d9.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      395373724 => 
+      array (
+        'id' => 395373724,
+        'name' => 'Scatter Charge',
+        'icon' => '/common/destiny2_content/icons/e6a5297a5b5b0dd79989e7558f3ec944.png',
+        'desc' => 'You gain an additional Scatter Grenade charge. Enables tracking for Scatter Grenade projectiles.\\nEnhanced Scatter Grenades.',
+      ),
+    ),
+  ),
+  691578978 => 
+  array (
+    'name' => 'Oathkeeper',
+    'icon' => '/common/destiny2_content/icons/e37b8c80f3b87365c372de25e45dc658.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1449897496 => 
+      array (
+        'id' => 1449897496,
+        'name' => 'Adamantine Brace',
+        'icon' => '/common/destiny2_content/icons/88cfe1fb31bcd10270adbeeefc66441a.png',
+        'desc' => 'Bow charges can be held indefinitely. Provides a moderate benefit to the airborne effectiveness stat of Bows.\\nBows charges can be held indefinitely.',
+      ),
+    ),
+  ),
+  691578979 => 
+  array (
+    'name' => 'Shards of Galanor',
+    'icon' => '/common/destiny2_content/icons/3c9400f304fc1d7976d6f6784b21b85f.jpg',
+    'sockets' => 
+    array (
+      2248916764 => 
+      array (
+        'id' => 2248916764,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/c926fa331c3d658c38c8a22d718936df.jpg',
+        'desc' => 'Change this armor\'s energy type to Solar.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1449897497 => 
+      array (
+        'id' => 1449897497,
+        'name' => 'Sharp Edges',
+        'icon' => '/common/destiny2_content/icons/052164f598ff1e351cf8f7d12990f04e.png',
+        'desc' => 'Hits and kills with Blade Barrage will return Super energy after the Super ends.\\nGet Super energy for Blade Barrage hits and kills.',
+      ),
+    ),
+  ),
+  809007410 => 
+  array (
+    'name' => 'Ashen Wake',
+    'icon' => '/common/destiny2_content/icons/a48952be6f94003a71b317486532eb10.jpg',
+    'sockets' => 
+    array (
+      384759954 => 
+      array (
+        'id' => 384759954,
+        'name' => 'Bring the Heat',
+        'icon' => '/common/destiny2_content/icons/0dee07b1d0cfc9ecd6d6746a2d6935d9.png',
+        'desc' => 'Fusion Grenades now explode on impact and gain increased throw speed. Final blows with Fusion Grenades grant grenade energy.\\nImproved Fusion Grenades.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  809007411 => 
+  array (
+    'name' => 'Wormgod Caress',
+    'icon' => '/common/destiny2_content/icons/aadd6b6efdd9e70cb2849d08a0755a54.jpg',
+    'sockets' => 
+    array (
+      384759955 => 
+      array (
+        'id' => 384759955,
+        'name' => 'Burning Fists',
+        'icon' => '/common/destiny2_content/icons/5e7d6aec46301de9ca30917d7cbb11ca.png',
+        'desc' => 'Melee kills increase melee damage for a period of time. Additional kills extend duration and increase effects.\\nMelee kills increase melee damage.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  1053737370 => 
+  array (
+    'name' => 'Shinobu\'s Vow',
+    'icon' => '/common/destiny2_content/icons/41d16b23c1af5dbf3363bc34bd591ce6.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3907299874 => 
+      array (
+        'id' => 3907299874,
+        'name' => 'New Tricks',
+        'icon' => '/common/destiny2_content/icons/2f77a4729f445239a2a516bed0704dcf.png',
+        'desc' => 'Improves Skip Grenade, and you gain an additional Skip Grenade charge. Skip Grenade returns energy when it damages enemies.\\nImproved Skip Grenade.',
+      ),
+    ),
+  ),
+  1190497097 => 
+  array (
+    'name' => 'Citan\'s Ramparts',
+    'icon' => '/common/destiny2_content/icons/410990b1b05932c0380eb5c808a9c22e.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1828251441 => 
+      array (
+        'id' => 1828251441,
+        'name' => 'Assault Barricade',
+        'icon' => '/common/destiny2_content/icons/11cfdf4496627df9b4f4cf945d51dd36.png',
+        'desc' => 'You and your allies can shoot through your Towering Barricade, which has reduced health and duration.\\nYou and your allies can shoot through your Towering Barricade.',
+      ),
+    ),
+  ),
+  1443166262 => 
+  array (
+    'name' => 'Second Chance',
+    'icon' => '/common/destiny2_content/icons/804b7ca7817b82515764adcf277d1c87.jpg',
+    'sockets' => 
+    array (
+      4197017647 => 
+      array (
+        'id' => 4197017647,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/83a37647ae6c6763d5e331c96086eeff.jpg',
+        'desc' => 'Change this armor\'s energy type to Void.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1437147326 => 
+      array (
+        'id' => 1437147326,
+        'name' => 'Myrmidon\'s Reach',
+        'icon' => '/common/destiny2_content/icons/f18b7e9e76f55bdfaf3e1823ca47ef2c.png',
+        'desc' => 'Gain a second charge of your Shield Throw melee, which becomes shield-piercing and stuns [Shield-Piercing] Barrier Champions.\\nImproves your Shield Throw melee.',
+      ),
+    ),
+  ),
+  1467044898 => 
+  array (
+    'name' => 'Icefall Mantle',
+    'icon' => '/common/destiny2_content/icons/83eaeca380ae46c3747b07af22d2923e.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      185514250 => 
+      array (
+        'id' => 185514250,
+        'name' => 'Glacial Guard',
+        'icon' => '/common/destiny2_content/icons/88db13dc9a7a26e7a77e4d2f4f9c4d7f.png',
+        'desc' => 'Replaces your Barricade ability with a personal overshield. When you activate your Barricade, you create a burst around yourself that slows combatants. While you have the overshield, you are slowed and Barricade does not recharge.\\nReplace your Barricade with an overshield.',
+      ),
+    ),
+  ),
+  1484674161 => 
+  array (
+    'name' => 'Ursa Furiosa',
+    'icon' => '/common/destiny2_content/icons/fcb345a9ab4c3c6a1afecb75f379c289.jpg',
+    'sockets' => 
+    array (
+      4190535237 => 
+      array (
+        'id' => 4190535237,
+        'name' => 'Ursine Guard',
+        'icon' => '/common/destiny2_content/icons/b8b533ddef212794b60a54799a00797d.png',
+        'desc' => 'Move faster while guarding when Sentinel Shield is active. Guarded damage converts to Super energy when the Super ends.\\nBlock damage with Sentinel Shield for more Super energy.',
+      ),
+      3530997750 => 
+      array (
+        'id' => 3530997750,
+        'name' => 'Plasteel Reinforcement Mod',
+        'icon' => '/common/destiny2_content/icons/03e65aee62fcabf98ffc45ab25f01298.png',
+        'desc' => 'Increased resilience.',
+      ),
+    ),
+  ),
+  1654461647 => 
+  array (
+    'name' => 'Aeon Safe',
+    'icon' => '/common/destiny2_content/icons/1bd2569de3ca26038dca9c2a406b0fb5.jpg',
+    'sockets' => 
+    array (
+      3482456145 => 
+      array (
+        'id' => 3482456145,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/163ba58204e888f0c34e1a64ee3c55c6.jpg',
+        'desc' => 'Change this armor\'s energy type to Arc.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      3268255645 => 
+      array (
+        'id' => 3268255645,
+        'name' => 'Sect of Force',
+        'icon' => '/common/destiny2_content/icons/1afd329603bbc915ce6ec5e2cc1f3c55.jpg',
+        'desc' => 'You specialize in punishing powerful combatants before they can harm your allies.',
+      ),
+    ),
+  ),
+  1703598057 => 
+  array (
+    'name' => 'Point-Contact Cannon Brace',
+    'icon' => '/common/destiny2_content/icons/51b1c4168179d7b2d115f1278b729624.jpg',
+    'sockets' => 
+    array (
+      4003902350 => 
+      array (
+        'id' => 4003902350,
+        'name' => 'Change Energy Type',
+        'icon' => '/common/destiny2_content/icons/7a9c2c9b5e4a94db2aa2f844fd66ac9a.jpg',
+        'desc' => 'Change this armor\'s energy type to Stasis.
+
+This action will reduce this armor\'s energy capacity to 1. Materials and currencies used previously will not be refunded.',
+      ),
+      1969105489 => 
+      array (
+        'id' => 1969105489,
+        'name' => 'Hammer of the Gods',
+        'icon' => '/common/destiny2_content/icons/b2b6afe30ebbd06b6a6b04eaa91f8bab.png',
+        'desc' => 'Defeating targets with your Thunderclap melee restores melee energy. Targets near you when you use your Thunderclap suffer lightning strikes; being amplified increases the range of these lightning strikes.\\nGain melee energy and create lightning strikes with Thunderclap.',
+      ),
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_LEGARMORMODS = array (
+  2183342667 => 
+  array (
+    'name' => 'Sidearm Scavenger',
+    'desc' => 'Sidearms that use Special ammo get bonus reserves when you pick up Special ammo.',
+    'icon' => '/common/destiny2_content/icons/b60763f81889eaf07329eaf32b01b0ae.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2238903692 => 
+  array (
+    'name' => 'Linear Fusion Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Linear Fusion Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/2c4b29bb798040b2f889877276a89b52.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2347686425 => 
+  array (
+    'name' => 'Fusion Rifle Scavenger',
+    'desc' => 'Fusion Rifles get bonus reserves when picking up ammo used by that Fusion Rifle.',
+    'icon' => '/common/destiny2_content/icons/692521d0d7d3a4432f98773d484c3f9a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2356995028 => 
+  array (
+    'name' => 'Scout Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Scout Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/72a1d3288f1ab8692aed4979c5092244.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2395653827 => 
+  array (
+    'name' => 'Shotgun Holster',
+    'desc' => 'Gradually reloads your stowed Shotguns over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/f36017eb03c9599aa2ffed2b912ee69b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2627515934 => 
+  array (
+    'name' => 'Grenade Launcher Holster',
+    'desc' => 'Gradually reloads your stowed Power Grenade Launchers over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/7a845afd2ed782c6ff08e0cb1166e535.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2758832455 => 
+  array (
+    'name' => 'Hand Cannon Scavenger',
+    'desc' => 'Hand Cannons that use Special ammo get bonus reserves when picking up Special ammo.',
+    'icon' => '/common/destiny2_content/icons/deb9ea8b84e7b15620d8a31d1755c76f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2799168657 => 
+  array (
+    'name' => 'Invigoration',
+    'desc' => 'Reduces melee cooldown each time you pick up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/fbd50803fc86f3b60c62fa9a37760186.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979161761 => 
+  array (
+    'name' => 'Hand Cannon Holster',
+    'desc' => 'Gradually reloads your stowed Hand Cannons over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/c4a18ec69b5536bfc0b8c501de34432f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2982054284 => 
+  array (
+    'name' => 'Sidearm Holster',
+    'desc' => 'Gradually reloads your stowed Sidearms over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/33e7629d7ec79d4ff20983a541312c90.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3563461386 => 
+  array (
+    'name' => 'Submachine Gun Holster',
+    'desc' => 'Gradually reloads your stowed Submachine Guns over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/e5c1c8a62e98f75c4f43ff0f8737aeb6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632415743 => 
+  array (
+    'name' => 'Trace Rifle Scavenger',
+    'desc' => 'Trace Rifles get bonus reserves when you pick up Special ammo.',
+    'icon' => '/common/destiny2_content/icons/7f83b92ed68b0809c83878dc8f1924e3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3670960347 => 
+  array (
+    'name' => 'Grenade Launcher Scavenger',
+    'desc' => 'Grenade Launchers get bonus reserves when picking up ammo used by that Grenade Launcher.',
+    'icon' => '/common/destiny2_content/icons/b6151afb1922d7b55184f5a2e2ff0ebb.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3836152936 => 
+  array (
+    'name' => 'Shotgun Scavenger',
+    'desc' => 'Shotguns get bonus reserves when picking up ammo used by that Shotgun.',
+    'icon' => '/common/destiny2_content/icons/3197f9d1cfea5f72e9d09cf5b465c226.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  96170281 => 
+  array (
+    'name' => 'Auto Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Auto Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/0bac5cc00ae4e9800befaf9b2c7e447c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  107499324 => 
+  array (
+    'name' => 'Fusion Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Fusion Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/2768295c5da74928d4700c0f9f2937ac.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  155500646 => 
+  array (
+    'name' => 'Glaive Scavenger',
+    'desc' => 'Glaives get bonus reserves when picking up ammo used by that Glaive.',
+    'icon' => '/common/destiny2_content/icons/0b5e2a4d82f0b70f140e1a2faa58022b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  311492789 => 
+  array (
+    'name' => 'Rocket Launcher Scavenger',
+    'desc' => 'Rocket Launchers get bonus reserves when picking up Heavy ammo.',
+    'icon' => '/common/destiny2_content/icons/9e7860f02150e019b059b2e104a32b97.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  320966913 => 
+  array (
+    'name' => 'Trace Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Trace Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/3162920187df845cab728894a7142ce6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  380905615 => 
+  array (
+    'name' => 'Innervation',
+    'desc' => 'Reduces grenade cooldown each time you pick up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/8d4ff6be1e86ffb1af2a61c987c027b5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  498878196 => 
+  array (
+    'name' => 'Sniper Rifle Scavenger',
+    'desc' => 'Sniper Rifles get bonus reserves when picking up ammo used by that Sniper Rifle.',
+    'icon' => '/common/destiny2_content/icons/3703c9e60783d6aba0a259976a9481d7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  573150099 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/c4b573f9dd4892f6eb3bfb9b194170d0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  681555689 => 
+  array (
+    'name' => 'Glaive Holster',
+    'desc' => 'Gradually reloads your stowed Glaives over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/0c828f9e6432ee5572c5ec5e1fc86831.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  703340600 => 
+  array (
+    'name' => 'Insulation',
+    'desc' => 'Reduces class ability cooldown each time you pick up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/bf91aa03df6599cb3fd7eac78ecf778f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  987267082 => 
+  array (
+    'name' => 'Arrow Scavenger',
+    'desc' => 'Bows that use Heavy ammo get bonus reserves when picking up Heavy ammo.',
+    'icon' => '/common/destiny2_content/icons/10f2870c3bc0479befbeb198bdcf0e12.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1127642993 => 
+  array (
+    'name' => 'Machine Gun Holster',
+    'desc' => 'Gradually reloads your stowed Machine Guns over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/ebfe0433cf251414515c8e23ce670e5c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1207025932 => 
+  array (
+    'name' => 'Absolution',
+    'desc' => 'Reduces all ability cooldowns each time you pick up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/a3cd4b61619a426bd5787a9aa5e8e4b4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324869195 => 
+  array (
+    'name' => 'Better Already',
+    'desc' => 'Your health begins to regenerate immediately after picking up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/51740c539e0858f2c951b8d350483eab.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1559280270 => 
+  array (
+    'name' => 'Machine Gun Scavenger',
+    'desc' => 'Machine Guns get bonus reserves when you pick up ammo.',
+    'icon' => '/common/destiny2_content/icons/31caef1935f19a168b3a44c4d0a19409.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1597311617 => 
+  array (
+    'name' => 'Sniper Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Sniper Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/c022deefaa07eaed35c49dd2e4b866cf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1921961414 => 
+  array (
+    'name' => 'Recuperation',
+    'desc' => 'Replenishes health each time you pick up an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/ca8ea4c398dbf809bcec8a24b1c37180.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1985887424 => 
+  array (
+    'name' => 'Orbs of Restoration',
+    'desc' => 'Picking up an Orb of Power grants a small amount of energy to your ability with the least energy.',
+    'icon' => '/common/destiny2_content/icons/3da4a26eca77c94bfcb0907fe12d8b6a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2001283033 => 
+  array (
+    'name' => 'Pulse Rifle Holster',
+    'desc' => 'Gradually reloads your stowed Pulse Rifles over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/ebb08c2cc53768557e1bf6efeb972bf5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2051366208 => 
+  array (
+    'name' => 'Linear Fusion Rifle Scavenger',
+    'desc' => 'Linear Fusion Rifles get bonus reserves when picking up ammo used by that Linear Fusion Rifle.',
+    'icon' => '/common/destiny2_content/icons/81220058001d0ab32c6833624dabae3f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2146553541 => 
+  array (
+    'name' => 'Sword Scavenger',
+    'desc' => 'Swords get bonus reserves when picking up Heavy ammo.',
+    'icon' => '/common/destiny2_content/icons/1d408256bf3d9a8aebfd9249190998cc.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321584 => 
+  array (
+    'name' => 'Precision Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with precision kills from Bows, Hand Cannons, and Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/2614935a04f326038bddff44a374e996.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321585 => 
+  array (
+    'name' => 'Surprise Attack',
+    'desc' => 'While Charged with Light, reloading or readying a Sidearm will consume all stacks of Charged with Light and convert them into stacks of a major damage buff, which are depleted as you damage combatants with that Sidearm.',
+    'icon' => '/common/destiny2_content/icons/df471d6e132702ba8bdfc87b16d1c441.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321586 => 
+  array (
+    'name' => 'Energy Converter',
+    'desc' => 'While Charged with Light, using your grenade attack grants you Super energy, consuming all stacks of Charged with Light. The more stacks you have, the more energy you gain, up to a maximum of 50% of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/e0b2cb5c2a1fd8ffa92f20c91ed5e7e0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321587 => 
+  array (
+    'name' => 'Charge Harvester',
+    'desc' => 'While you are not Charged with Light, any kill or assist has a small cumulative chance to cause you to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/a8acc2b6cf36527f879051a38622e310.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815164 => 
+  array (
+    'name' => 'Swift Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Pulse Rifles, Sidearms, or Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/80b1179638c3627864a1ab5247151305.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815165 => 
+  array (
+    'name' => 'Lucent Blade',
+    'desc' => 'While Charged with Light, dealing damage with a Sword gives you bonus Sword damage for 5 seconds, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b2863d7ca41af5bca31641ecc6c5998a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815166 => 
+  array (
+    'name' => 'Reactive Pulse',
+    'desc' => 'While Charged with Light, when you take damage while surrounded by combatants, you emit a burst of damaging Arc energy, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/19fc1544595d371c631855656c9f31b7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815167 => 
+  array (
+    'name' => 'Radiant Light',
+    'desc' => 'Casting your Super causes nearby allies to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b6649b05c177d25a0faae24fe727fbb9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435908 => 
+  array (
+    'name' => 'Firepower',
+    'desc' => 'While Charged with Light, regain a portion of your grenade energy when you use your grenade, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/070b7b77cd6fb8462dc6013764cb3709.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435909 => 
+  array (
+    'name' => 'Heal Thyself',
+    'desc' => 'While you are Charged with Light, grenade final blows heal you and consume one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e7067bd91843c6a9a40cceba9d376683.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435910 => 
+  array (
+    'name' => 'Charged Up',
+    'desc' => 'Allows for 1 additional stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/ce29f32ba5ef8758d1b5f3cfad0944a6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435911 => 
+  array (
+    'name' => 'Blast Radius',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Grenade Launchers or Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/6b0d065905e6e640a2c23b1af25160d1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075120 => 
+  array (
+    'name' => 'Protective Light',
+    'desc' => 'While Charged with Light, you gain significant damage resistance against combatants when your shields are destroyed. This effect consumes all stacks of Charged with Light. The more stacks consumed, the longer the damage resistance lasts.',
+    'icon' => '/common/destiny2_content/icons/f9d3dcc86e0805401b6f0ce72b0847ba.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075121 => 
+  array (
+    'name' => 'Extra Reserves',
+    'desc' => 'While Charged with Light, defeating combatants with Void damage grants a chance to drop Special ammo. This effect consumes all stacks of Charged with Light. The more stacks you have, the higher your chance of gaining the ammo drop.',
+    'icon' => '/common/destiny2_content/icons/fc70edeb4ce73caf4021b67c0017794b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075122 => 
+  array (
+    'name' => 'Precisely Charged',
+    'desc' => 'Become Charged with Light by getting multiple rapid precision final blows with Linear Fusion Rifles or Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/13d7d5a897651438d055d64942c1ff4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075123 => 
+  array (
+    'name' => 'Stacks on Stacks',
+    'desc' => 'Gain an extra stack of Charged with Light for every stack you gain.',
+    'icon' => '/common/destiny2_content/icons/519f5f15cddf0f17906e951fd3a9769b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726236 => 
+  array (
+    'name' => 'Empowered Finish',
+    'desc' => 'Become Charged with Light by finishing a combatant, consuming one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/a8e2913f5e424d4c8ed18c719c85c2db.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726237 => 
+  array (
+    'name' => 'High-Energy Fire',
+    'desc' => 'While Charged with Light, gain a bonus to weapon damage. Each defeated combatant consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/126c83604240748a98f807a85220b652.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726238 => 
+  array (
+    'name' => 'Taking Charge',
+    'desc' => 'Become Charged with Light by picking up Orbs of Power.',
+    'icon' => '/common/destiny2_content/icons/5f0c0d6604569712074ae7cba8fb47d3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726239 => 
+  array (
+    'name' => 'Shield Break Charge',
+    'desc' => 'Become Charged with Light by breaking a combatant shield with the matching energy type.',
+    'icon' => '/common/destiny2_content/icons/32b5e4b0719f6bec8e70987db09aa755.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180932 => 
+  array (
+    'name' => 'Argent Ordnance',
+    'desc' => 'While Charged with Light, readying or firing a Rocket Launcher grants it increased damage and reload speed. Damaging a combatant with a rocket consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/9bc05cbb389498fb9ca99807c9b91b6b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180933 => 
+  array (
+    'name' => 'Sustained Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Auto Rifles, Trace Rifles, or Machine Guns. Additional copies of this mod increase the time allowed between combatants that are defeated.',
+    'icon' => '/common/destiny2_content/icons/900534ac5f6ffd274521ed7fc0e43e31.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180934 => 
+  array (
+    'name' => 'Supercharged',
+    'desc' => 'You can have 2 additional stacks of Charged with Light, up to a maximum of 5.',
+    'icon' => '/common/destiny2_content/icons/7102cef97f85ae4fae1d34153c292973.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180935 => 
+  array (
+    'name' => 'Kindling the Flame',
+    'desc' => 'While Charged with Light, reviving a downed Guardian gives you a burst of healing, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/cc1eb304baed451cbb4b8b5cfcab164f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685884 => 
+  array (
+    'name' => 'Quick Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Fusion Rifles or Shotguns.',
+    'icon' => '/common/destiny2_content/icons/e80f0a325b78190e164810724044776e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685885 => 
+  array (
+    'name' => 'Striking Light',
+    'desc' => 'While Charged with Light, defeating combatants with melee damage and Swords spawns 1 Orb of Power for your allies and consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e1eb7cf6ad88c3311f775df370bd21e4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685886 => 
+  array (
+    'name' => 'Heavy Handed',
+    'desc' => 'While Charged with Light, regain half of your melee energy when you use a charged melee ability, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/c6d1db58becc093aa5d7b2534af41005.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685887 => 
+  array (
+    'name' => 'Powerful Friends',
+    'desc' => 'When you become Charged with Light, nearby allies also become Charged with Light, if they are not already.',
+    'icon' => '/common/destiny2_content/icons/006460670f0ca57fbe5ee1af83dcfd4d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575870 => 
+  array (
+    'name' => 'Anti-Oracle',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating an Oracle grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/121c47d570be6cb4c77ee5cf5a8d5dcf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575871 => 
+  array (
+    'name' => 'Anti-Praetorian',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Praetorian grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/d875cd79e496abe02b608c4b404ce77d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776732 => 
+  array (
+    'name' => 'Rapid Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Pulse Rifles, Shotguns, Sidearms, SMGs, and Swords deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/24f635fa2f0f3b0a5f8f9328771d2cd5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776733 => 
+  array (
+    'name' => 'Vex Breaker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a melee attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/ec576e6c4d570a4cbe9ac42376e7b087.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776734 => 
+  array (
+    'name' => 'Superstructure Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to stun those combatants.',
+    'icon' => '/common/destiny2_content/icons/b840f523d03b4ed439560c1a5ec10fc6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521232 => 
+  array (
+    'name' => 'Precise Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Bows, Hand Cannons, Linear Fusion Rifles, Scout Rifles, and Sniper Rifles deal additional damage to Oracles in the Vault of Glass.',
+    'icon' => '/common/destiny2_content/icons/e3a31b91f13978610b75dff836bad99b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521233 => 
+  array (
+    'name' => 'Vex Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a precision hit has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/81f78e450c715d53dbac5ef99235a696.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521234 => 
+  array (
+    'name' => 'Superstructure Defender',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to weaken those combatants.',
+    'icon' => '/common/destiny2_content/icons/0ff2d5c2be0870eb3208f6f649dfda78.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506404 => 
+  array (
+    'name' => 'Vex Destroyer',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a grenade attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/1329b43e9413bb45a678847c14f8c04a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506405 => 
+  array (
+    'name' => 'Aggressive Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Auto Rifles, Fusion Rifles, Grenade Launchers, Trace Rifles, and Rocket Launchers deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/61c39d00cda46b7e7dfd8d60a70ff9ac.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506407 => 
+  array (
+    'name' => 'Superstructure Medic',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to create a burst of healing for you and allies near you.',
+    'icon' => '/common/destiny2_content/icons/8f2805e20ae35c09851c919f161efa41.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2527938402 => 
+  array (
+    'name' => 'Riven\'s Curse',
+    'desc' => 'While in the Dreaming City, you deal more damage, but also take more damage from all sources.',
+    'icon' => '/common/destiny2_content/icons/8e07a3c749f6cd8736cc489faa857f4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2623485440 => 
+  array (
+    'name' => 'Minor Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/8fa2d4e4c82586668210e12c5115575a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2645858828 => 
+  array (
+    'name' => 'Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/18054408a5fc068f2384c6c31a183423.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2850583378 => 
+  array (
+    'name' => 'Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/195f4f173adb52b336b4ecd67101004d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3253038666 => 
+  array (
+    'name' => 'Strength Mod',
+    'icon' => '/common/destiny2_content/icons/07f2361532c79e773909220e5884ab07.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3355995799 => 
+  array (
+    'name' => 'Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/9fd56c3b42923c9df23edf585b0107bf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3682186345 => 
+  array (
+    'name' => 'Minor Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/53c28186a4b97285a01aace5748e4de7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3699676109 => 
+  array (
+    'name' => 'Minor Strength Mod',
+    'icon' => '/common/destiny2_content/icons/ec0b298ec4dac0023604e467a58c3868.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3961599962 => 
+  array (
+    'name' => 'Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/c664ddd10920daab49cc3808dbb6a1e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4048838440 => 
+  array (
+    'name' => 'Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/9d54e2149f945b2c298020da443b70fa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  204137529 => 
+  array (
+    'name' => 'Minor Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/287901ef741855655856f6e8f5776f03.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  369171376 => 
+  array (
+    'name' => 'Transcendent Blessing',
+    'desc' => 'This is a consumable armor mod, which can be inserted into only one piece of armor at a time. Replacing this mod with another mod destroys it. Dismantling armor containing this mod refunds the mod.\\nWhile in the Dreaming City, you deal more damage to all targets.',
+    'icon' => '/common/destiny2_content/icons/e6d331674ccfb21c5a99dac70c41d851.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  481675395 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/3a1e41ae2e2cbe33611481665f7d0378.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  555005975 => 
+  array (
+    'name' => 'Minor Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/f39b0c97678148a864d6f6fbbe85524d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1227870362 => 
+  array (
+    'name' => 'Minor Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/d8da60458e3355ddf7123be5ffe3dc3c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3056430904 => 
+  array (
+    'name' => 'Fallen Barrier',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3230867320 => 
+  array (
+    'name' => 'Mask Upgrade',
+    'desc' => 'Defeat Terrors in the Haunted Forest while wearing a Festival of the Lost mask to unlock this perk.',
+    'icon' => '/common/destiny2_content/icons/e54d34d49fce1ecdbb31c386da908f44.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3750139805 => 
+  array (
+    'name' => 'Fallen Invigoration',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  406106409 => 
+  array (
+    'name' => 'Fallen Repurposing',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796172 => 
+  array (
+    'name' => 'Vampiric Touch',
+    'desc' => 'This mask can be upgraded to increase damage to challenging enemies and trigger health regeneration on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/d687306cdc10af8472976319b955d296.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796173 => 
+  array (
+    'name' => 'Higher Purpose',
+    'desc' => 'This mask can be upgraded to increase damage to enemies and provide near-invulnerability while airborne. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/b72ae79f6a9b017fd4bec0e5d790d94c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796175 => 
+  array (
+    'name' => 'Energetic Assassin',
+    'desc' => 'This mask can be upgraded to increase damage to Terrors and grant grenade and melee energy on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/561f898ec516907c91eaee957f65a0f7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  618799600 => 
+  array (
+    'name' => 'Fallen Armaments',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2187989977 => 
+  array (
+    'name' => 'Machine Gun Scavenger',
+    'desc' => 'Machine Guns get bonus reserves when you pick up ammo.',
+    'icon' => '/common/destiny2_content/icons/c265f2ac684faaf21a68f1afdb412515.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2426323900 => 
+  array (
+    'name' => 'Energized',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324233016 => 
+  array (
+    'name' => 'Sword Scavenger',
+    'icon' => '/common/destiny2_content/icons/a18e4ff3b26d2b219f3782aa54c36eb2.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324233017 => 
+  array (
+    'name' => 'Machine Gun Holster',
+    'desc' => 'Gradually reloads your stowed Machine Guns over time. Multiple copies of this perk stack to reduce the time taken to fully reload.',
+    'icon' => '/common/destiny2_content/icons/ab90d70d323a0b31e5ce4c259cfd142c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_ARMARMORMODS = array (
+  2187989983 => 
+  array (
+    'name' => 'Focusing Strike',
+    'desc' => 'Grants class ability energy when you cause damage with a melee attack.',
+    'icon' => '/common/destiny2_content/icons/9dc79ed7e412b41d4cba5ccb352a3bcd.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2192962617 => 
+  array (
+    'name' => 'Hand Cannon Dexterity',
+    'desc' => 'Faster ready and stow speed for Hand Cannons.',
+    'icon' => '/common/destiny2_content/icons/bbf83c956ccae185a26b7d914739d9e4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2324400338 => 
+  array (
+    'name' => 'Rocket Launcher Loader',
+    'desc' => 'Increases reload speed of Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/776cbdeb79b0e5b002daa1eed3330fe2.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2353976789 => 
+  array (
+    'name' => 'Sidearm Dexterity',
+    'desc' => 'Faster ready and stow speed for Sidearms.',
+    'icon' => '/common/destiny2_content/icons/e3bbf8c6f503088b36a152ce95125b4e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2571974065 => 
+  array (
+    'name' => 'Auto Rifle Loader',
+    'desc' => 'Increases reload speed of Auto Rifles.',
+    'icon' => '/common/destiny2_content/icons/b347afa5ea1de90d71a19befad378e5a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2790645726 => 
+  array (
+    'name' => 'Submachine Gun Loader',
+    'desc' => 'Increases reload speed of Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/0cf177981705d5633f9ace696c4d9f39.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3038929059 => 
+  array (
+    'name' => 'Grenade Launcher Dexterity',
+    'desc' => 'Faster ready and stow speed for Grenade Launchers.',
+    'icon' => '/common/destiny2_content/icons/d20a351956b61019aa7b8950496a8ec0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3228149706 => 
+  array (
+    'name' => 'Pulse Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Pulse Rifles.',
+    'icon' => '/common/destiny2_content/icons/fed35822cf04a8405492211ad2bba2a0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3337174653 => 
+  array (
+    'name' => 'Scout Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/de794223d5d653cddc57255f63b095f0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3436675785 => 
+  array (
+    'name' => 'Bow Reloader',
+    'desc' => 'Increases the nocking speed of arrows.',
+    'icon' => '/common/destiny2_content/icons/47df7780b705e2fc829ba28114e652c3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3470562293 => 
+  array (
+    'name' => 'Impact Induction',
+    'desc' => 'Causing damage with a melee attack reduces your grenade cooldown.',
+    'icon' => '/common/destiny2_content/icons/e00ae3014d71f672690e493cb814e9bf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3517390997 => 
+  array (
+    'name' => 'Fusion Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/f0b919dbe17cdfa7aa4df1e35ef32650.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3725144328 => 
+  array (
+    'name' => 'Glaive Dexterity',
+    'desc' => 'Faster ready and stow speed for Glaives.',
+    'icon' => '/common/destiny2_content/icons/20508b728b91743f066da45aea6128cf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3750579462 => 
+  array (
+    'name' => 'Bolstering Detonation',
+    'desc' => 'Grants class ability energy when you cause damage with a grenade.',
+    'icon' => '/common/destiny2_content/icons/4799aa0b650494b79dc8c3d8941cdc03.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3788210493 => 
+  array (
+    'name' => 'Momentum Transfer',
+    'desc' => 'Causing damage with a grenade reduces your melee cooldown.',
+    'icon' => '/common/destiny2_content/icons/496016b33c0c21d64e75a53d0358a7eb.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4140815674 => 
+  array (
+    'name' => 'Grenade Launcher Loader',
+    'desc' => 'Increases reload speed of Grenade Launchers.',
+    'icon' => '/common/destiny2_content/icons/631e8f886cd0eda3f2debb7cfbbb203d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  47859594 => 
+  array (
+    'name' => 'Grenade Kickstart',
+    'desc' => 'When your grenade energy is fully expended, you gain grenade energy.',
+    'icon' => '/common/destiny2_content/icons/2387baa3ce8a7479b45219ab7ea93ab1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  100050722 => 
+  array (
+    'name' => 'Auto Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Auto Rifles.',
+    'icon' => '/common/destiny2_content/icons/34da39d9d7a4511d16d79a329da0874c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  146553282 => 
+  array (
+    'name' => 'Sniper Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/b25e9791a5a0ef4b99279135098f9469.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  157329321 => 
+  array (
+    'name' => 'Machine Gun Loader',
+    'desc' => 'Increases the reload speed of Machine Guns.',
+    'icon' => '/common/destiny2_content/icons/b980e2d7c665239655fa1fac7fc05faa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  178399816 => 
+  array (
+    'name' => 'Linear Fusion Rifle Loader',
+    'desc' => 'Increases reload speed of Linear Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/38827b292fc7d628409ac950b539602d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  235706376 => 
+  array (
+    'name' => 'Shotgun Dexterity',
+    'desc' => 'Faster ready and stow speed for Shotguns.',
+    'icon' => '/common/destiny2_content/icons/289d94384604378342d0ba62fc11b4bb.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  403494087 => 
+  array (
+    'name' => 'Fastball',
+    'desc' => 'Increases grenade throw distance.',
+    'icon' => '/common/destiny2_content/icons/6939d7377921c9e8a80558bec173f96b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  428274928 => 
+  array (
+    'name' => 'Fusion Rifle Loader',
+    'desc' => 'Increases reload speed of Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/4bd5d235727b184427cdd0b79036d6d7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  459449847 => 
+  array (
+    'name' => 'Submachine Gun Dexterity',
+    'desc' => 'Faster ready and stow speed for Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/ea0baac685d7becb74ba30a5e00ee3d7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  532451225 => 
+  array (
+    'name' => 'Trace Rifle Dexterity',
+    'desc' => 'Faster ready and stow speed for Trace Rifles.',
+    'icon' => '/common/destiny2_content/icons/105c887db55aecd3a62cb37a7f77fa24.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  667313240 => 
+  array (
+    'name' => 'Scout Rifle Loader',
+    'desc' => 'Increases reload speed of Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/10c932a466c63876b8177d2f7a9d4185.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  762238512 => 
+  array (
+    'name' => 'Sidearm Loader',
+    'desc' => 'Increases reload speed of Sidearms.',
+    'icon' => '/common/destiny2_content/icons/4af8bade4eaef5ca1996d5a8e9c9e37d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1052494884 => 
+  array (
+    'name' => 'Hand Cannon Loader',
+    'desc' => 'Increases reload speed of Hand Cannons.',
+    'icon' => '/common/destiny2_content/icons/aea4a74a51ddbed77350afdafaaf13cd.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1129724921 => 
+  array (
+    'name' => 'Pulse Rifle Loader',
+    'desc' => 'Increases reload speed of Pulse Rifles.',
+    'icon' => '/common/destiny2_content/icons/321b9bacddce27d2d4c661ddbe7d203c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1371877916 => 
+  array (
+    'name' => 'Melee Kickstart',
+    'desc' => 'When your melee energy is fully expended, you gain melee energy.',
+    'icon' => '/common/destiny2_content/icons/e49575bf41a8967fedc570c1a5fbdbdb.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1445862797 => 
+  array (
+    'name' => 'Linear Fusion Dexterity',
+    'desc' => 'Faster ready and stow speed for Linear Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/25458636887e9eeff6868c6daaa6482c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1534061443 => 
+  array (
+    'name' => 'Shotgun Loader',
+    'desc' => 'Increases reload speed of Shotguns.',
+    'icon' => '/common/destiny2_content/icons/12d6b0e57bc1ceff6cfa637e09674b4b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1600896643 => 
+  array (
+    'name' => 'Glaive Loader',
+    'desc' => 'Increases reload speed of Glaives.',
+    'icon' => '/common/destiny2_content/icons/6715229d59e2d0c9b860fe8e1c7203f5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1621596154 => 
+  array (
+    'name' => 'Bow Dexterity',
+    'desc' => 'Faster ready and stow speed for Bows.',
+    'icon' => '/common/destiny2_content/icons/bcdc82bb7b3d32d11cce08ac4db1f745.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1740875866 => 
+  array (
+    'name' => 'Machine Gun Dexterity',
+    'desc' => 'Faster ready and stow speed for Machine Guns.',
+    'icon' => '/common/destiny2_content/icons/11e2f4844a9cffd30dfc1b1e065a6ef0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1807758212 => 
+  array (
+    'name' => 'Trace Rifle Loader',
+    'desc' => 'Increases reload speed of Trace Rifles.',
+    'icon' => '/common/destiny2_content/icons/be8fb8a2aa3b5750ed650da21d7a2fc0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1844045567 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/18bb744532b78a20164f150c770c5f89.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1970413851 => 
+  array (
+    'name' => 'Rocket Launcher Dexterity',
+    'desc' => 'Faster ready and stow speed for Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/8b8461ea49aa2ee1c50cc8e62a7e3b23.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2039949393 => 
+  array (
+    'name' => 'Sniper Rifle Loader',
+    'desc' => 'Increases reload speed of Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/87e6d89dda2ea208b49d90e47af8fb9e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321584 => 
+  array (
+    'name' => 'Precision Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with precision kills from Bows, Hand Cannons, and Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/2614935a04f326038bddff44a374e996.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321585 => 
+  array (
+    'name' => 'Surprise Attack',
+    'desc' => 'While Charged with Light, reloading or readying a Sidearm will consume all stacks of Charged with Light and convert them into stacks of a major damage buff, which are depleted as you damage combatants with that Sidearm.',
+    'icon' => '/common/destiny2_content/icons/df471d6e132702ba8bdfc87b16d1c441.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321586 => 
+  array (
+    'name' => 'Energy Converter',
+    'desc' => 'While Charged with Light, using your grenade attack grants you Super energy, consuming all stacks of Charged with Light. The more stacks you have, the more energy you gain, up to a maximum of 50% of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/e0b2cb5c2a1fd8ffa92f20c91ed5e7e0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321587 => 
+  array (
+    'name' => 'Charge Harvester',
+    'desc' => 'While you are not Charged with Light, any kill or assist has a small cumulative chance to cause you to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/a8acc2b6cf36527f879051a38622e310.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815164 => 
+  array (
+    'name' => 'Swift Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Pulse Rifles, Sidearms, or Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/80b1179638c3627864a1ab5247151305.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815165 => 
+  array (
+    'name' => 'Lucent Blade',
+    'desc' => 'While Charged with Light, dealing damage with a Sword gives you bonus Sword damage for 5 seconds, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b2863d7ca41af5bca31641ecc6c5998a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815166 => 
+  array (
+    'name' => 'Reactive Pulse',
+    'desc' => 'While Charged with Light, when you take damage while surrounded by combatants, you emit a burst of damaging Arc energy, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/19fc1544595d371c631855656c9f31b7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815167 => 
+  array (
+    'name' => 'Radiant Light',
+    'desc' => 'Casting your Super causes nearby allies to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b6649b05c177d25a0faae24fe727fbb9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435908 => 
+  array (
+    'name' => 'Firepower',
+    'desc' => 'While Charged with Light, regain a portion of your grenade energy when you use your grenade, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/070b7b77cd6fb8462dc6013764cb3709.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435909 => 
+  array (
+    'name' => 'Heal Thyself',
+    'desc' => 'While you are Charged with Light, grenade final blows heal you and consume one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e7067bd91843c6a9a40cceba9d376683.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435910 => 
+  array (
+    'name' => 'Charged Up',
+    'desc' => 'Allows for 1 additional stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/ce29f32ba5ef8758d1b5f3cfad0944a6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435911 => 
+  array (
+    'name' => 'Blast Radius',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Grenade Launchers or Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/6b0d065905e6e640a2c23b1af25160d1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075120 => 
+  array (
+    'name' => 'Protective Light',
+    'desc' => 'While Charged with Light, you gain significant damage resistance against combatants when your shields are destroyed. This effect consumes all stacks of Charged with Light. The more stacks consumed, the longer the damage resistance lasts.',
+    'icon' => '/common/destiny2_content/icons/f9d3dcc86e0805401b6f0ce72b0847ba.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075121 => 
+  array (
+    'name' => 'Extra Reserves',
+    'desc' => 'While Charged with Light, defeating combatants with Void damage grants a chance to drop Special ammo. This effect consumes all stacks of Charged with Light. The more stacks you have, the higher your chance of gaining the ammo drop.',
+    'icon' => '/common/destiny2_content/icons/fc70edeb4ce73caf4021b67c0017794b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075122 => 
+  array (
+    'name' => 'Precisely Charged',
+    'desc' => 'Become Charged with Light by getting multiple rapid precision final blows with Linear Fusion Rifles or Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/13d7d5a897651438d055d64942c1ff4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075123 => 
+  array (
+    'name' => 'Stacks on Stacks',
+    'desc' => 'Gain an extra stack of Charged with Light for every stack you gain.',
+    'icon' => '/common/destiny2_content/icons/519f5f15cddf0f17906e951fd3a9769b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726236 => 
+  array (
+    'name' => 'Empowered Finish',
+    'desc' => 'Become Charged with Light by finishing a combatant, consuming one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/a8e2913f5e424d4c8ed18c719c85c2db.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726237 => 
+  array (
+    'name' => 'High-Energy Fire',
+    'desc' => 'While Charged with Light, gain a bonus to weapon damage. Each defeated combatant consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/126c83604240748a98f807a85220b652.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726238 => 
+  array (
+    'name' => 'Taking Charge',
+    'desc' => 'Become Charged with Light by picking up Orbs of Power.',
+    'icon' => '/common/destiny2_content/icons/5f0c0d6604569712074ae7cba8fb47d3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726239 => 
+  array (
+    'name' => 'Shield Break Charge',
+    'desc' => 'Become Charged with Light by breaking a combatant shield with the matching energy type.',
+    'icon' => '/common/destiny2_content/icons/32b5e4b0719f6bec8e70987db09aa755.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180932 => 
+  array (
+    'name' => 'Argent Ordnance',
+    'desc' => 'While Charged with Light, readying or firing a Rocket Launcher grants it increased damage and reload speed. Damaging a combatant with a rocket consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/9bc05cbb389498fb9ca99807c9b91b6b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180933 => 
+  array (
+    'name' => 'Sustained Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Auto Rifles, Trace Rifles, or Machine Guns. Additional copies of this mod increase the time allowed between combatants that are defeated.',
+    'icon' => '/common/destiny2_content/icons/900534ac5f6ffd274521ed7fc0e43e31.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180934 => 
+  array (
+    'name' => 'Supercharged',
+    'desc' => 'You can have 2 additional stacks of Charged with Light, up to a maximum of 5.',
+    'icon' => '/common/destiny2_content/icons/7102cef97f85ae4fae1d34153c292973.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180935 => 
+  array (
+    'name' => 'Kindling the Flame',
+    'desc' => 'While Charged with Light, reviving a downed Guardian gives you a burst of healing, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/cc1eb304baed451cbb4b8b5cfcab164f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685884 => 
+  array (
+    'name' => 'Quick Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Fusion Rifles or Shotguns.',
+    'icon' => '/common/destiny2_content/icons/e80f0a325b78190e164810724044776e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685885 => 
+  array (
+    'name' => 'Striking Light',
+    'desc' => 'While Charged with Light, defeating combatants with melee damage and Swords spawns 1 Orb of Power for your allies and consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e1eb7cf6ad88c3311f775df370bd21e4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685886 => 
+  array (
+    'name' => 'Heavy Handed',
+    'desc' => 'While Charged with Light, regain half of your melee energy when you use a charged melee ability, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/c6d1db58becc093aa5d7b2534af41005.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685887 => 
+  array (
+    'name' => 'Powerful Friends',
+    'desc' => 'When you become Charged with Light, nearby allies also become Charged with Light, if they are not already.',
+    'icon' => '/common/destiny2_content/icons/006460670f0ca57fbe5ee1af83dcfd4d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575870 => 
+  array (
+    'name' => 'Anti-Oracle',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating an Oracle grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/121c47d570be6cb4c77ee5cf5a8d5dcf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575871 => 
+  array (
+    'name' => 'Anti-Praetorian',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Praetorian grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/d875cd79e496abe02b608c4b404ce77d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776732 => 
+  array (
+    'name' => 'Rapid Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Pulse Rifles, Shotguns, Sidearms, SMGs, and Swords deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/24f635fa2f0f3b0a5f8f9328771d2cd5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776733 => 
+  array (
+    'name' => 'Vex Breaker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a melee attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/ec576e6c4d570a4cbe9ac42376e7b087.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776734 => 
+  array (
+    'name' => 'Superstructure Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to stun those combatants.',
+    'icon' => '/common/destiny2_content/icons/b840f523d03b4ed439560c1a5ec10fc6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521232 => 
+  array (
+    'name' => 'Precise Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Bows, Hand Cannons, Linear Fusion Rifles, Scout Rifles, and Sniper Rifles deal additional damage to Oracles in the Vault of Glass.',
+    'icon' => '/common/destiny2_content/icons/e3a31b91f13978610b75dff836bad99b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521233 => 
+  array (
+    'name' => 'Vex Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a precision hit has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/81f78e450c715d53dbac5ef99235a696.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521234 => 
+  array (
+    'name' => 'Superstructure Defender',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to weaken those combatants.',
+    'icon' => '/common/destiny2_content/icons/0ff2d5c2be0870eb3208f6f649dfda78.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506404 => 
+  array (
+    'name' => 'Vex Destroyer',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a grenade attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/1329b43e9413bb45a678847c14f8c04a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506405 => 
+  array (
+    'name' => 'Aggressive Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Auto Rifles, Fusion Rifles, Grenade Launchers, Trace Rifles, and Rocket Launchers deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/61c39d00cda46b7e7dfd8d60a70ff9ac.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506407 => 
+  array (
+    'name' => 'Superstructure Medic',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to create a burst of healing for you and allies near you.',
+    'icon' => '/common/destiny2_content/icons/8f2805e20ae35c09851c919f161efa41.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2527938402 => 
+  array (
+    'name' => 'Riven\'s Curse',
+    'desc' => 'While in the Dreaming City, you deal more damage, but also take more damage from all sources.',
+    'icon' => '/common/destiny2_content/icons/8e07a3c749f6cd8736cc489faa857f4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2623485440 => 
+  array (
+    'name' => 'Minor Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/8fa2d4e4c82586668210e12c5115575a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2645858828 => 
+  array (
+    'name' => 'Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/18054408a5fc068f2384c6c31a183423.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2850583378 => 
+  array (
+    'name' => 'Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/195f4f173adb52b336b4ecd67101004d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3253038666 => 
+  array (
+    'name' => 'Strength Mod',
+    'icon' => '/common/destiny2_content/icons/07f2361532c79e773909220e5884ab07.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3355995799 => 
+  array (
+    'name' => 'Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/9fd56c3b42923c9df23edf585b0107bf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3682186345 => 
+  array (
+    'name' => 'Minor Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/53c28186a4b97285a01aace5748e4de7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3699676109 => 
+  array (
+    'name' => 'Minor Strength Mod',
+    'icon' => '/common/destiny2_content/icons/ec0b298ec4dac0023604e467a58c3868.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3961599962 => 
+  array (
+    'name' => 'Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/c664ddd10920daab49cc3808dbb6a1e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4048838440 => 
+  array (
+    'name' => 'Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/9d54e2149f945b2c298020da443b70fa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  204137529 => 
+  array (
+    'name' => 'Minor Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/287901ef741855655856f6e8f5776f03.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  369171376 => 
+  array (
+    'name' => 'Transcendent Blessing',
+    'desc' => 'This is a consumable armor mod, which can be inserted into only one piece of armor at a time. Replacing this mod with another mod destroys it. Dismantling armor containing this mod refunds the mod.\\nWhile in the Dreaming City, you deal more damage to all targets.',
+    'icon' => '/common/destiny2_content/icons/e6d331674ccfb21c5a99dac70c41d851.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  481675395 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/3a1e41ae2e2cbe33611481665f7d0378.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  555005975 => 
+  array (
+    'name' => 'Minor Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/f39b0c97678148a864d6f6fbbe85524d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1227870362 => 
+  array (
+    'name' => 'Minor Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/d8da60458e3355ddf7123be5ffe3dc3c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3056430904 => 
+  array (
+    'name' => 'Fallen Barrier',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3230867320 => 
+  array (
+    'name' => 'Mask Upgrade',
+    'desc' => 'Defeat Terrors in the Haunted Forest while wearing a Festival of the Lost mask to unlock this perk.',
+    'icon' => '/common/destiny2_content/icons/e54d34d49fce1ecdbb31c386da908f44.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3750139805 => 
+  array (
+    'name' => 'Fallen Invigoration',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  406106409 => 
+  array (
+    'name' => 'Fallen Repurposing',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796172 => 
+  array (
+    'name' => 'Vampiric Touch',
+    'desc' => 'This mask can be upgraded to increase damage to challenging enemies and trigger health regeneration on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/d687306cdc10af8472976319b955d296.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796173 => 
+  array (
+    'name' => 'Higher Purpose',
+    'desc' => 'This mask can be upgraded to increase damage to enemies and provide near-invulnerability while airborne. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/b72ae79f6a9b017fd4bec0e5d790d94c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796175 => 
+  array (
+    'name' => 'Energetic Assassin',
+    'desc' => 'This mask can be upgraded to increase damage to Terrors and grant grenade and melee energy on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/561f898ec516907c91eaee957f65a0f7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  618799600 => 
+  array (
+    'name' => 'Fallen Armaments',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2187989980 => 
+  array (
+    'name' => 'Glaive Loader',
+    'desc' => 'Increases reload speed of Glaives.',
+    'icon' => '/common/destiny2_content/icons/48ea8bdd47065e378f5bca16b42099ef.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3420505819 => 
+  array (
+    'name' => 'Giving Hand',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3521781034 => 
+  array (
+    'name' => 'Unstoppable Shotgun',
+    'desc' => 'Shotguns you wield fire a powerful explosive payload that stuns unshielded combatants.
+
+Strong against [Stagger] Unstoppable Champions.',
+    'icon' => '/common/destiny2_content/icons/7d221f21568de0828c0c3dea7cb83646.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3521781035 => 
+  array (
+    'name' => 'Anti-Barrier Auto Rifle',
+    'desc' => 'Auto Rifles you are wielding fire shield-piercing rounds and stun [Shield-Piercing] Barrier Champions.
+
+Auto Rifles deal bonus damage against [Shield-Piercing] Barrier Champions.',
+    'icon' => '/common/destiny2_content/icons/022136ff1ba2ad30aeb9d0c06df81631.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3521781036 => 
+  array (
+    'name' => 'Anti-Barrier Scout Rifle',
+    'desc' => 'Scout Rifles you are wielding fire shield-piercing rounds and stun [Shield-Piercing] Barrier Champions.
+
+Scout Rifles deal bonus damage against [Shield-Piercing] Barrier Champions.',
+    'icon' => '/common/destiny2_content/icons/fd16f0cc5e5d6d92036b6d91a5c012e3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3521781037 => 
+  array (
+    'name' => 'Unstoppable Pulse Rifle',
+    'desc' => 'Aiming down Pulse Rifle sights loads a high-impact burst that stuns unshielded combatants.
+
+Strong against [Stagger] Unstoppable Champions.',
+    'icon' => '/common/destiny2_content/icons/25b7173f9049934a967bb4a97b939ab8.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3521781038 => 
+  array (
+    'name' => 'Overload Bow',
+    'desc' => 'Damage by fully drawn arrows disrupts combatants, stunning them, delaying ability energy regeneration and lowering combatant damage output. Strong against [Disruption] Overload Champions.',
+    'icon' => '/common/destiny2_content/icons/dcbc827311479a0c17bea6e14ad997c0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  439168247 => 
+  array (
+    'name' => 'Striking Hand',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  843081753 => 
+  array (
+    'name' => 'Shielding Hand',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1276313701 => 
+  array (
+    'name' => 'Solar Ordnance Mod',
+    'desc' => 'This mod has been deprecated. Dismantle to clear space and reclaim useful components.',
+    'icon' => '/common/destiny2_content/icons/7821effdc9ed9bc4aec04f6e3c955a08.jpg',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324233019 => 
+  array (
+    'name' => 'Scout Rifle Loader',
+    'desc' => 'Increases reload speed of Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/5a5e2adbbde813d46ac459960cbe8435.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1404465537 => 
+  array (
+    'name' => 'Overload Machine Guns',
+    'desc' => 'Uninterrupted fire from your equipped Machine Guns grants bullets that stun combatants, delaying ability energy regeneration and lowering combatant damage output.
+
+Strong against [Disruption] Overload Champions.',
+    'icon' => '/common/destiny2_content/icons/53166617a3683ddf43211711778209bb.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1404465538 => 
+  array (
+    'name' => 'Anti-Barrier Sniper Rifle',
+    'desc' => 'Sniper Rifles you are wielding fire shield-piercing rounds and stun [Shield-Piercing] Barrier Champions.
+
+Sniper Rifles deal bonus damage against [Shield-Piercing] Barrier Champions.',
+    'icon' => '/common/destiny2_content/icons/7e1d1a6a7b5745e003fbf08cbcbfbdd7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_CHESTARMORMODS = array (
+  2321484659 => 
+  array (
+    'name' => 'Trace Rifle Reserves',
+    'desc' => 'Increases the amount of Trace Rifle ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/0843d74baf5d5f63cf4bd305822ae1dd.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2368162286 => 
+  array (
+    'name' => 'Shotgun Reserves',
+    'desc' => 'Increases the amount of Shotgun ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/a302feb7fbe96fce0fd9b300aa1bca3f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2379452959 => 
+  array (
+    'name' => 'Unflinching Pulse Rifle Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Pulse Rifles.',
+    'icon' => '/common/destiny2_content/icons/a371c51d5dd15934ec2641167e5b8692.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2505824339 => 
+  array (
+    'name' => 'Unflinching Auto Rifle Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Auto Rifles.',
+    'icon' => '/common/destiny2_content/icons/6be962bda318162e15a5cf395d8b5158.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2588939505 => 
+  array (
+    'name' => 'Concussive Dampener',
+    'desc' => 'Reduces incoming area-of-effect damage from combatants.',
+    'icon' => '/common/destiny2_content/icons/401b1b783fe5773d5078c1bd3edb7f5a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2881057950 => 
+  array (
+    'name' => 'Unflinching Sidearm Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Sidearms.',
+    'icon' => '/common/destiny2_content/icons/128abd9ae18efbb7683826413117cd57.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3074491624 => 
+  array (
+    'name' => 'Arc Resistance',
+    'icon' => '/common/destiny2_content/icons/89d9d251481212557ac29707d7577449.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3091213995 => 
+  array (
+    'name' => 'Unflinching Machine Gun',
+    'desc' => 'Reduces hit flinch from incoming fire while aiming Machine Guns.',
+    'icon' => '/common/destiny2_content/icons/f91b08d440a599e8b69008ced64b5181.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3121039270 => 
+  array (
+    'name' => 'Unflinching Fusion Rifle Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/eb5f2e47bc787d8d7a8109b362f0e61c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3176563510 => 
+  array (
+    'name' => 'Stasis Resistance',
+    'desc' => 'Reduces incoming Stasis damage from combatants.',
+    'icon' => '/common/destiny2_content/icons/459f43879baa6419df8eb49a64e3f007.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3188535145 => 
+  array (
+    'name' => 'Machine Gun Reserves',
+    'desc' => 'Increase the amount of Machine Gun ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/cee338f4c63ce1e8abb40bdee6d239ef.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3330921441 => 
+  array (
+    'name' => 'Grenade Launcher Reserves',
+    'desc' => 'Increases the amount of Grenade Launcher ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/eda11a352c552d800316e11c6b0bd112.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3531950723 => 
+  array (
+    'name' => 'Fusion Rifle Reserves',
+    'desc' => 'Increases the amount of Fusion Rifle ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/b79414f7866e5e2f307871acfbe86238.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3543966269 => 
+  array (
+    'name' => 'Sword Reserves',
+    'desc' => 'Increases the amount of Sword ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/8981721c1297e13342148f48f9d063cd.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3566745556 => 
+  array (
+    'name' => 'Sniper Damage Resistance',
+    'desc' => 'Reduces incoming damage from combatants that are at long range.',
+    'icon' => '/common/destiny2_content/icons/be4f49ecae3a731234e8c49c0da3b278.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3626376648 => 
+  array (
+    'name' => 'Unflinching Submachine Gun Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/09dc11384483de48bfca39d3b48f9298.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3662638763 => 
+  array (
+    'name' => 'Unflinching Bow Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Bows.',
+    'icon' => '/common/destiny2_content/icons/751903f60aac49ccaa94c243e7780321.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3859610803 => 
+  array (
+    'name' => 'Sidearm Reserves',
+    'desc' => 'Increases the amount of Sidearm ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/ed993c2a0662ae820957dfe00938d18d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3926976952 => 
+  array (
+    'name' => 'Sniper Rifle Reserves',
+    'desc' => 'Increases the amount of Sniper Rifle ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/8700b5f6f2a832d513f81746d796f439.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4023967480 => 
+  array (
+    'name' => 'Unflinching Trace Rifle Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Trace Rifles.',
+    'icon' => '/common/destiny2_content/icons/b7289e7a7513c8a21cb41eb4ccc1b686.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  107977982 => 
+  array (
+    'name' => 'Void Resistance',
+    'icon' => '/common/destiny2_content/icons/5a3cc0bd1709b28147ec5fbc497360f8.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  201502208 => 
+  array (
+    'name' => 'Bow Reserves',
+    'desc' => 'Increases the amount of Bow ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/b28e4384a52a150b81ee70282c7a93a9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  357349821 => 
+  array (
+    'name' => 'Unflinching Shotgun Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Shotguns.',
+    'icon' => '/common/destiny2_content/icons/ba6b4de9111248e5d772ccd97f4b36ff.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  650627622 => 
+  array (
+    'name' => 'Unflinching Linear Fusion Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Linear Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/af8c3f7f19d4e141bd58c53310826da2.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  749060462 => 
+  array (
+    'name' => 'Linear Fusion Rifle Reserves',
+    'desc' => 'Increases the amount of Linear Fusion Rifle ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/56d897309f2d48bad31228a28e0c556a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  760472183 => 
+  array (
+    'name' => 'Melee Damage Resistance',
+    'desc' => 'Reduces incoming damage from combatants that are at point-blank range.',
+    'icon' => '/common/destiny2_content/icons/4bb83fc5179ed2884300688d126b1019.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  807774340 => 
+  array (
+    'name' => 'Unflinching Grenade Launcher Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Grenade Launchers.',
+    'icon' => '/common/destiny2_content/icons/dfa35fc69b72b504adc0e86e0a7434ff.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  950703238 => 
+  array (
+    'name' => 'Glaive Reserves',
+    'desc' => 'Increases the amount of Glaive ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/f314e9d2f6fdc6657087fbe25983309a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1043617959 => 
+  array (
+    'name' => 'Hand Cannon Reserves',
+    'desc' => 'Increases the amount of Hand Cannon ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/245da97d50fecb936aab369db3cc0659.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1203395203 => 
+  array (
+    'name' => 'Unflinching Sniper Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/e104d516992ecdde609034141b851b26.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1279446438 => 
+  array (
+    'name' => 'Unflinching Scout Rifle Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/84f799f6a73473be939afc549b18d669.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1303690937 => 
+  array (
+    'name' => 'Rocket Launcher Reserves',
+    'desc' => 'Increases the amount of Rocket Launcher ammo you can carry.',
+    'icon' => '/common/destiny2_content/icons/998bbff08fca8d244b74d6236109f855.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1406211233 => 
+  array (
+    'name' => 'Unflinching Glaive Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Glaives.',
+    'icon' => '/common/destiny2_content/icons/b4d9aa71081a3e659b8605049aa76737.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1429600943 => 
+  array (
+    'name' => 'Solar Resistance',
+    'icon' => '/common/destiny2_content/icons/c0534a2920be982cc4712ecc9026abf0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1659393211 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/6bf61607ffa8198cdabdf0fa3b5feab1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1859929470 => 
+  array (
+    'name' => 'Unflinching Hand Cannon Aim',
+    'desc' => 'Reduces flinching from incoming fire while aiming Hand Cannons.',
+    'icon' => '/common/destiny2_content/icons/e42e42a3846155c12f00657dd4ab1581.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321584 => 
+  array (
+    'name' => 'Precision Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with precision kills from Bows, Hand Cannons, and Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/2614935a04f326038bddff44a374e996.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321585 => 
+  array (
+    'name' => 'Surprise Attack',
+    'desc' => 'While Charged with Light, reloading or readying a Sidearm will consume all stacks of Charged with Light and convert them into stacks of a major damage buff, which are depleted as you damage combatants with that Sidearm.',
+    'icon' => '/common/destiny2_content/icons/df471d6e132702ba8bdfc87b16d1c441.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321586 => 
+  array (
+    'name' => 'Energy Converter',
+    'desc' => 'While Charged with Light, using your grenade attack grants you Super energy, consuming all stacks of Charged with Light. The more stacks you have, the more energy you gain, up to a maximum of 50% of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/e0b2cb5c2a1fd8ffa92f20c91ed5e7e0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321587 => 
+  array (
+    'name' => 'Charge Harvester',
+    'desc' => 'While you are not Charged with Light, any kill or assist has a small cumulative chance to cause you to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/a8acc2b6cf36527f879051a38622e310.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815164 => 
+  array (
+    'name' => 'Swift Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Pulse Rifles, Sidearms, or Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/80b1179638c3627864a1ab5247151305.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815165 => 
+  array (
+    'name' => 'Lucent Blade',
+    'desc' => 'While Charged with Light, dealing damage with a Sword gives you bonus Sword damage for 5 seconds, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b2863d7ca41af5bca31641ecc6c5998a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815166 => 
+  array (
+    'name' => 'Reactive Pulse',
+    'desc' => 'While Charged with Light, when you take damage while surrounded by combatants, you emit a burst of damaging Arc energy, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/19fc1544595d371c631855656c9f31b7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815167 => 
+  array (
+    'name' => 'Radiant Light',
+    'desc' => 'Casting your Super causes nearby allies to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b6649b05c177d25a0faae24fe727fbb9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435908 => 
+  array (
+    'name' => 'Firepower',
+    'desc' => 'While Charged with Light, regain a portion of your grenade energy when you use your grenade, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/070b7b77cd6fb8462dc6013764cb3709.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435909 => 
+  array (
+    'name' => 'Heal Thyself',
+    'desc' => 'While you are Charged with Light, grenade final blows heal you and consume one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e7067bd91843c6a9a40cceba9d376683.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435910 => 
+  array (
+    'name' => 'Charged Up',
+    'desc' => 'Allows for 1 additional stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/ce29f32ba5ef8758d1b5f3cfad0944a6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435911 => 
+  array (
+    'name' => 'Blast Radius',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Grenade Launchers or Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/6b0d065905e6e640a2c23b1af25160d1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075120 => 
+  array (
+    'name' => 'Protective Light',
+    'desc' => 'While Charged with Light, you gain significant damage resistance against combatants when your shields are destroyed. This effect consumes all stacks of Charged with Light. The more stacks consumed, the longer the damage resistance lasts.',
+    'icon' => '/common/destiny2_content/icons/f9d3dcc86e0805401b6f0ce72b0847ba.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075121 => 
+  array (
+    'name' => 'Extra Reserves',
+    'desc' => 'While Charged with Light, defeating combatants with Void damage grants a chance to drop Special ammo. This effect consumes all stacks of Charged with Light. The more stacks you have, the higher your chance of gaining the ammo drop.',
+    'icon' => '/common/destiny2_content/icons/fc70edeb4ce73caf4021b67c0017794b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075122 => 
+  array (
+    'name' => 'Precisely Charged',
+    'desc' => 'Become Charged with Light by getting multiple rapid precision final blows with Linear Fusion Rifles or Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/13d7d5a897651438d055d64942c1ff4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075123 => 
+  array (
+    'name' => 'Stacks on Stacks',
+    'desc' => 'Gain an extra stack of Charged with Light for every stack you gain.',
+    'icon' => '/common/destiny2_content/icons/519f5f15cddf0f17906e951fd3a9769b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726236 => 
+  array (
+    'name' => 'Empowered Finish',
+    'desc' => 'Become Charged with Light by finishing a combatant, consuming one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/a8e2913f5e424d4c8ed18c719c85c2db.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726237 => 
+  array (
+    'name' => 'High-Energy Fire',
+    'desc' => 'While Charged with Light, gain a bonus to weapon damage. Each defeated combatant consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/126c83604240748a98f807a85220b652.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726238 => 
+  array (
+    'name' => 'Taking Charge',
+    'desc' => 'Become Charged with Light by picking up Orbs of Power.',
+    'icon' => '/common/destiny2_content/icons/5f0c0d6604569712074ae7cba8fb47d3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726239 => 
+  array (
+    'name' => 'Shield Break Charge',
+    'desc' => 'Become Charged with Light by breaking a combatant shield with the matching energy type.',
+    'icon' => '/common/destiny2_content/icons/32b5e4b0719f6bec8e70987db09aa755.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180932 => 
+  array (
+    'name' => 'Argent Ordnance',
+    'desc' => 'While Charged with Light, readying or firing a Rocket Launcher grants it increased damage and reload speed. Damaging a combatant with a rocket consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/9bc05cbb389498fb9ca99807c9b91b6b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180933 => 
+  array (
+    'name' => 'Sustained Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Auto Rifles, Trace Rifles, or Machine Guns. Additional copies of this mod increase the time allowed between combatants that are defeated.',
+    'icon' => '/common/destiny2_content/icons/900534ac5f6ffd274521ed7fc0e43e31.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180934 => 
+  array (
+    'name' => 'Supercharged',
+    'desc' => 'You can have 2 additional stacks of Charged with Light, up to a maximum of 5.',
+    'icon' => '/common/destiny2_content/icons/7102cef97f85ae4fae1d34153c292973.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180935 => 
+  array (
+    'name' => 'Kindling the Flame',
+    'desc' => 'While Charged with Light, reviving a downed Guardian gives you a burst of healing, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/cc1eb304baed451cbb4b8b5cfcab164f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685884 => 
+  array (
+    'name' => 'Quick Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Fusion Rifles or Shotguns.',
+    'icon' => '/common/destiny2_content/icons/e80f0a325b78190e164810724044776e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685885 => 
+  array (
+    'name' => 'Striking Light',
+    'desc' => 'While Charged with Light, defeating combatants with melee damage and Swords spawns 1 Orb of Power for your allies and consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e1eb7cf6ad88c3311f775df370bd21e4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685886 => 
+  array (
+    'name' => 'Heavy Handed',
+    'desc' => 'While Charged with Light, regain half of your melee energy when you use a charged melee ability, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/c6d1db58becc093aa5d7b2534af41005.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685887 => 
+  array (
+    'name' => 'Powerful Friends',
+    'desc' => 'When you become Charged with Light, nearby allies also become Charged with Light, if they are not already.',
+    'icon' => '/common/destiny2_content/icons/006460670f0ca57fbe5ee1af83dcfd4d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575870 => 
+  array (
+    'name' => 'Anti-Oracle',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating an Oracle grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/121c47d570be6cb4c77ee5cf5a8d5dcf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575871 => 
+  array (
+    'name' => 'Anti-Praetorian',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Praetorian grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/d875cd79e496abe02b608c4b404ce77d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776732 => 
+  array (
+    'name' => 'Rapid Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Pulse Rifles, Shotguns, Sidearms, SMGs, and Swords deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/24f635fa2f0f3b0a5f8f9328771d2cd5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776733 => 
+  array (
+    'name' => 'Vex Breaker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a melee attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/ec576e6c4d570a4cbe9ac42376e7b087.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776734 => 
+  array (
+    'name' => 'Superstructure Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to stun those combatants.',
+    'icon' => '/common/destiny2_content/icons/b840f523d03b4ed439560c1a5ec10fc6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521232 => 
+  array (
+    'name' => 'Precise Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Bows, Hand Cannons, Linear Fusion Rifles, Scout Rifles, and Sniper Rifles deal additional damage to Oracles in the Vault of Glass.',
+    'icon' => '/common/destiny2_content/icons/e3a31b91f13978610b75dff836bad99b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521233 => 
+  array (
+    'name' => 'Vex Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a precision hit has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/81f78e450c715d53dbac5ef99235a696.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521234 => 
+  array (
+    'name' => 'Superstructure Defender',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to weaken those combatants.',
+    'icon' => '/common/destiny2_content/icons/0ff2d5c2be0870eb3208f6f649dfda78.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506404 => 
+  array (
+    'name' => 'Vex Destroyer',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a grenade attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/1329b43e9413bb45a678847c14f8c04a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506405 => 
+  array (
+    'name' => 'Aggressive Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Auto Rifles, Fusion Rifles, Grenade Launchers, Trace Rifles, and Rocket Launchers deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/61c39d00cda46b7e7dfd8d60a70ff9ac.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506407 => 
+  array (
+    'name' => 'Superstructure Medic',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to create a burst of healing for you and allies near you.',
+    'icon' => '/common/destiny2_content/icons/8f2805e20ae35c09851c919f161efa41.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2527938402 => 
+  array (
+    'name' => 'Riven\'s Curse',
+    'desc' => 'While in the Dreaming City, you deal more damage, but also take more damage from all sources.',
+    'icon' => '/common/destiny2_content/icons/8e07a3c749f6cd8736cc489faa857f4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2623485440 => 
+  array (
+    'name' => 'Minor Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/8fa2d4e4c82586668210e12c5115575a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2645858828 => 
+  array (
+    'name' => 'Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/18054408a5fc068f2384c6c31a183423.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2850583378 => 
+  array (
+    'name' => 'Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/195f4f173adb52b336b4ecd67101004d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3253038666 => 
+  array (
+    'name' => 'Strength Mod',
+    'icon' => '/common/destiny2_content/icons/07f2361532c79e773909220e5884ab07.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3355995799 => 
+  array (
+    'name' => 'Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/9fd56c3b42923c9df23edf585b0107bf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3682186345 => 
+  array (
+    'name' => 'Minor Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/53c28186a4b97285a01aace5748e4de7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3699676109 => 
+  array (
+    'name' => 'Minor Strength Mod',
+    'icon' => '/common/destiny2_content/icons/ec0b298ec4dac0023604e467a58c3868.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3961599962 => 
+  array (
+    'name' => 'Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/c664ddd10920daab49cc3808dbb6a1e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4048838440 => 
+  array (
+    'name' => 'Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/9d54e2149f945b2c298020da443b70fa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  204137529 => 
+  array (
+    'name' => 'Minor Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/287901ef741855655856f6e8f5776f03.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  369171376 => 
+  array (
+    'name' => 'Transcendent Blessing',
+    'desc' => 'This is a consumable armor mod, which can be inserted into only one piece of armor at a time. Replacing this mod with another mod destroys it. Dismantling armor containing this mod refunds the mod.\\nWhile in the Dreaming City, you deal more damage to all targets.',
+    'icon' => '/common/destiny2_content/icons/e6d331674ccfb21c5a99dac70c41d851.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  481675395 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/3a1e41ae2e2cbe33611481665f7d0378.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  555005975 => 
+  array (
+    'name' => 'Minor Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/f39b0c97678148a864d6f6fbbe85524d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1227870362 => 
+  array (
+    'name' => 'Minor Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/d8da60458e3355ddf7123be5ffe3dc3c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3056430904 => 
+  array (
+    'name' => 'Fallen Barrier',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3230867320 => 
+  array (
+    'name' => 'Mask Upgrade',
+    'desc' => 'Defeat Terrors in the Haunted Forest while wearing a Festival of the Lost mask to unlock this perk.',
+    'icon' => '/common/destiny2_content/icons/e54d34d49fce1ecdbb31c386da908f44.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3750139805 => 
+  array (
+    'name' => 'Fallen Invigoration',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  406106409 => 
+  array (
+    'name' => 'Fallen Repurposing',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796172 => 
+  array (
+    'name' => 'Vampiric Touch',
+    'desc' => 'This mask can be upgraded to increase damage to challenging enemies and trigger health regeneration on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/d687306cdc10af8472976319b955d296.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796173 => 
+  array (
+    'name' => 'Higher Purpose',
+    'desc' => 'This mask can be upgraded to increase damage to enemies and provide near-invulnerability while airborne. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/b72ae79f6a9b017fd4bec0e5d790d94c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796175 => 
+  array (
+    'name' => 'Energetic Assassin',
+    'desc' => 'This mask can be upgraded to increase damage to Terrors and grant grenade and melee energy on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/561f898ec516907c91eaee957f65a0f7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  618799600 => 
+  array (
+    'name' => 'Fallen Armaments',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2187989982 => 
+  array (
+    'name' => 'Thermoshock Plating',
+    'icon' => '/common/destiny2_content/icons/950112d2fcdf470108fa58b274abcf3b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1544361296 => 
+  array (
+    'name' => 'Heavy Hitter',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_HEADARMORMODS = array (
+  2193892158 => 
+  array (
+    'name' => 'Auto Rifle Ammo Finder',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2307244871 => 
+  array (
+    'name' => 'Sniper Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/9aee84e9176a73dc541bc34629e0a233.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2524985605 => 
+  array (
+    'name' => 'Kinetic Siphon',
+    'desc' => 'Rapid Kinetic weapon final blows create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/67d074904b6c58b426939705162cf6d7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2603856295 => 
+  array (
+    'name' => 'Rocket Launcher Ammo Finder',
+    'desc' => 'Increases your chance of finding Heavy ammo while you have a Rocket Launcher equipped.',
+    'icon' => '/common/destiny2_content/icons/2b68b4265777e980448252610500c441.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2754084930 => 
+  array (
+    'name' => 'Sniper Rifle Ammo Finder',
+    'desc' => 'Increases your chance of finding ammo while you have a Sniper Rifle equipped.',
+    'icon' => '/common/destiny2_content/icons/32501a5e9478cc1cf294aaf14de7924d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2829974286 => 
+  array (
+    'name' => 'Hand Cannon Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Hand Cannons.',
+    'icon' => '/common/destiny2_content/icons/24b5e0c0687d15f596472c2c73b49517.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2919349723 => 
+  array (
+    'name' => 'Shotgun Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Shotguns.',
+    'icon' => '/common/destiny2_content/icons/676aeec6afa47c9d915daf4b8fe68ab6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2999890939 => 
+  array (
+    'name' => 'Solar Siphon',
+    'desc' => 'Rapid Solar weapon final blows create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/6b8226abbdf842d8e90e1e220e2fc19d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3065699930 => 
+  array (
+    'name' => 'Hands-On',
+    'desc' => 'Gain bonus Super energy on melee kills.',
+    'icon' => '/common/destiny2_content/icons/f47540dc70a9aad624a8936c7e82fcbd.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3109470977 => 
+  array (
+    'name' => 'Glaive Targeting',
+    'desc' => 'Improved target acquisition and accuracy for Glaives.',
+    'icon' => '/common/destiny2_content/icons/10da8417193c7660abe67dbb80418d52.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3201675491 => 
+  array (
+    'name' => 'Auto Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Auto Rifles.',
+    'icon' => '/common/destiny2_content/icons/90a37644be43a6be4c0bfd5da2bf8f42.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3319681729 => 
+  array (
+    'name' => 'Pulse Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Pulse Rifles.',
+    'icon' => '/common/destiny2_content/icons/5c8b9e5bc6be59d0c94437f7ae03bb12.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3330325954 => 
+  array (
+    'name' => 'Trace Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Trace Rifles.',
+    'icon' => '/common/destiny2_content/icons/e82851107867604506ce5817afc3d944.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3338875786 => 
+  array (
+    'name' => 'Linear Fusion Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Linear Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/0b0ee64a72b55e981bc3f7259ac2d590.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3394151347 => 
+  array (
+    'name' => 'Fusion Rifle Ammo Finder',
+    'desc' => 'Increases your chances of finding ammo while you have a Fusion Rifle equipped.',
+    'icon' => '/common/destiny2_content/icons/a668d5527a48876715d2b630a238fa71.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3638321667 => 
+  array (
+    'name' => 'Power Preservation',
+    'desc' => 'Your Super final blows create extra Orbs of Power for your allies.',
+    'icon' => '/common/destiny2_content/icons/bc234e3e21567070dd71b7143e4ea3e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3825575169 => 
+  array (
+    'name' => 'Stasis Siphon',
+    'desc' => 'Rapid Stasis weapon final blows create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/3cf4c6fec97056b96a1b8eb15b913403.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3857411140 => 
+  array (
+    'name' => 'Submachine Gun Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/73c7b20dacf59b2e2bb460184f22c11d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3899134858 => 
+  array (
+    'name' => 'Arc Siphon',
+    'desc' => 'Rapid Arc weapon final blows create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/5393642f4770040ba9264fd675e34912.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3901392720 => 
+  array (
+    'name' => 'Fusion Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Fusion Rifles.',
+    'icon' => '/common/destiny2_content/icons/43d53063d48ec188c3a6c0287403608c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3973928133 => 
+  array (
+    'name' => 'Trace Rifle Ammo Finder',
+    'desc' => 'Increases your chance of finding Special ammo while you have a Trace Rifle equipped.',
+    'icon' => '/common/destiny2_content/icons/07b90310a869e79cc04542f182f33871.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4148827738 => 
+  array (
+    'name' => 'Shotgun Ammo Finder',
+    'desc' => 'Increases your chance of finding ammo while you have a Shotgun equipped.',
+    'icon' => '/common/destiny2_content/icons/5ab48ede85a6972d2c0b1f4bc5bcb640.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  212107599 => 
+  array (
+    'name' => 'Harmonic Siphon',
+    'desc' => 'Rapid weapon final blows with damage matching your subclass type create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/a0d7dff2937c64c92cfbbd7ab9cb9fc8.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  322752304 => 
+  array (
+    'name' => 'Ashes to Assets',
+    'desc' => 'Gain bonus Super energy on grenade kills.',
+    'icon' => '/common/destiny2_content/icons/ba29cbcb4fa6f32b18fc1c9a27593f8b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  421111969 => 
+  array (
+    'name' => 'Scout Rifle Ammo Finder',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  631976966 => 
+  array (
+    'name' => 'Scout Rifle Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/812fae884f6deb3850d7e14104ecf9d5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  650047261 => 
+  array (
+    'name' => 'Hand Cannon Ammo Finder',
+    'desc' => 'Increases your chances of finding Special ammo while you have a Hand Cannon that uses Special ammo equipped.',
+    'icon' => '/common/destiny2_content/icons/4c0ad0185e173ccc3eec62854639d9d9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  712951940 => 
+  array (
+    'name' => 'Glaive Ammo Finder',
+    'desc' => 'Increases your chances of finding ammo while you have a Glaive equipped.',
+    'icon' => '/common/destiny2_content/icons/a8d41eb0e214170b8299e1d07373b93b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  755265365 => 
+  array (
+    'name' => 'Grenade Launcher Ammo Finder',
+    'desc' => 'Increases your chance of finding ammo while you have a Grenade Launcher equipped.',
+    'icon' => '/common/destiny2_content/icons/292a3b4ede46b4de5a392232cf9fd80c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  807186981 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/d89699e6307ac5d2a306cf054978e251.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1015337793 => 
+  array (
+    'name' => 'Machine Gun Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim down sights speed for Machine Guns.',
+    'icon' => '/common/destiny2_content/icons/8ebb9612f54977cd2a6f0d3d67f1a6f2.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1016705548 => 
+  array (
+    'name' => 'Dynamo',
+    'desc' => 'Reduces Super cooldown when using your class ability near targets.',
+    'icon' => '/common/destiny2_content/icons/8f2bffcbe752a6c8c39cfebe38db6ad1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1038135636 => 
+  array (
+    'name' => 'Void Siphon',
+    'desc' => 'Rapid Void weapon final blows create an Orb of Power.',
+    'icon' => '/common/destiny2_content/icons/e08c781dd6bc0f9c9fde99f87bcd58ca.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1050260245 => 
+  array (
+    'name' => 'Sidearm Ammo Finder',
+    'desc' => 'Increases your chance of finding Special ammo while you have a Sidearm equipped that uses Special ammo.',
+    'icon' => '/common/destiny2_content/icons/c1ae38920a60c4e8f393d44761972169.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1476367343 => 
+  array (
+    'name' => 'Sword Ammo Finder',
+    'desc' => 'Increases your chance of finding Heavy ammo while you have a Sword equipped.',
+    'icon' => '/common/destiny2_content/icons/3f9257833e7868adb737570612db3fe8.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1499759470 => 
+  array (
+    'name' => 'Linear Fusion Rifle Ammo Finder',
+    'desc' => 'Increases your chance of finding ammo while you have a Linear Fusion Rifle equipped.',
+    'icon' => '/common/destiny2_content/icons/f48292aa6d351e3c1f8fb4a74502c239.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1507854082 => 
+  array (
+    'name' => 'Sidearm Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Sidearms.',
+    'icon' => '/common/destiny2_content/icons/dcf93341f610a12e2e920310a4b5a64a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1624081088 => 
+  array (
+    'name' => 'Bow Ammo Finder',
+    'desc' => 'Increases your chances of finding Heavy ammo while you have a Bow equipped that uses Heavy ammo.',
+    'icon' => '/common/destiny2_content/icons/4f7b531fac3f1311e4b7847874f3d949.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2080519917 => 
+  array (
+    'name' => 'Bow Targeting',
+    'desc' => 'Improved target acquisition, accuracy, and aim-down-sights speed for Bows.',
+    'icon' => '/common/destiny2_content/icons/a5121e051f0aeaa9eb39c90652ae68c6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2128395292 => 
+  array (
+    'name' => 'Machine Gun Ammo Finder',
+    'desc' => 'Increases your chance of finding Heavy ammo while you have a Machine Gun equipped.',
+    'icon' => '/common/destiny2_content/icons/492ddb35255ab0c8a9969b9e9e5075d6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321584 => 
+  array (
+    'name' => 'Precision Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with precision kills from Bows, Hand Cannons, and Scout Rifles.',
+    'icon' => '/common/destiny2_content/icons/2614935a04f326038bddff44a374e996.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321585 => 
+  array (
+    'name' => 'Surprise Attack',
+    'desc' => 'While Charged with Light, reloading or readying a Sidearm will consume all stacks of Charged with Light and convert them into stacks of a major damage buff, which are depleted as you damage combatants with that Sidearm.',
+    'icon' => '/common/destiny2_content/icons/df471d6e132702ba8bdfc87b16d1c441.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321586 => 
+  array (
+    'name' => 'Energy Converter',
+    'desc' => 'While Charged with Light, using your grenade attack grants you Super energy, consuming all stacks of Charged with Light. The more stacks you have, the more energy you gain, up to a maximum of 50% of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/e0b2cb5c2a1fd8ffa92f20c91ed5e7e0.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2263321587 => 
+  array (
+    'name' => 'Charge Harvester',
+    'desc' => 'While you are not Charged with Light, any kill or assist has a small cumulative chance to cause you to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/a8acc2b6cf36527f879051a38622e310.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815164 => 
+  array (
+    'name' => 'Swift Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Pulse Rifles, Sidearms, or Submachine Guns.',
+    'icon' => '/common/destiny2_content/icons/80b1179638c3627864a1ab5247151305.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815165 => 
+  array (
+    'name' => 'Lucent Blade',
+    'desc' => 'While Charged with Light, dealing damage with a Sword gives you bonus Sword damage for 5 seconds, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b2863d7ca41af5bca31641ecc6c5998a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815166 => 
+  array (
+    'name' => 'Reactive Pulse',
+    'desc' => 'While Charged with Light, when you take damage while surrounded by combatants, you emit a burst of damaging Arc energy, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/19fc1544595d371c631855656c9f31b7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2979815167 => 
+  array (
+    'name' => 'Radiant Light',
+    'desc' => 'Casting your Super causes nearby allies to become Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/b6649b05c177d25a0faae24fe727fbb9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435908 => 
+  array (
+    'name' => 'Firepower',
+    'desc' => 'While Charged with Light, regain a portion of your grenade energy when you use your grenade, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/070b7b77cd6fb8462dc6013764cb3709.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435909 => 
+  array (
+    'name' => 'Heal Thyself',
+    'desc' => 'While you are Charged with Light, grenade final blows heal you and consume one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e7067bd91843c6a9a40cceba9d376683.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435910 => 
+  array (
+    'name' => 'Charged Up',
+    'desc' => 'Allows for 1 additional stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/ce29f32ba5ef8758d1b5f3cfad0944a6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3185435911 => 
+  array (
+    'name' => 'Blast Radius',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Grenade Launchers or Rocket Launchers.',
+    'icon' => '/common/destiny2_content/icons/6b0d065905e6e640a2c23b1af25160d1.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075120 => 
+  array (
+    'name' => 'Protective Light',
+    'desc' => 'While Charged with Light, you gain significant damage resistance against combatants when your shields are destroyed. This effect consumes all stacks of Charged with Light. The more stacks consumed, the longer the damage resistance lasts.',
+    'icon' => '/common/destiny2_content/icons/f9d3dcc86e0805401b6f0ce72b0847ba.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075121 => 
+  array (
+    'name' => 'Extra Reserves',
+    'desc' => 'While Charged with Light, defeating combatants with Void damage grants a chance to drop Special ammo. This effect consumes all stacks of Charged with Light. The more stacks you have, the higher your chance of gaining the ammo drop.',
+    'icon' => '/common/destiny2_content/icons/fc70edeb4ce73caf4021b67c0017794b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075122 => 
+  array (
+    'name' => 'Precisely Charged',
+    'desc' => 'Become Charged with Light by getting multiple rapid precision final blows with Linear Fusion Rifles or Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/13d7d5a897651438d055d64942c1ff4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3523075123 => 
+  array (
+    'name' => 'Stacks on Stacks',
+    'desc' => 'Gain an extra stack of Charged with Light for every stack you gain.',
+    'icon' => '/common/destiny2_content/icons/519f5f15cddf0f17906e951fd3a9769b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726236 => 
+  array (
+    'name' => 'Empowered Finish',
+    'desc' => 'Become Charged with Light by finishing a combatant, consuming one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/a8e2913f5e424d4c8ed18c719c85c2db.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726237 => 
+  array (
+    'name' => 'High-Energy Fire',
+    'desc' => 'While Charged with Light, gain a bonus to weapon damage. Each defeated combatant consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/126c83604240748a98f807a85220b652.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726238 => 
+  array (
+    'name' => 'Taking Charge',
+    'desc' => 'Become Charged with Light by picking up Orbs of Power.',
+    'icon' => '/common/destiny2_content/icons/5f0c0d6604569712074ae7cba8fb47d3.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3632726239 => 
+  array (
+    'name' => 'Shield Break Charge',
+    'desc' => 'Become Charged with Light by breaking a combatant shield with the matching energy type.',
+    'icon' => '/common/destiny2_content/icons/32b5e4b0719f6bec8e70987db09aa755.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180932 => 
+  array (
+    'name' => 'Argent Ordnance',
+    'desc' => 'While Charged with Light, readying or firing a Rocket Launcher grants it increased damage and reload speed. Damaging a combatant with a rocket consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/9bc05cbb389498fb9ca99807c9b91b6b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180933 => 
+  array (
+    'name' => 'Sustained Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating combatants with Auto Rifles, Trace Rifles, or Machine Guns. Additional copies of this mod increase the time allowed between combatants that are defeated.',
+    'icon' => '/common/destiny2_content/icons/900534ac5f6ffd274521ed7fc0e43e31.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180934 => 
+  array (
+    'name' => 'Supercharged',
+    'desc' => 'You can have 2 additional stacks of Charged with Light, up to a maximum of 5.',
+    'icon' => '/common/destiny2_content/icons/7102cef97f85ae4fae1d34153c292973.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4272180935 => 
+  array (
+    'name' => 'Kindling the Flame',
+    'desc' => 'While Charged with Light, reviving a downed Guardian gives you a burst of healing, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/cc1eb304baed451cbb4b8b5cfcab164f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685884 => 
+  array (
+    'name' => 'Quick Charge',
+    'desc' => 'Become Charged with Light by rapidly defeating multiple combatants with Fusion Rifles or Shotguns.',
+    'icon' => '/common/destiny2_content/icons/e80f0a325b78190e164810724044776e.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685885 => 
+  array (
+    'name' => 'Striking Light',
+    'desc' => 'While Charged with Light, defeating combatants with melee damage and Swords spawns 1 Orb of Power for your allies and consumes one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/e1eb7cf6ad88c3311f775df370bd21e4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685886 => 
+  array (
+    'name' => 'Heavy Handed',
+    'desc' => 'While Charged with Light, regain half of your melee energy when you use a charged melee ability, consuming one stack of Charged with Light.',
+    'icon' => '/common/destiny2_content/icons/c6d1db58becc093aa5d7b2534af41005.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1484685887 => 
+  array (
+    'name' => 'Powerful Friends',
+    'desc' => 'When you become Charged with Light, nearby allies also become Charged with Light, if they are not already.',
+    'icon' => '/common/destiny2_content/icons/006460670f0ca57fbe5ee1af83dcfd4d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575870 => 
+  array (
+    'name' => 'Anti-Oracle',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating an Oracle grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/121c47d570be6cb4c77ee5cf5a8d5dcf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2725575871 => 
+  array (
+    'name' => 'Anti-Praetorian',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Praetorian grants you Super energy.',
+    'icon' => '/common/destiny2_content/icons/d875cd79e496abe02b608c4b404ce77d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776732 => 
+  array (
+    'name' => 'Rapid Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Pulse Rifles, Shotguns, Sidearms, SMGs, and Swords deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/24f635fa2f0f3b0a5f8f9328771d2cd5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776733 => 
+  array (
+    'name' => 'Vex Breaker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a melee attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/ec576e6c4d570a4cbe9ac42376e7b087.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4076776734 => 
+  array (
+    'name' => 'Superstructure Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to stun those combatants.',
+    'icon' => '/common/destiny2_content/icons/b840f523d03b4ed439560c1a5ec10fc6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521232 => 
+  array (
+    'name' => 'Precise Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Bows, Hand Cannons, Linear Fusion Rifles, Scout Rifles, and Sniper Rifles deal additional damage to Oracles in the Vault of Glass.',
+    'icon' => '/common/destiny2_content/icons/e3a31b91f13978610b75dff836bad99b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521233 => 
+  array (
+    'name' => 'Vex Striker',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a precision hit has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/81f78e450c715d53dbac5ef99235a696.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  518521234 => 
+  array (
+    'name' => 'Superstructure Defender',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to weaken those combatants.',
+    'icon' => '/common/destiny2_content/icons/0ff2d5c2be0870eb3208f6f649dfda78.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506404 => 
+  array (
+    'name' => 'Vex Destroyer',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nDefeating a Vex with a grenade attack has a chance to spawn an Orb of Power. Multiple copies of this mod increase the Super energy granted when those Orbs are picked up.',
+    'icon' => '/common/destiny2_content/icons/1329b43e9413bb45a678847c14f8c04a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506405 => 
+  array (
+    'name' => 'Aggressive Oracle Disruptor',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nYour equipped Auto Rifles, Fusion Rifles, Grenade Launchers, Trace Rifles, and Rocket Launchers deal additional damage to Oracles.',
+    'icon' => '/common/destiny2_content/icons/61c39d00cda46b7e7dfd8d60a70ff9ac.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1401506407 => 
+  array (
+    'name' => 'Superstructure Medic',
+    'desc' => 'This mod\'s perks are only active in the "Vault of Glass" raid.
+
+Multiple copies of this mod stack and improve its effects.\\nWhile you are standing on a sync plate or are near a conflux, weapon attacks that hit powerful Vex combatants have a high chance to create a burst of healing for you and allies near you.',
+    'icon' => '/common/destiny2_content/icons/8f2805e20ae35c09851c919f161efa41.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2527938402 => 
+  array (
+    'name' => 'Riven\'s Curse',
+    'desc' => 'While in the Dreaming City, you deal more damage, but also take more damage from all sources.',
+    'icon' => '/common/destiny2_content/icons/8e07a3c749f6cd8736cc489faa857f4f.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2623485440 => 
+  array (
+    'name' => 'Minor Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/8fa2d4e4c82586668210e12c5115575a.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2645858828 => 
+  array (
+    'name' => 'Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/18054408a5fc068f2384c6c31a183423.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2850583378 => 
+  array (
+    'name' => 'Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/195f4f173adb52b336b4ecd67101004d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3253038666 => 
+  array (
+    'name' => 'Strength Mod',
+    'icon' => '/common/destiny2_content/icons/07f2361532c79e773909220e5884ab07.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3355995799 => 
+  array (
+    'name' => 'Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/9fd56c3b42923c9df23edf585b0107bf.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3682186345 => 
+  array (
+    'name' => 'Minor Resilience Mod',
+    'icon' => '/common/destiny2_content/icons/53c28186a4b97285a01aace5748e4de7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3699676109 => 
+  array (
+    'name' => 'Minor Strength Mod',
+    'icon' => '/common/destiny2_content/icons/ec0b298ec4dac0023604e467a58c3868.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3961599962 => 
+  array (
+    'name' => 'Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/c664ddd10920daab49cc3808dbb6a1e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4048838440 => 
+  array (
+    'name' => 'Discipline Mod',
+    'icon' => '/common/destiny2_content/icons/9d54e2149f945b2c298020da443b70fa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  204137529 => 
+  array (
+    'name' => 'Minor Mobility Mod',
+    'icon' => '/common/destiny2_content/icons/287901ef741855655856f6e8f5776f03.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  369171376 => 
+  array (
+    'name' => 'Transcendent Blessing',
+    'desc' => 'This is a consumable armor mod, which can be inserted into only one piece of armor at a time. Replacing this mod with another mod destroys it. Dismantling armor containing this mod refunds the mod.\\nWhile in the Dreaming City, you deal more damage to all targets.',
+    'icon' => '/common/destiny2_content/icons/e6d331674ccfb21c5a99dac70c41d851.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  481675395 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/3a1e41ae2e2cbe33611481665f7d0378.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  555005975 => 
+  array (
+    'name' => 'Minor Recovery Mod',
+    'icon' => '/common/destiny2_content/icons/f39b0c97678148a864d6f6fbbe85524d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1227870362 => 
+  array (
+    'name' => 'Minor Intellect Mod',
+    'icon' => '/common/destiny2_content/icons/d8da60458e3355ddf7123be5ffe3dc3c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3056430904 => 
+  array (
+    'name' => 'Fallen Barrier',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3230867320 => 
+  array (
+    'name' => 'Mask Upgrade',
+    'desc' => 'Defeat Terrors in the Haunted Forest while wearing a Festival of the Lost mask to unlock this perk.',
+    'icon' => '/common/destiny2_content/icons/e54d34d49fce1ecdbb31c386da908f44.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3750139805 => 
+  array (
+    'name' => 'Fallen Invigoration',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  406106409 => 
+  array (
+    'name' => 'Fallen Repurposing',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796172 => 
+  array (
+    'name' => 'Vampiric Touch',
+    'desc' => 'This mask can be upgraded to increase damage to challenging enemies and trigger health regeneration on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/d687306cdc10af8472976319b955d296.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796173 => 
+  array (
+    'name' => 'Higher Purpose',
+    'desc' => 'This mask can be upgraded to increase damage to enemies and provide near-invulnerability while airborne. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/b72ae79f6a9b017fd4bec0e5d790d94c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  466796175 => 
+  array (
+    'name' => 'Energetic Assassin',
+    'desc' => 'This mask can be upgraded to increase damage to Terrors and grant grenade and melee energy on precision kills. Unlock these upgrades by defeating Terrors in the Haunted Forest.
+
+These perks are active only inside the Haunted Forest. Choosing this upgrade will lock the selected perks on the mask.',
+    'icon' => '/common/destiny2_content/icons/561f898ec516907c91eaee957f65a0f7.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  618799600 => 
+  array (
+    'name' => 'Fallen Armaments',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2187989976 => 
+  array (
+    'name' => 'Bottomless Bounty II',
+    'desc' => 'Improves the effect of the Soul Drinker and Hot Swap weapon Origin perks.',
+    'icon' => '/common/destiny2_content/icons/2c123d5269c207622a9fd85c458f25fa.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3432568518 => 
+  array (
+    'name' => 'Empowering Largesse',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  910975608 => 
+  array (
+    'name' => 'Embraced Largesse',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  952444125 => 
+  array (
+    'name' => 'Radiant Largesse',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324233022 => 
+  array (
+    'name' => 'Scout and Sniper Rifle Targeting',
+    'desc' => 'Improves targeting for Scout Rifles and Sniper Rifles.',
+    'icon' => '/common/destiny2_content/icons/ca157de8b75447308b50c58836ba0360.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1324233023 => 
+  array (
+    'name' => 'Bottomless Bounty I',
+    'desc' => 'Improves the effect of the Right Hook and Runneth Over weapon Origin perks.',
+    'icon' => '/common/destiny2_content/icons/e76882d51ea38e6dffa66a30595670c8.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1404465541 => 
+  array (
+    'name' => 'Inferno Whip',
+    'desc' => 'Solar melee abilities stun unshielded combatants.
+
+Strong against [Stagger] Unstoppable Champions.',
+    'icon' => '/common/destiny2_content/icons/d52bf97156a06bcd389f3a58c477e226.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+);
+//-----------------------------------------------------------------------------
+
+const DATA_CLASSARMORMODS = array (
+  3561960031 => 
+  array (
+    'name' => 'Bomber',
+    'desc' => 'Reduces grenade cooldown when using your class ability.',
+    'icon' => '/common/destiny2_content/icons/25c877c27b991ac3980891f1ecc2e385.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3974455041 => 
+  array (
+    'name' => 'Outreach',
+    'desc' => 'Reduces melee cooldown when using your class ability.',
+    'icon' => '/common/destiny2_content/icons/9af796ceac99cec4ee91044fe727d596.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4055766573 => 
+  array (
+    'name' => 'Utility Finisher',
+    'desc' => 'Finishers restore class abilities. Requires one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/d8fe55ca252f4e4d1a11f0a287cf76b9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4137020505 => 
+  array (
+    'name' => 'Perpetuation',
+    'desc' => 'Reduces class ability cooldown when using your class ability.',
+    'icon' => '/common/destiny2_content/icons/2d61f6d5e5199a84189227d392105e3d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638088 => 
+  array (
+    'name' => 'Bulwark Finisher',
+    'desc' => 'Finisher final blows generate an overshield. Requires one-fourth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/89a94073e404879c46cf87b22da6570d.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638089 => 
+  array (
+    'name' => 'Healthy Finisher',
+    'desc' => 'Finishers heal you. Requires one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/37e26f865e6562c00c917f732ade153b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638090 => 
+  array (
+    'name' => 'Special Finisher',
+    'desc' => 'Finishers generate Special ammo for the whole fireteam. Requires one-third of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/36540b55b40a64b4448375d8d32b144c.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638091 => 
+  array (
+    'name' => 'One-Two Finisher',
+    'desc' => 'Finishers restore melee abilities.  Requires one-sixth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/cb2d268d435fd6b70d25beee4e6a3d61.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638094 => 
+  array (
+    'name' => 'Snapload Finisher',
+    'desc' => 'Finishers reload all your weapons. Requires one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/f2a5aeff94123a72571b8de0fcdfb6b9.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  4237638095 => 
+  array (
+    'name' => 'Explosive Finisher',
+    'desc' => 'Finishers restore grenades. Requires one-fifth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/3ef420580bfb4b39296e94d80328fd32.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  445559589 => 
+  array (
+    'name' => 'Utility Kickstart',
+    'desc' => 'When your class ability energy is fully expended, you gain class ability energy.',
+    'icon' => '/common/destiny2_content/icons/8141643a58362babeda68255fd60e550.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  958741637 => 
+  array (
+    'name' => 'Restorative Finisher',
+    'desc' => 'When you use a finisher, you gain a portion of energy for your least-recharged ability. Requires one-tenth of your Super energy.',
+    'icon' => '/common/destiny2_content/icons/fb1d4dd417b172728d13005e83de5904.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1137289077 => 
+  array (
+    'name' => 'Empty Mod Socket',
+    'desc' => 'No mod currently selected.',
+    'icon' => '/common/destiny2_content/icons/3cfff0f2aa68784762f553eb7997e909.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1513970148 => 
+  array (
+    'name' => 'Distribution',
+    'desc' => 'Reduces all ability cooldowns when using your class ability near targets.',
+    'icon' => '/common/destiny2_content/icons/a116725dc6ebe6a35866ecc7c681cef4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3018857481 => 
+  array (
+    'name' => 'Emperor\'s Blaze',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3511308612 => 
+  array (
+    'name' => 'Emperor\'s Balance',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3778343680 => 
+  array (
+    'name' => 'Trace Evidence',
+    'desc' => 'Defeating combatants affected by Arc debuffs spawns an Ionic Trace.',
+    'icon' => '/common/destiny2_content/icons/05e1c0694134fb11016734ea50ad27a4.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3778343681 => 
+  array (
+    'name' => 'Amped Up',
+    'desc' => 'Stay amplified longer.',
+    'icon' => '/common/destiny2_content/icons/df97dbd692244a48734290f9746bd6b2.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3778343682 => 
+  array (
+    'name' => 'Thunderous Retort',
+    'desc' => 'Grants bonus Arc Super damage if cast while critically wounded or while amplified. Lasts until the end of the Super activation.',
+    'icon' => '/common/destiny2_content/icons/83a01e73c21a830b281fee6b98b6d3e5.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3778343686 => 
+  array (
+    'name' => 'Sundering Glare',
+    'desc' => 'Rapid precision hits against distant combatants weaken them for a short duration.',
+    'icon' => '/common/destiny2_content/icons/f8d8732ab798faf87860ae3670ea1860.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  3778343687 => 
+  array (
+    'name' => 'Lightning Strikes Twice',
+    'desc' => 'After throwing an Arc grenade, gain increased grenade recharge for a short time. Arc final blows extend the duration of this benefit.',
+    'icon' => '/common/destiny2_content/icons/9106d481628b1c0ae6d88518c97fc9e6.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1404465539 => 
+  array (
+    'name' => 'Bad Amplitude',
+    'desc' => 'Damaging a Champion with an Arc ability causes the Champion to become jolted.',
+    'icon' => '/common/destiny2_content/icons/b279f03860f23a6dee1555ee8a04894b.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  1404465540 => 
+  array (
+    'name' => 'Surge Detonators',
+    'desc' => 'Arc grenades disrupt combatants, stunning them, delaying ability regeneration and lowering combatant damage output.
+
+Strong against [Disruption] Overload Champions.',
+    'icon' => '/common/destiny2_content/icons/e5049e5ac3be04260609c281e2fa7579.png',
+    'sockets' => 
+    array (
+    ),
+  ),
+  2044767186 => 
+  array (
+    'name' => 'Emperor\'s Shock',
+    'desc' => 'This mod has been deprecated and no longer functions. You may replace it with another mod.',
+    'icon' => '/common/destiny2_content/icons/58afd7d17e7b58883b94fd5ba2e66b76.png',
+    'sockets' => 
+    array (
     ),
   ),
 );
