@@ -99,6 +99,9 @@ class CUespDestiny2CreateWPData
 	protected $equipSlotData = [];
 	
 	public $PERMIT_DUPLICATE_NAMES = false;
+	public $PERMIT_DUPLICATE_PERK_NAMES = false;
+	public $INCLUDE_ALL_SOCKETS = false;
+	public $OUTPUT_DUPLICATE_NAMES = false;
 	
 	const IGNORE_SOCKET_NAMES = [
 			'Default Effect' => true,
@@ -143,17 +146,44 @@ class CUespDestiny2CreateWPData
 	
 	protected function ShouldDisplaySocket($socketData)
 	{
-		if ($socketData['defaultVisible'] === false) return false;
+		$id = intval($socketData['singleInitialItemHash']);
+		
+		if ($this->INCLUDE_ALL_SOCKETS) return true;
+		
+		if ($id <= 0) return false;
+		
+		if ($socketData['defaultVisible'] === false) 
+		{
+			//print("\t$id: Not visible\n");
+			return false;
+		}
 		
 		$name = $socketData['name'];
 		$desc = $socketData['description'];
 		
-		if ($name == null || $name == "") return false;
+		if ($name === null || $name === "") 
+		{
+			//print("\t$id: No Name\n");
+			return false;
+		}
 		
-		if (preg_match('/deprecated/i', $name)) return false;
-		if ($desc && preg_match('/deprecated/i', $desc)) return false;
+		if (preg_match('/deprecated/i', $name)) 
+		{
+			//print("\t$id: Deprecated\n");
+			return false;
+		}
 		
-		if (self::IGNORE_SOCKET_NAMES[$name]) return false;
+		if ($desc && preg_match('/deprecated/i', $desc)) 
+		{
+			//print("\t$id: Description Deprecated\n");
+			return false;
+		}
+		
+		if (self::IGNORE_SOCKET_NAMES[$name]) 
+		{
+			//print("\t$id: Ignored Name\n");
+			return false;
+		}
 		
 		return true;
 	}
@@ -172,14 +202,16 @@ class CUespDestiny2CreateWPData
 		while ($row = $result->fetch_assoc())
 		{
 			$id = $row['id'];
-			if ($id == null) $id = $row['key'];
+			if ($id === null) $id = $row['key'];
+			
+			//if ($tableName == 'InventoryItem' && $id != 1697682876) continue;
 			
 			$json = json_decode($row['json'], true);
 			$row['data'] = $json;
 			
 			if ($indexField != null)
 			{
-				$id1 = $this->GetJsonData($json, $indexField, false);
+				$id1 = $this->GetJsonData($row, $indexField, false);
 				if ($id1 !== false) $id = $id1;
 			}
 			
@@ -189,7 +221,7 @@ class CUespDestiny2CreateWPData
 			{
 				$equipSlotType = "";
 				if ($this->equipSlotData[$equipSlotTypeHash]) $equipSlotType = $this->equipSlotData[$equipSlotTypeHash]['name'];
-				if ($equipSlotType == null) $equipSlotType = "";
+				if ($equipSlotType === null) $equipSlotType = "";
 				$row['data']['equipSlotName'] = $equipSlotType;
 				//print("\tEquipSlotType for $id is $equipSlotType ($equipSlotTypeHash)\n");
 			}
@@ -198,13 +230,165 @@ class CUespDestiny2CreateWPData
 		}
 		
 		$this->LoadPerkDescriptions($data);
+		
+		if ($tableName == "InventoryItem") 
+		{
+			$this->IncludeRandomizedSockets($data);
+			$this->LoadModDescriptions($data);
+			//$count2 = count($data['2145476620']['data']['mods']);
+			//print("\tCounts: $count2\n");
+		}
+		
 		$this->LoadSocketDescriptions($data);
 		
 		$this->tableData[$tableName] = $data;
 		$count = count($data);
 		print("\t//Loaded $count records from $tableName...\n");
 		
+		//$count = count($data[1298815317]['data']['sockets']['socketEntries']);
+		//$count = count($this->tableData[$tableName][1298815317]['data']['sockets']['socketEntries']);
+		//print("\tCount $count\n");
+		
 		return $data;
+	}
+	
+	
+	protected function IncludeRandomizedSockets(&$data)
+	{
+		foreach ($data as $recordId => &$record)
+		{
+			$socketEntries = $this->GetJsonData($record, 'sockets::socketEntries');
+			if ($socketEntries === null) continue;
+			
+			$newSockets = [];
+			$existingSockets = [];
+			
+			foreach ($socketEntries as $socketIndex => $socket)
+			{
+				$id = intval($socket['singleInitialItemHash']);
+				if ($id <= 0) continue;
+				
+				//print("\tSocket #$socketIndex:$id\n");
+				
+				$existingSockets[$id] = true;
+				
+				$randomizedPlugSetHash = intval($socket['randomizedPlugSetHash']);
+				if ($randomizedPlugSetHash <= 0) continue;
+				
+				$plugSet = $this->plugSetData[$randomizedPlugSetHash];
+				
+				if ($plugSet == null) 
+				{
+					//print("\tNo plugset matching $randomizedPlugSetHash!\n");
+					continue;
+				}
+				
+				$items = $plugSet['data']['reusablePlugItems'];
+				
+				if ($items == null) 
+				{
+					//print("\tPlugset has no reusablePlugItems!\n");
+					continue;
+				}
+				
+				$count = count($items);
+				//print("\tFound $count possible new sockets.\n");
+				
+				foreach ($items as $index => $item)
+				{
+					$plugItemHash = intval($item['plugItemHash']);
+					
+					if ($plugItemHash <= 0) 
+					{
+						//print("\t\tMissing plugItemHash!\n");
+						continue;
+					}
+					
+					$newSockets[$plugItemHash] = true;
+				}
+			}
+			
+			$newCount = 0;
+			
+			foreach ($newSockets as $itemId => $v)
+			{
+					// Ignore existing sockets on item
+				if ($existingSockets[$itemId] === true) continue;
+				
+				$newSocket = [
+						'singleInitialItemHash' => $itemId,
+						'defaultVisible' => 'true',
+				];
+				
+				$record['data']['sockets']['socketEntries'][] = $newSocket;
+				++$newCount;
+			}
+			
+			//$count = count($record['data']['sockets']['socketEntries']);
+			//$count = count($data[$recordId]['data']['sockets']['socketEntries']);
+			//print("\t$recordId: Added $newCount sockets (total of $count)!\n");
+		}
+		
+		return true;
+	}
+	
+	
+	protected function CreateItemSummaryIndex(&$data, $onlyMods = false)
+	{
+		$index = [];
+		
+		foreach ($data as $id => &$record)
+		{
+			$json = json_decode($record['json'], true);
+			
+			$itemSummaryHash = intval($this->GetJsonData($record, "summaryItemHash", 0));
+			if ($itemSummaryHash <= 0) continue;
+			
+			$itemType = intval($this->GetJsonData($record, "itemType", 0));
+			if ($onlyMods && $itemType != 19 && $itemType != 20) continue;
+			
+			$index[$itemSummaryHash][$id] = $record['data'];
+			//print("\t$itemSummaryHash\n");
+		}
+		
+		$count = count($index);
+		print("\t//Created item summary index size of $count!\n");
+		
+		return $index;
+	}
+	
+	
+	protected function LoadModDescriptions(&$data)
+	{
+		$modSummaryIndex = $this->CreateItemSummaryIndex($data, true);
+		
+		//print_r($modSummaryIndex['3520001075']);
+		//exit();
+		
+		foreach ($data as $id => &$record)
+		{
+			$itemSummaryHash = intval($this->GetJsonData($record, "summaryItemHash", 0));
+			if ($itemSummaryHash <= 0) continue;
+			
+			$mods = $modSummaryIndex[$itemSummaryHash];
+			
+			if ($mods === null)
+			{
+				//print("\tEmpty mods for $itemSummaryHash!\n");
+			}
+			
+			$record['data']['mods'] = $mods;
+		}
+		
+		//$count1 = count($modSummaryIndex['3520001075']);
+		//$count2 = count($data['2145476620']['data']['mods']);
+		//print("\tCounts: $count1:$count2\n");
+		//print_r($modSummaryIndex['3520001075']);
+		//print("\n\n");
+		//print_r();
+		//print("\n\n");
+		
+		return true;
 	}
 	
 	
@@ -213,7 +397,9 @@ class CUespDestiny2CreateWPData
 		foreach ($data as $id => &$record)
 		{
 			$socketEntries = $this->GetJsonData($record, 'sockets::socketEntries');
-			if ($socketEntries == null) continue;
+			if ($socketEntries === null) continue;
+			
+			$socketNames = [];
 			
 			foreach ($socketEntries as $socketIndex => $socket)
 			{
@@ -223,7 +409,7 @@ class CUespDestiny2CreateWPData
 				if ($itemHash <= 0) continue;
 				
 				$itemRecord = $data[$itemHash];
-				if ($itemRecord == null) continue;
+				if ($itemRecord === null) continue;
 				
 				$desc = $this->GetJsonData($itemRecord, 'displayProperties::description', '');
 				$name = $this->GetJsonData($itemRecord, 'displayProperties::name', '');
@@ -236,7 +422,12 @@ class CUespDestiny2CreateWPData
 				$socket = $record['data']['sockets']['socketEntries'][$socketIndex];
 				
 				if ($this->ShouldDisplaySocket($socket)) $record['data']['sockets']['socketEntries'][$socketIndex]['shouldDisplay'] = true;
+				
+				if ($socketNames[$name] != null && !$this->PERMIT_DUPLICATE_PERK_NAMES) $record['data']['sockets']['socketEntries'][$socketIndex]['shouldDisplay'] = false;
+				$socketNames[$name] = true;
 			}
+			
+			//print_r($record['data']['sockets']['socketEntries']);
 		}
 	}
 	
@@ -249,7 +440,7 @@ class CUespDestiny2CreateWPData
 			$name = $this->GetJsonData($record, 'displayProperties::name');
 			
 			$perks = $this->GetJsonData($record, 'perks');
-			if ($perks == null) continue;
+			if ($perks === null) continue;
 			
 			foreach ($perks as $perkIndex => $perk)
 			{
@@ -260,16 +451,16 @@ class CUespDestiny2CreateWPData
 				if ($perkRecord === false) continue;
 				
 				$perkDesc = $this->GetJsonData($perkRecord, 'displayProperties::description');
-				if ($perkDesc == null) continue;
+				if ($perkDesc === null) continue;
 				
 				$perkName = $this->GetJsonData($perkRecord, 'displayProperties::name');
-				if ($perkName == null) continue;
+				if ($perkName === null) continue;
 				
 				//print("Perk $perkId description $perkDesc...\n");
 				
 				if (strtolower($perkName) == strtolower($name) && $perkDesc != '')
 				{
-					if ($desc == null) $desc = '';
+					if ($desc === null) $desc = '';
 					if ($desc != '') $desc .= '\n';
 					$desc .= $perkDesc;
 					$record['data']['displayProperties']['description'] = $desc;
@@ -290,7 +481,7 @@ class CUespDestiny2CreateWPData
 		if ($result === false) return $this->ReportError("Error: Failed to load data from table '$fullTableName'!");
 		
 		$row = $result->fetch_assoc();
-		if ($row == null) return $this->ReportError("Error: Failed to load data record '$id' from table '$fullTableName'!");
+		if ($row === null) return $this->ReportError("Error: Failed to load data record '$id' from table '$fullTableName'!");
 		
 		$json = json_decode($row['json'], true);
 		$row['data'] = $json;
@@ -305,10 +496,27 @@ class CUespDestiny2CreateWPData
 		if (!$json) return false;
 		
 		$value2 = $json[$key];
-		if ($value2 == null) return false;
+		if ($value2 === null) return false;
 		
 		if ($value == $value2) return true;
 		return false;
+	}
+	
+	
+	protected function DoesRecordMatchFilters($record, $filters)
+	{
+		$json = $record['data'];
+		if (!$json) return false;
+		
+		foreach ($filters as $key => $value)
+		{
+			$value2 = $json[$key];
+			if ($value2 === null) return false;
+			
+			if ($value != $value2) return false;
+		}
+		
+		return true;
 	}
 	
 	
@@ -316,31 +524,48 @@ class CUespDestiny2CreateWPData
 	{
 		$newRecords = [];
 		$names = [];
+		$dupNames = [];
 		
 		foreach ($records as $id => $record)
 		{
 			$name = $record['name'];
-			if ($name == null) continue;
-			if ($names[$name] != null) continue;
+			if ($name === null) continue;
+			
+			if ($names[$name] != null) 
+			{
+				$dupNames[$name]++;
+				continue;
+			}
 			
 			$names[$name] = true;
 			$newRecords[$id] = $record;
+		}
+		
+		if ($this->OUTPUT_DUPLICATE_NAMES)
+		{
+			foreach ($dupNames as $name => $count)
+			{
+				print("\t\t$name had $count duplicates\n");
+			}
 		}
 		
 		return $newRecords;
 	}
 	
 	
-	protected function FilterRecords($tableName, $key, $value)
+	protected function FilterRecords($tableName, $filters)
 	{
 		$tableName = preg_replace('/[^a-zA-Z0-9_]+/', '', $tableName);
-		if ($this->tableData[$tableName] == null) return $this->ReportError("Error: '$tableName' is not a valid table name!");
+		if ($this->tableData[$tableName] === null) return $this->ReportError("Error: '$tableName' is not a valid table name!");
 		
 		$filterData = [];
 		
+		$niceFilterText = http_build_query($filters, '', ', ');
+		$niceFilterText = str_replace('+', ' ', $niceFilterText);
+		
 		foreach ($this->tableData[$tableName] as $id => $record)
 		{
-			if ($this->DoesRecordMatchFilter($record, $key, $value))
+			if ($this->DoesRecordMatchFilters($record, $filters))
 			{
 				$filterData[$id] = $record;
 			}
@@ -354,29 +579,33 @@ class CUespDestiny2CreateWPData
 			
 			$count = count($filterData);
 			$diffCount = $preCount - $count;
-			print("\t//Found $count $tableName records matching $key is '$value' (removed $diffCount duplicate names)...\n");
+			print("\t//Found $count $tableName records matching $niceFilterText (removed $diffCount duplicate names)...\n");
 		}
 		else
 		{
 			$count = count($filterData);
-			print("\t//Found $count $tableName records matching $key is '$value'...\n");
+			print("\t//Found $count $tableName records matching $niceFilterText...\n");
 		}
 		
 		return $filterData;
 	}
 	
 	
-	protected function GetJsonData($record, $varString, $default = null)
+	protected function GetJsonData($record, $varString, $default = null, $isJsonData = false)
 	{
 		$vars = explode("::", $varString);
 		
-		$data = $record['data'];
-		if ($data == null) return $default;
+		if ($isJsonData)
+			$data = $record;
+		else
+			$data = $record['data'];
+		
+		if ($data === null) return $default;
 		
 		foreach ($vars as $var)
 		{
 			$data = $data[$var];
-			if ($data == null) return $default;
+			if ($data === null) return $default;
 		}
 		
 		return $data;
@@ -386,10 +615,21 @@ class CUespDestiny2CreateWPData
 	protected function GetArrayRecordForDump($record, $varArray)
 	{
 		$dataId = $varArray['_'];
-		if ($dataId == null) return [];
+		if ($dataId === null) return [];
+		
+		//print("\tRecord Hash: {$record['data']['hash']}\n");
 		
 		$dataArray = $this->GetJsonData($record, $dataId);
-		if ($dataArray == null) return [];
+		
+		if ($dataArray === null)
+		{
+			//print_r($record);
+			//print("\tEmpty value for $dataId!\n");
+			return [];
+		}
+		
+		//if ($dataId == "mods") print("\tNon-Empty value for $dataId!\n");
+		$origDataId = $dataId;
 		
 		$outputData = [];
 		
@@ -407,8 +647,17 @@ class CUespDestiny2CreateWPData
 				if ($varName == '_') continue;
 				if ($data['shouldDisplay'] === false) continue;
 				
-				$value = $data[$varString];
-				if ($value == null) continue;
+				$value = $this->GetJsonData($data, $varString, null, true);
+				
+				if ($value === null) 
+				{
+					if ($origDataId == "mods") {
+						//print("\t\t$varString is NULL\n");
+						//print_r($data);
+						//exit();
+					}
+					continue;
+				}
 				
 				$newData[$varName] = $value;
 			}
@@ -435,7 +684,7 @@ class CUespDestiny2CreateWPData
 			else
 			{
 				$value = $this->GetJsonData($record, $varString);
-				if ($value == null) continue;
+				if ($value === null) continue;
 			}
 			
 			//$value = mb_convert_encoding($value , 'UTF-8', 'UTF-8');
@@ -450,6 +699,10 @@ class CUespDestiny2CreateWPData
 	protected function DumpData($data, $varName, $outputVars)
 	{
 		$records = [];
+		
+		//$count1 = count($data['2145476620']['data']['mods']);
+		//$count2 = count($this->tableData['InventoryItem']['2145476620']['data']['mods']);
+		//print("\tCounts $count1:$count2\n");
 		
 		foreach ($data as $id => $record)
 		{
@@ -468,42 +721,56 @@ class CUespDestiny2CreateWPData
 	{
 		$this->classData = $this->LoadTableData('Class', 'classType');
 		$this->equipSlotData = $this->LoadTableData('EquipmentSlot');
+		$this->plugSetData = $this->LoadTableData('PlugSet');
 		
 		$this->LoadTableData("InventoryItem");
 		
-		$superAbilities = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Super Ability");
-		$classAbilities = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Class Ability");
-		$movementAbilities = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Movement Ability");
-		$arcGrenade = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Arc Grenade");
-		$arcMelee = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Arc Melee");
+		//$count = count($this->tableData[$tableName][1298815317]['data']['sockets']['socketEntries']);
+		//$count1 = count($this->tableData['InventoryItem']['1298815317']['data']['sockets']['socketEntries']);
+		//print("Socket count = $count1\n");
 		
-		$aspect = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Arc Aspect");
-		$fragment = $this->FilterRecords("InventoryItem", "itemTypeDisplayName", "Arc Fragment");
+		$superAbilities = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Super Ability"]);
+		$classAbilities = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Class Ability"]);
+		$movementAbilities = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Movement Ability"]);
+		$arcGrenade = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Grenade"]);
+		$arcMelee = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Melee"]);
 		
-		$kineticWeapons = $this->FilterRecords("InventoryItem", "equipSlotName", "Kinetic Weapons");
-		$energyWeapons = $this->FilterRecords("InventoryItem", "equipSlotName", "Energy Weapons");
-		$powerWeapons = $this->FilterRecords("InventoryItem", "equipSlotName", "Power Weapons");
+		$aspect = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Aspect"]);
+		$fragment = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Fragment"]);
 		
-		$exoticArmor = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Leg Armor");
-		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Chest Armor");
-		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Helmet");
-		$exoticArmor += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Exotic Gauntlets");
+		$kineticWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Kinetic Weapons", "equippable" => "true"]);
+		$energyWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Energy Weapons", "equippable" => "true"]);
+		$powerWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Power Weapons", "equippable" => "true"]);
 		
-		$commonArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Charged with Light Mod");
-		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Vault of Glass Armor Mod");
-		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common General Armor Mod");
-		$commonArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Armor Mod");
+		$exoticArmor = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Exotic Leg Armor"]);
+		$exoticArmor += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Exotic Chest Armor"]);
+		$exoticArmor += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Exotic Helmet"]);
+		$exoticArmor += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Exotic Gauntlets"]);
 		
-		$legArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Leg Armor Mod") + $commonArmorMods;
-		$legArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Leg Armor Mod");
-		$armArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Arms Armor Mod") + $commonArmorMods;
-		$armArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Arms Armor Mod");
-		$chestArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Chest Armor Mod") + $commonArmorMods;
-		$chestArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Chest Armor Mod");
-		$headArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Helmet Armor Mod") + $commonArmorMods;
-		$headArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Helmet Armor Mod");
-		$classArmorMods = $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Common Class Item Armor Mod");
-		$classArmorMods += $this->FilterRecords("InventoryItem", "itemTypeAndTierDisplayName", "Legendary Class Item Mod");
+		$commonArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Charged with Light Mod"]);
+		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Vault of Glass Armor Mod"]);
+		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common General Armor Mod"]);
+		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Armor Mod"]);
+		
+		$legArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Leg Armor Mod"]) + $commonArmorMods;
+		$legArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Leg Armor Mod"]);
+		$armArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Arms Armor Mod"]) + $commonArmorMods;
+		$armArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Arms Armor Mod"]);
+		$chestArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Chest Armor Mod"]) + $commonArmorMods;
+		$chestArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Chest Armor Mod"]);
+		$headArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Helmet Armor Mod"]) + $commonArmorMods;
+		$headArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Helmet Armor Mod"]);
+		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]);
+		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Mod"]);
+		
+		//$count1 = count($kineticWeapons['2145476620']['data']['mods']);
+		//$count2 = count($this->tableData['InventoryItem']['2145476620']['data']['mods']);
+		//print("\tCounts $count1:$count2\n");
+		
+		//$count1 = count($this->tableData['InventoryItem']['1298815317']['data']['sockets']['socketEntries']);
+		//print("Socket count = $count1\n");
+		//print_r($this->tableData['InventoryItem']['1298815317']['data']['sockets']['socketEntries']);
+		//exit();
 		
 		print("//-----------------------------------------------------------------------------\n\n");
 		
@@ -516,17 +783,20 @@ class CUespDestiny2CreateWPData
 		$this->DumpData($aspect, "aspect", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon']);
 		$this->DumpData($fragment, "fragment", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon']);
 		
-		$this->DumpData($kineticWeapons, "kineticWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($energyWeapons, "energyWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($powerWeapons, "powerWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$socketDef = [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ];
+		$modDef = [ '_' => 'mods', 'id' => 'hash', 'name' => 'displayProperties::name', 'icon' => 'displayProperties::icon', 'desc' => 'displayProperties::description' ];
 		
-		$this->DumpData($exoticArmor, "exoticArmor", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($kineticWeapons, "kineticWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($energyWeapons, "energyWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($powerWeapons, "powerWeapons", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
 		
-		$this->DumpData($legArmorMods, "LegArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($armArmorMods, "ArmArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($chestArmorMods, "ChestArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($headArmorMods, "HeadArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
-		$this->DumpData($classArmorMods, "ClassArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => [ '_' => 'sockets::socketEntries', 'id' => 'singleInitialItemHash', 'name' => 'name', 'icon' => 'icon', 'desc' => 'description' ], ]);
+		$this->DumpData($exoticArmor, "exoticArmor", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		
+		$this->DumpData($legArmorMods, "LegArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($armArmorMods, "ArmArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($chestArmorMods, "ChestArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($headArmorMods, "HeadArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
+		$this->DumpData($classArmorMods, "ClassArmorMods", [ 'name' => 'displayProperties::name', 'desc' => 'displayProperties::description', 'icon' => 'displayProperties::icon', 'sockets' => $socketDef ]);
 		
 		return true;
 	}

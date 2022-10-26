@@ -9,6 +9,12 @@
  * 		- Slots: Energy, Kinetic, Heavy
  * 		- x4 Traits per slot (Intrinsic/Trait)
  * 		- Primary/Special/Heavy Ammo?
+ * 		- Perks:
+ * 			- Legendary Intrinsic
+ * 			- Basic Magazine (Common Magazine)
+ * 			- Basic Barrel (Common Barrel)
+ * 			- Basic Trait (Common Trait)
+ * 			- Basic Origin Trait
  * - Skills
  * 		- Slots: Skills, Fragments, Aspect
  */
