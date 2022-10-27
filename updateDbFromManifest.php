@@ -11,7 +11,7 @@ class CUespDestiny2DbUpdater
 	const DOWNLOAD_PATH = '/home/destiny2/downloads/';
 	const SQLITE_PATH = '/home/destiny2/sqlitedbs/';
 	
-	const SKIP_DOWNLOAD = true;	// For testing only
+	const SKIP_DOWNLOAD = false;	// For testing only
 	
 	
 	protected $manifestData = [];

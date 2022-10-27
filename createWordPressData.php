@@ -733,10 +733,23 @@ class CUespDestiny2CreateWPData
 		$classAbilities = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Class Ability"]);
 		$movementAbilities = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Movement Ability"]);
 		$arcGrenade = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Grenade"]);
+		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Grenade"]);
+		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Grenade"]);
+		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Grenade"]);
 		$arcMelee = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Melee"]);
+		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Melee"]);
+		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Melee"]);
+		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Melee"]);
+		
 		
 		$aspect = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Aspect"]);
+		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Aspect"]);
+		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Aspect"]);
+		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Aspect"]);
 		$fragment = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Fragment"]);
+		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Fragment"]);
+		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Fragment"]);
+		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Fragment"]);
 		
 		$kineticWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Kinetic Weapons", "equippable" => "true"]);
 		$energyWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Energy Weapons", "equippable" => "true"]);
@@ -760,7 +773,7 @@ class CUespDestiny2CreateWPData
 		$chestArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Chest Armor Mod"]);
 		$headArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Helmet Armor Mod"]) + $commonArmorMods;
 		$headArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Helmet Armor Mod"]);
-		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]);
+		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]) + $commonArmorMods;
 		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Mod"]);
 		
 		//$count1 = count($kineticWeapons['2145476620']['data']['mods']);
