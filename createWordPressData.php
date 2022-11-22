@@ -102,6 +102,7 @@ class CUespDestiny2CreateWPData
 	public $PERMIT_DUPLICATE_PERK_NAMES = false;
 	public $INCLUDE_ALL_SOCKETS = false;
 	public $OUTPUT_DUPLICATE_NAMES = false;
+	public $IGNORE_DUMMY_ITEMS = true;
 	
 	const IGNORE_SOCKET_NAMES = [
 			'Default Effect' => true,
@@ -345,7 +346,8 @@ class CUespDestiny2CreateWPData
 			if ($itemSummaryHash <= 0) continue;
 			
 			$itemType = intval($this->GetJsonData($record, "itemType", 0));
-			if ($onlyMods && $itemType != 19 && $itemType != 20) continue;
+			//if ($onlyMods && $itemType != 19 && $itemType != 20) continue;
+			if ($onlyMods && $itemType != 19) continue;
 			
 			$index[$itemSummaryHash][$id] = $record['data'];
 			//print("\t$itemSummaryHash\n");
@@ -565,6 +567,12 @@ class CUespDestiny2CreateWPData
 		
 		foreach ($this->tableData[$tableName] as $id => $record)
 		{
+			if ($this->IGNORE_DUMMY_ITEMS)
+			{
+				$itemType = $record['data']['itemType'];
+				if ($itemType == 20) continue;
+			}
+			
 			if ($this->DoesRecordMatchFilters($record, $filters))
 			{
 				$filterData[$id] = $record;
@@ -741,7 +749,6 @@ class CUespDestiny2CreateWPData
 		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Melee"]);
 		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Melee"]);
 		
-		
 		$aspect = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Aspect"]);
@@ -764,6 +771,7 @@ class CUespDestiny2CreateWPData
 		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Vault of Glass Armor Mod"]);
 		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common General Armor Mod"]);
 		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Armor Mod"]);
+		$commonArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Elemental Well Mod"]);
 		
 		$legArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Leg Armor Mod"]) + $commonArmorMods;
 		$legArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Leg Armor Mod"]);
@@ -774,7 +782,7 @@ class CUespDestiny2CreateWPData
 		$headArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Helmet Armor Mod"]) + $commonArmorMods;
 		$headArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Helmet Armor Mod"]);
 		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]) + $commonArmorMods;
-		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Mod"]);
+		
 		
 		//$count1 = count($kineticWeapons['2145476620']['data']['mods']);
 		//$count2 = count($this->tableData['InventoryItem']['2145476620']['data']['mods']);
