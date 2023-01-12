@@ -97,9 +97,12 @@ class CUespDestiny2CreateWPData
 	protected $tableData = [];
 	protected $classData = [];
 	protected $equipSlotData = [];
+	protected $powerCapData = [];
 	
 	public $PERMIT_DUPLICATE_NAMES = false;
 	public $PERMIT_DUPLICATE_PERK_NAMES = false;
+	public $REMOVE_SUNSET_DUPLICATE_NAMES = true;
+	public $INCLUDE_SUNSET_ITEMS = true;					// Should be true or removes ALL sunset items
 	public $INCLUDE_ALL_SOCKETS = false;
 	public $OUTPUT_DUPLICATE_NAMES = false;
 	public $IGNORE_DUMMY_ITEMS = true;
@@ -535,11 +538,28 @@ class CUespDestiny2CreateWPData
 			
 			if ($names[$name] != null) 
 			{
+				if ($this->REMOVE_SUNSET_DUPLICATE_NAMES)
+				{
+					$lastId = $names[$name];
+					$lastRecord = $records[$lastId];
+					
+					//print("\t\t$id ($lastId): Checking sunset record....\n");
+					
+					if ($this->IsRecordSunset($lastRecord))
+					{
+						unset($newRecords[$lastId]);
+						$names[$name] = $id;
+						$newRecords[$id] = $record;
+						
+						//print("\t\t$id: Replaced sunset record $lastId with the same name!\n");
+					}
+				}
+				
 				$dupNames[$name]++;
 				continue;
 			}
 			
-			$names[$name] = true;
+			$names[$name] = $id;
 			$newRecords[$id] = $record;
 		}
 		
@@ -552,6 +572,26 @@ class CUespDestiny2CreateWPData
 		}
 		
 		return $newRecords;
+	}
+	
+	
+	protected function IsRecordSunset($record)
+	{
+		$powerCapHashes = $this->GetJsonData($record, 'quality::versions', 0);
+		if (!is_array($powerCapHashes)) return false;
+		
+		$firstPowerCap = $powerCapHashes[0];
+		$powerCapHash = $firstPowerCap['powerCapHash'];
+		if ($powerCapHash == null) return false;
+		
+		$powerCapData = $this->powerCapData[$powerCapHash];
+		if ($powerCapData == null) return false;
+		
+		$powerCap = $powerCapData['data']['powerCap'];
+		if ($powerCap == null) return false;
+		
+		if (substr($powerCap, 0, 4) === '9999') return false;
+		return true;
 	}
 	
 	
@@ -570,12 +610,31 @@ class CUespDestiny2CreateWPData
 			if ($this->IGNORE_DUMMY_ITEMS)
 			{
 				$itemType = $record['data']['itemType'];
-				if ($itemType == 20) continue;
+				
+				if ($itemType == 20)
+				{
+					//print("\t\t$id: Ignoring dummy item!\n");
+					continue;
+				}
+			}
+			
+			if (!$this->INCLUDE_SUNSET_ITEMS)
+			{
+				if ($this->IsRecordSunset($record)) 
+				{
+					//print("\t\t$id: Ignoring sunset item!\n");
+					continue;
+				}
 			}
 			
 			if ($this->DoesRecordMatchFilters($record, $filters))
 			{
 				$filterData[$id] = $record;
+				//print("\t\t$id: Record matches filters!\n");
+			}
+			else
+			{
+				//print("\t\t$id: Record doesn't match filters!\n");
 			}
 		}
 		
@@ -730,6 +789,7 @@ class CUespDestiny2CreateWPData
 		$this->classData = $this->LoadTableData('Class', 'classType');
 		$this->equipSlotData = $this->LoadTableData('EquipmentSlot');
 		$this->plugSetData = $this->LoadTableData('PlugSet');
+		$this->powerCapData = $this->LoadTableData('PowerCap');
 		
 		$this->LoadTableData("InventoryItem");
 		
@@ -783,7 +843,7 @@ class CUespDestiny2CreateWPData
 		$headArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Helmet Armor Mod"]);
 		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]) + $commonArmorMods;
 		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Mod"]);
-		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Mod"]);
+		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Mod"]); 
 		
 		//$count1 = count($kineticWeapons['2145476620']['data']['mods']);
 		//$count2 = count($this->tableData['InventoryItem']['2145476620']['data']['mods']);
