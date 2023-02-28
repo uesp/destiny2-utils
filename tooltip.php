@@ -205,6 +205,7 @@ class CUespDestiny2Tooltips
 		
 		$socketCategories = $this->GetJsonData($itemData, "sockets", "socketCategories");
 		if ($socketCategories == null) return false;
+		if (!is_array($socketCategories)) return false;
 		
 		foreach ($socketCategories as $category => $socketCategory)
 		{
