@@ -804,16 +804,21 @@ class CUespDestiny2CreateWPData
 		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Grenade"]);
 		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Grenade"]);
 		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Grenade"]);
+		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Strand Grenade"]);
+		$arcGrenade += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Grenade"]);
 		$arcMelee = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Melee"]);
 		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Melee"]);
 		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Melee"]);
 		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Melee"]);
+		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Strand Melee"]);
+		$arcMelee += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Melee"]);
 		
 		$aspect = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Aspect"]);
 		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Strand Aspect"]);
+		$aspect += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Titan Aspect"]);
 		$fragment = $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Arc Fragment"]);
 		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Solar Fragment"]);
 		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Fragment"]);
