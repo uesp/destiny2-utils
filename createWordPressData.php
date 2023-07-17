@@ -850,6 +850,7 @@ class CUespDestiny2CreateWPData
 		$headArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Helmet Armor Mod"]);
 		$classArmorMods = $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Armor Mod"]) + $commonArmorMods;
 		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Mod"]);
+		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Legendary Class Item Armor Mod"]);
 		$classArmorMods += $this->FilterRecords("InventoryItem", ["itemTypeAndTierDisplayName" => "Common Class Item Mod"]); 
 		
 		//$count1 = count($kineticWeapons['2145476620']['data']['mods']);
