@@ -196,6 +196,7 @@ class CUespDestiny2DbUpdater
 			//$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nINDEX idx_name(`name`(64))\n);", $createQuery);
 			$createQuery = str_replace(');', " , name TINYTEXT NOT NULL, \nFULLTEXT(`name`)\n);", $createQuery);
 			$createQuery = str_replace(');', " , icon TINYTEXT NOT NULL, \nINDEX idx_icon(icon(64))\n);", $createQuery);
+			$createQuery = str_replace('json BLOB', "json MEDIUMBLOB", $createQuery);
 			
 			//print("$createQuery");
 			
