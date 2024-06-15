@@ -824,6 +824,7 @@ class CUespDestiny2CreateWPData
 		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Stasis Fragment"]);
 		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Void Fragment"]);
 		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Strand Fragment"]);
+		$fragment += $this->FilterRecords("InventoryItem", ["itemTypeDisplayName" => "Prismatic Fragment"]);
 		
 		$kineticWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Kinetic Weapons", "equippable" => "true"]);
 		$energyWeapons = $this->FilterRecords("InventoryItem", ["equipSlotName" => "Energy Weapons", "equippable" => "true"]);
